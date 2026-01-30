@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeremy Johns – Teaching & Outreach</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>My Website</h1>
+   <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="teaching.html">Teaching/Outreach</a></li>
+
+      <li class="dropdown">
+        <a href="#">Language Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="wordsearch.html">Reduplication Dictionary</a></li>
+          <li><a href="neologisms.html">Neologisms</a></li>
+          <li><a href="lab.html">'O'odham Lab</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+<main class="teaching-page">
+
+  <h2>Enter Password</h2>
+
+  <input type="password" id="pw">
+  <button onclick="checkPassword()">Enter</button>
+
+  <script>
+    function checkPassword() {
+      const pw = document.getElementById("pw").value;
+      if (pw === "password") {
+        window.location.href = "wordsearch.html";
+      } else {
+        alert("Incorrect password");
+      }
+    }
+  </script>
+
+</main>
+
+<footer>
+  <p>© 2026 Jeremy Johns | <a href="mailto:jeremyjohns@arizona.edu">jeremyjohns@arizona.edu</a></p>
+</footer>
+
+
+</body>
+</html>

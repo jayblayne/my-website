@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeremy Johns – Reduplication Dictionary</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      background-color: #f4f4f4;
+    }
+
+    
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Card styling for dictionary entries */
+    .card {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Jeremy Johns</h1>
+   <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="teaching.html">Teaching/Outreach</a></li>
+
+      <li class="dropdown">
+        <a href="#">Language Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="wordsearch.html">Reduplication Dictionary</a></li>
+          <li><a href="neologisms.html">Neologisms</a></li>
+          <li><a href="lab.html">'O'odham Lab</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Reduplication Dictionary</h2>
+  <p>The Reduplication Dictionary is meant to help learners find reduplicated forms of words
+    easily. You can search by English word or O’odham word. If you already know the reduplicated
+    word, you can type it in and find its unreduplicated form and meaning. 
+    <br> Some words may
+    be tagged by dialect. If a word has multiple entries across different dialects, you can use 
+  the drop down menu to narrow your search. If you choose a dialect from the drop down menu without searching
+  a word, all the words that are tagged with that dialect will appear..
+  </p>
+
+  <!-- Search inputs -->
+  <input type="text" id="searchInput" placeholder="Search English, O'odham, or Reduplicated form..." />
+  <select id="dialectSelect">
+    <option value="">All Dialects</option>
+    <!-- Options will be auto-populated from lexicon.js -->
+  </select>
+
+  <div id="results"></div>
+</main>
+
+<footer>
+  <p>© 2026 Jeremy Johns | <a href="mailto:jeremyjohns@arizona.edu">jeremyjohns@arizona.edu</a></p>
+</footer>
+
+
+<!-- Load dictionary -->
+<script src="lexicon.js"></script>
+<script src="search.js"></script>
+
+</body>
+</html>

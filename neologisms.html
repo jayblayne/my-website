@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeremy Johns</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+      cursor: pointer;
+      user-select: none;
+      position: sticky;      /* Makes header sticky */
+      top: 0;                /* Sticks to top of container */
+      z-index: 2;            /* Ensures it stays above table cells */
+    }
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    .sort-indicator {
+      margin-left: 5px;
+      font-size: 0.8em;
+    }
+
+    /* Scrollable container */
+    .table-container {
+      max-height: 400px; /* Adjust height as needed */
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Jeremy Johns</h1>
+
+  <!-- Hamburger menu -->
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation links -->
+ <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="teaching.html">Teaching/Outreach</a></li>
+
+      <li class="dropdown">
+        <a href="#">Language Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="login.html">Reduplication Dictionary</a></li>
+          <li><a href="neologisms.html">Neologisms</a></li>
+          <li><a href="lab.html">'O'odham Lab</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>’O’odham Metalinguistic Terminology</h2>
+  <p>
+O’odham terms for metalinguistic concepts are listed in the box below. 
+
+<ul>
+    <li><b>First Column</b>: the English metalinguistic term.</li>
+    <li><b>Second Column</b>:the O’odham metalinguistic term. Any terms 
+    in this column that are followed by a small triangle (▴) have been adapted
+    from Alvarez & Hale (1971, 1970). </li>
+    <li><b>Third Column</b>: the literal translation of the O’odham
+    term into English. </li>
+    <li><b>Fourth Column</b>: a short definition in O’odham.</li>
+</ul>
+<br>
+If you click on "English", you can sort the terminology alphabetically by the English term.
+If you click "O"odham" you can sort alphabetically by the O’odham term.<br><br>
+Please note: this list of terminology is intended to be expanded upon and revised over time as needed. More terms may be added later, please check back for any changes.
+  </p>
+
+  <h2>Neologisms Glossary</h2>
+
+  <!-- Scrollable table container -->
+  <div class="table-container">
+    <table id="glossary">
+      <thead>
+        <tr>
+          <th data-column="0" data-order="asc">English <span class="sort-indicator"></span></th>
+          <th data-column="1" data-order="asc">O'odham <span class="sort-indicator"></span></th>
+          <th>Translation</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody id="glossary-body">
+        <!-- CSV data will be loaded here -->
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<script>
+  // CSV parser that handles quoted fields
+  function parseCSV(text) {
+    const rows = [];
+    const lines = text.trim().split('\n');
+
+    for (let line of lines) {
+      const values = [];
+      let current = '';
+      let inQuotes = false;
+
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+
+        if (char === '"' && line[i + 1] === '"') {
+          current += '"';
+          i++;
+        } else if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+          values.push(current);
+          current = '';
+        } else {
+          current += char;
+        }
+      }
+      values.push(current);
+      rows.push(values);
+    }
+
+    return rows;
+  }
+
+  async function loadGlossary() {
+    try {
+      const response = await fetch('neologisms.csv'); // CSV file name
+      const csvText = await response.text();
+      const allRows = parseCSV(csvText);
+
+      const tbody = document.getElementById('glossary-body');
+
+      // Skip header row if it exists
+      const dataRows = allRows[0][0].toLowerCase() === 'english' ? allRows.slice(1) : allRows;
+
+      dataRows.forEach(row => {
+        // Skip empty rows
+        if (!row || row.every(cell => cell.trim() === '')) return;
+
+        const [english, oodham, translation, definition] = row;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${english || ''}</td>
+          <td>${oodham || ''}</td>
+          <td>${translation || ''}</td>
+          <td>${definition || ''}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      enableSorting();
+    } catch (error) {
+      console.error('Error loading CSV:', error);
+    }
+  }
+
+  function enableSorting() {
+    const table = document.getElementById('glossary');
+    const headers = table.querySelectorAll('th[data-column]');
+
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const columnIndex = parseInt(header.getAttribute('data-column'));
+        let order = header.getAttribute('data-order');
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+
+        rows.sort((a, b) => {
+          const cellA = a.cells[columnIndex].textContent.trim().toLowerCase();
+          const cellB = b.cells[columnIndex].textContent.trim().toLowerCase();
+
+          if (cellA < cellB) return order === 'asc' ? -1 : 1;
+          if (cellA > cellB) return order === 'asc' ? 1 : -1;
+          return 0;
+        });
+
+        rows.forEach(row => tbody.appendChild(row));
+        header.setAttribute('data-order', order === 'asc' ? 'desc' : 'asc');
+
+        headers.forEach(h => h.querySelector('.sort-indicator').textContent = '');
+        header.querySelector('.sort-indicator').textContent = order === 'asc' ? '▲' : '▼';
+      });
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', loadGlossary);
+</script>
+
+<footer>
+  <p>© 2026 Jeremy Johns | <a href="mailto:jeremyjohns@arizona.edu">jeremyjohns@arizona.edu</a></p>
+</footer>
+
+</body>
+</html>
