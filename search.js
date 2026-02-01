@@ -60,15 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
         examplesHTML = `<p><strong>Examples:</strong><br>${examplesHTML}</p>`;
       }
 
-      // Build entry HTML
+      // Build entry HTML with separate audio files
       div.innerHTML = `
         ${entry.oodham ? `<p><strong>O’odham:</strong> ${entry.oodham}</p>` : ""}
-        ${entry.audio ? `<p><strong>Audio:</strong> <audio controls src="${entry.audio}"></audio></p>` : ""}
+        ${entry.audio_singular ? `<p><strong>Audio Singular:</strong> <audio controls src="${entry.audio_singular}"></audio></p>` : ""}
         ${entry.english ? `<p><strong>English:</strong> ${entry.english}</p>` : ""}
         ${entry.pos ? `<p><strong>Part of Speech:</strong> ${entry.pos}</p>` : ""}
         ${entry.pattern ? `<p><strong>Pattern:</strong> ${entry.pattern}</p>` : ""}
         ${entry.pronunciation ? `<p><strong>Pronunciation:</strong> ${entry.pronunciation}</p>` : ""}
         ${entry.reduplicated ? `<p><strong>Reduplicated:</strong> ${entry.reduplicated}</p>` : ""}
+        ${entry.audio_red ? `<p><strong>Audio Reduplicated:</strong> <audio controls src="${entry.audio_red}"></audio></p>` : ""}
         ${entry.redup_pronunciation ? `<p><strong>Reduplicated Pronunciation:</strong> ${entry.redup_pronunciation}</p>` : ""}
         ${entry.redup_meaning ? `<p><strong>Reduplicated Meaning:</strong> ${entry.redup_meaning}</p>` : ""}
         ${entry.dialect ? `<p><strong>Dialect:</strong> ${entry.dialect}</p>` : ""}
