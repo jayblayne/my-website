@@ -1,6 +1,6 @@
 const lexicon = [
   {
-    "﻿oodham": "’ali",
+    "oodham": "’ali",
     "english": "baby",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -14,7 +14,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "hoa",
+    "oodham": "hoa",
     "english": "basket",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -28,7 +28,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "vo’ikuḍ",
+    "oodham": "vo’ikuḍ",
     "english": "bed",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -42,7 +42,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’iks",
+    "oodham": "’iks",
     "english": "blanket, cloth",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -56,7 +56,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kahon",
+    "oodham": "kahon",
     "english": "box",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -70,7 +70,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "viappoi",
+    "oodham": "viappoi",
     "english": "boy, boys",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -84,7 +84,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’oag",
+    "oodham": "’oag",
     "english": "brain",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -98,7 +98,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "mi:tol",
+    "oodham": "mi:tol",
     "english": "cat",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -112,7 +112,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "mi:stol",
+    "oodham": "mi:stol",
     "english": "cat",
     "pattern": "3",
     "partOfSpeech": "noun",
@@ -126,7 +126,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "daikuḍ",
+    "oodham": "daikuḍ",
     "english": "chair",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -140,7 +140,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "gogs",
+    "oodham": "gogs",
     "english": "dog",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -154,7 +154,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’ipuḍ",
+    "oodham": "’ipuḍ",
     "english": "dress",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -168,7 +168,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "wuhi",
+    "oodham": "wuhi",
     "english": "eye",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -182,7 +182,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "cehia",
+    "oodham": "cehia",
     "english": "girl",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -196,7 +196,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "mo’o",
+    "oodham": "mo’o",
     "english": "head",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -210,7 +210,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kanjul",
+    "oodham": "kanjul",
     "english": "lamp, electric light",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -224,7 +224,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "tonlig",
+    "oodham": "tonlig",
     "english": "light",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -238,7 +238,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kulañ",
+    "oodham": "kulañ",
     "english": "medicine",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -252,7 +252,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "viohog",
+    "oodham": "viohog",
     "english": "mesquite bean",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -266,7 +266,7 @@ const lexicon = [
     "image": "images/mesquitebean.png"
   },
   {
-    "﻿oodham": "kui",
+    "oodham": "kui",
     "english": "mesquite tree, tree (general)",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -280,7 +280,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ṣaliv",
+    "oodham": "ṣaliv",
     "english": "pair of pants",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -294,7 +294,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "tapial",
+    "oodham": "tapial",
     "english": "paper",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -308,7 +308,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "mo’ockuḍ",
+    "oodham": "mo’ockuḍ",
     "english": "pillow",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -322,7 +322,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "hodi",
+    "oodham": "hodi",
     "english": "rock, stone",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -336,7 +336,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "mumku",
+    "oodham": "mumku",
     "english": "sick, being sick",
     "pattern": "",
     "partOfSpeech": "verb, intransitive",
@@ -350,7 +350,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "vindoñ",
+    "oodham": "vindoñ",
     "english": "window",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -364,7 +364,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ki:",
+    "oodham": "ki:",
     "english": "house",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -378,7 +378,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "hoas-ha’a",
+    "oodham": "hoas-ha’a",
     "english": "plate",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -392,7 +392,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’uskonakuḍ",
+    "oodham": "’uskonakuḍ",
     "english": "fork",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -406,7 +406,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kusal",
+    "oodham": "kusal",
     "english": "spoon",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -420,7 +420,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ku:paḍag",
+    "oodham": "ku:paḍag",
     "english": "door",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -434,7 +434,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kotoñ",
+    "oodham": "kotoñ",
     "english": "shirt",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -448,7 +448,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kamiṣ",
+    "oodham": "kamiṣ",
     "english": "shirt",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -462,7 +462,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kalsi:do",
+    "oodham": "kalsi:do",
     "english": "sock",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -476,7 +476,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ṣu:ṣk",
+    "oodham": "ṣu:ṣk",
     "english": "shoe, pair of shoes",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -490,7 +490,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kolhi",
+    "oodham": "kolhi",
     "english": "fence",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -504,7 +504,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kahio",
+    "oodham": "kahio",
     "english": "leg",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -518,7 +518,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "taḍ",
+    "oodham": "taḍ",
     "english": "foot",
     "pattern": "5",
     "partOfSpeech": "noun",
@@ -532,7 +532,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "mi:ṣ",
+    "oodham": "mi:ṣ",
     "english": "table",
     "pattern": "3",
     "partOfSpeech": "noun",
@@ -546,7 +546,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "mi:sa",
+    "oodham": "mi:sa",
     "english": "table",
     "pattern": "3",
     "partOfSpeech": "noun",
@@ -560,7 +560,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ha’a",
+    "oodham": "ha’a",
     "english": "pot",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -574,7 +574,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "dagkoanakuḍ",
+    "oodham": "dagkoanakuḍ",
     "english": "towel; napkin",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -588,7 +588,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "tovaṣ",
+    "oodham": "tovaṣ",
     "english": "handkerchief",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -602,7 +602,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "monjel",
+    "oodham": "monjel",
     "english": "headscarf",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -616,7 +616,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "bayuka",
+    "oodham": "bayuka",
     "english": "necklace",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -630,7 +630,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "maskal",
+    "oodham": "maskal",
     "english": "neckerchief",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -644,7 +644,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "hu’u",
+    "oodham": "hu’u",
     "english": "star",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -658,7 +658,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "do’ag",
+    "oodham": "do’ag",
     "english": "mountain",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -672,7 +672,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "vo:g",
+    "oodham": "vo:g",
     "english": "road",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -686,7 +686,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "vainomĭ",
+    "oodham": "vainomĭ",
     "english": "knife",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -700,7 +700,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kavyu",
+    "oodham": "kavyu",
     "english": "horse",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -714,7 +714,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ma:gina",
+    "oodham": "ma:gina",
     "english": "car",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -728,7 +728,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kalit",
+    "oodham": "kalit",
     "english": "car",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -742,7 +742,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’o’ohon",
+    "oodham": "’o’ohon",
     "english": "book",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -756,7 +756,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’i:bdag",
+    "oodham": "’i:bdag",
     "english": "heart",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -770,7 +770,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "da:k",
+    "oodham": "da:k",
     "english": "nose",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -784,7 +784,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "na:k",
+    "oodham": "na:k",
     "english": "ear",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -798,7 +798,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kusvo",
+    "oodham": "kusvo",
     "english": "neck",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -812,7 +812,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ba:ṣo",
+    "oodham": "ba:ṣo",
     "english": "chest",
     "pattern": "3",
     "partOfSpeech": "noun",
@@ -826,7 +826,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kotva",
+    "oodham": "kotva",
     "english": "shoulder",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -840,7 +840,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "to:n",
+    "oodham": "to:n",
     "english": "knee",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -854,7 +854,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’a:ñilo",
+    "oodham": "’a:ñilo",
     "english": "ring",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -868,7 +868,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "nahagio",
+    "oodham": "nahagio",
     "english": "mouse; earring",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -882,7 +882,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "vagtalig",
+    "oodham": "vagtalig",
     "english": "jacket; sweater",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -896,7 +896,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "la:bis",
+    "oodham": "la:bis",
     "english": "pencil",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -910,7 +910,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "cevagĭ",
+    "oodham": "cevagĭ",
     "english": "cloud / clouds",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -924,7 +924,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "taḍai",
+    "oodham": "taḍai",
     "english": "roadrunner",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -938,7 +938,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "sa:vano",
+    "oodham": "sa:vano",
     "english": "bedsheet",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -952,7 +952,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’oidag",
+    "oodham": "’oidag",
     "english": "field",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -966,7 +966,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ñe:ñ",
+    "oodham": "ñe:ñ",
     "english": "tongue",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -980,7 +980,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ta:tamĭ",
+    "oodham": "ta:tamĭ",
     "english": "tooth / teeth",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -994,7 +994,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "tatk",
+    "oodham": "tatk",
     "english": "root / roots",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -1008,7 +1008,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "vo:k",
+    "oodham": "vo:k",
     "english": "stomach; belly",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -1022,7 +1022,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ka:m",
+    "oodham": "ka:m",
     "english": "cheek (of the face)",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1036,7 +1036,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’at",
+    "oodham": "’at",
     "english": "butt; bottom",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1050,7 +1050,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "hujuḍ",
+    "oodham": "hujuḍ",
     "english": "lizard",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1064,7 +1064,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "votoñ",
+    "oodham": "votoñ",
     "english": "button",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -1078,7 +1078,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "vo:da",
+    "oodham": "vo:da",
     "english": "boot",
     "pattern": "3",
     "partOfSpeech": "noun",
@@ -1092,7 +1092,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’u:s",
+    "oodham": "’u:s",
     "english": "stick",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -1106,7 +1106,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "kalna:yo",
+    "oodham": "kalna:yo",
     "english": "pomegranate / pomegranates",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -1120,7 +1120,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ṣa:mt",
+    "oodham": "ṣa:mt",
     "english": "brick / bricks",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -1134,7 +1134,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’o:",
+    "oodham": "’o:",
     "english": "back (of the body)",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -1148,7 +1148,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "cekva",
+    "oodham": "cekva",
     "english": "ankle",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -1162,7 +1162,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ce:gig",
+    "oodham": "ce:gig",
     "english": "name",
     "pattern": "3",
     "partOfSpeech": "noun",
@@ -1176,7 +1176,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ṣondal",
+    "oodham": "ṣondal",
     "english": "soldier",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1190,7 +1190,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ṣavkuḍ",
+    "oodham": "ṣavkuḍ",
     "english": "rattle",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1204,7 +1204,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’o:’o",
+    "oodham": "’o:’o",
     "english": "bone / bones",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -1218,7 +1218,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "koṣva",
+    "oodham": "koṣva",
     "english": "skull",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -1232,7 +1232,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "mavid",
+    "oodham": "mavid",
     "english": "mountain lion",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -1246,7 +1246,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "gevo",
+    "oodham": "gevo",
     "english": "bobcat",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1260,7 +1260,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "cevo",
+    "oodham": "cevo",
     "english": "gopher",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1274,7 +1274,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "navoj",
+    "oodham": "navoj",
     "english": "friend",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -1288,7 +1288,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ho’ibaḍ",
+    "oodham": "ho’ibaḍ",
     "english": "needle",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1302,7 +1302,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "cemait",
+    "oodham": "cemait",
     "english": "tortilla",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1316,7 +1316,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "tlo:gi",
+    "oodham": "tlo:gi",
     "english": "truck",
     "pattern": "7",
     "partOfSpeech": "noun",
@@ -1330,7 +1330,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "maṣcamakuḍ",
+    "oodham": "maṣcamakuḍ",
     "english": "school",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -1344,7 +1344,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ma:kig",
+    "oodham": "ma:kig",
     "english": "gift; present / gifts; presents",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -1358,7 +1358,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’e:’eḍ",
+    "oodham": "’e:’eḍ",
     "english": "blood",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -1372,7 +1372,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "maṣad",
+    "oodham": "maṣad",
     "english": "moon; month",
     "pattern": "1",
     "partOfSpeech": "noun",
@@ -1386,7 +1386,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "taṣ",
+    "oodham": "taṣ",
     "english": "day; sun; time",
     "pattern": "",
     "partOfSpeech": "noun",
@@ -1400,7 +1400,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "givuḍ",
+    "oodham": "givuḍ",
     "english": "belt",
     "pattern": "2",
     "partOfSpeech": "noun",
@@ -1414,7 +1414,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "ma:kai",
+    "oodham": "ma:kai",
     "english": "doctor",
     "pattern": "4",
     "partOfSpeech": "noun",
@@ -1428,7 +1428,7 @@ const lexicon = [
     "image": ""
   },
   {
-    "﻿oodham": "’u’uhig",
+    "oodham": "’u’uhig",
     "english": "bird / birds",
     "pattern": "",
     "partOfSpeech": "noun",

@@ -6,7 +6,7 @@ csv_file = 'lexicon.csv'
 js_file = 'lexicon.js'
 
 # Read CSV
-with open(csv_file, newline='', encoding='utf-8') as f:
+with open(csv_file, newline='', encoding='utf-8-sig') as f:  # <-- change here
     reader = csv.DictReader(f)  # uses first row as headers
     entries = [row for row in reader]
 

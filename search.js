@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       div.innerHTML = `
-        ${entry.oodham ? `<p><strong>O'odham:</strong> ${entry.oodham}</p>` : ""}
+        ${entry.oodham ? `<p><strong>O’odham:</strong> ${entry.oodham}</p>` : ""}
         ${entry.english ? `<p><strong>English:</strong> ${entry.english}</p>` : ""}
         ${entry.pos ? `<p><strong>Part of Speech:</strong> ${entry.pos}</p>` : ""}
         ${entry.pattern ? `<p><strong>Pattern:</strong> ${entry.pattern}</p>` : ""}
