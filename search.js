@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ${entry.oodham ? `<p><strong>O'odham:</strong> ${entry.oodham}</p>` : ""}
         ${entry.english ? `<p><strong>English:</strong> ${entry.english}</p>` : ""}
         ${entry.pos ? `<p><strong>Part of Speech:</strong> ${entry.pos}</p>` : ""}
+        ${entry.pattern ? `<p><strong>Pattern:</strong> ${entry.pattern}</p>` : ""}
         ${entry.pronunciation ? `<p><strong>Pronunciation:</strong> ${entry.pronunciation}</p>` : ""}
         ${entry.reduplicated ? `<p><strong>Reduplicated:</strong> ${entry.reduplicated}</p>` : ""}
         ${entry.redup_pronunciation ? `<p><strong>Reduplicated Pronunciation:</strong> ${entry.redup_pronunciation}</p>` : ""}
@@ -72,6 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ${entry.audio ? `<audio controls src="${entry.audio}"></audio>` : ""}
         ${entry.image ? `<img src="${entry.image}" alt="${entry.english || 'image'}">` : ""}
       `;
+
+
+
 
       resultsDiv.appendChild(div);
     });
