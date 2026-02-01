@@ -27,7 +27,7 @@ function performSearch() {
   const matches = lexicon.filter(entry => {
     const wordMatch =
       (entry.english && entry.english.toLowerCase().includes(query)) ||
-      (entry.oodham && entry.oodham.toLowerCase().includes(query)) ||
+      (entry.odham && entry.odham.toLowerCase().includes(query)) ||
       (entry.reduplicated && entry.reduplicated.toLowerCase().includes(query));
 
     const dialectMatch = selectedDialect
@@ -64,9 +64,9 @@ function performSearch() {
 
     // Build card HTML conditionally
     div.innerHTML = `
-      ${entry.oodham ? `<p><strong>O'odham:</strong> ${entry.oodham}</p>` : ""}
+      ${entry.odham ? `<p><strong>O'odham:</strong> ${entry.odham}</p>` : ""}
       ${entry.english ? `<p><strong>English:</strong> ${entry.english}</p>` : ""}
-      ${entry.partOfSpeech ? `<p><strong>Part of Speech:</strong> ${entry.partOfSpeech}</p>` : ""}
+      ${entry.pos ? `<p><strong>Part of Speech:</strong> ${entry.pos}</p>` : ""}
       ${entry.pronunciation ? `<p><strong>Pronunciation:</strong> ${entry.pronunciation}</p>` : ""}
       ${entry.reduplicated ? `<p><strong>Reduplicated:</strong> ${entry.reduplicated}</p>` : ""}
       ${entry.redup_pronunciation ? `<p><strong>Reduplicated Pronunciation:</strong> ${entry.redup_pronunciation}</p>` : ""}

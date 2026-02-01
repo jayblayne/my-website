@@ -157,7 +157,6 @@ main::after {
   }
 }
 
-
 /* ---------- Forms ---------- */
 input[type="text"],
 select,
@@ -237,7 +236,6 @@ footer {
   }
 }
 
-
 /* ---------- Teaching & Outreach Page ---------- */
 main.teaching-page {
   padding: 2rem;
@@ -302,7 +300,6 @@ main.teaching-page ul li {
 
 /* Dropdown styling */
 
-
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -345,3 +342,4 @@ main.teaching-page ul li {
 ul {
   padding-left: 40px;
 }
+

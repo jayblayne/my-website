@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- See https://github.com/sillsdev/lift-standard for more information on the format used here. -->
+<lift producer="SIL.FLEx 9.2.11.1154" version="0.13">
+<header>
+<ranges>
+<range id="dialect" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="etymology" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="grammatical-info" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="lexical-relation" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="note-type" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="paradigm" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="reversal-type" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="semantic-domain-ddp4" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="status" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="users" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="location" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<!-- The following ranges are produced by FieldWorks Language Explorer, and are not part of the LIFT standard. -->
+<range id="anthro-code" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="translation-type" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<!-- The parts of speech are duplicated in another range because derivational affixes require a "From" PartOfSpeech as well as a "To" PartOfSpeech. -->
+<range id="from-part-of-speech" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="morph-type" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="exception-feature" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="inflection-feature" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="inflection-feature-type" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+<range id="do-not-publish-in" href="file://C:/Mac/Home/Desktop/Website/Website.lift-ranges"/>
+</ranges>
+<fields>
+<field tag="cv-pattern">
+<form lang="en"><text>This records the syllable pattern for a LexPronunciation in FieldWorks.</text></form>
+</field>
+<field tag="tone">
+<form lang="en"><text>This records the tone information for a LexPronunciation in FieldWorks.</text></form>
+</field>
+<field tag="comment">
+<form lang="en"><text>This records a comment (note) in a LexEtymology in FieldWorks.</text></form>
+</field>
+<field tag="import-residue">
+<form lang="en"><text>This records residue left over from importing a standard format file into FieldWorks (or LinguaLinks).</text></form>
+</field>
+<field tag="literal-meaning">
+<form lang="en"><text>This field is used to store a literal meaning of the entry.  Typically, this field is necessary only for a compound or an idiom where the meaning of the whole is different from the sum of its parts.</text></form>
+</field>
+<field tag="summary-definition">
+<form lang="en"><text>A summary definition (located at the entry level in the Entry pane) is a general definition summarizing all the senses of a primary entry. It has no theoretical value; its use is solely pragmatic.</text></form>
+</field>
+<field tag="exemplar">
+<form lang="en"><text>This field stores the exemplar form for the current sense.</text></form>
+</field>
+<field tag="scientific-name">
+<form lang="en"><text>This field stores the scientific name pertinent to the current sense.</text></form>
+</field>
+</fields>
+</header>
+<entry dateCreated="2026-02-01T16:19:12Z" dateModified="2026-02-01T16:29:02Z" id="gogs_de23f73a-f3ef-4226-9ad8-79bee4895a89" guid="de23f73a-f3ef-4226-9ad8-79bee4895a89">
+<lexical-unit>
+<form lang="ood-x-pima"><text>gogs</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<pronunciation>
+<media href="audio1.mp3">
+</media></pronunciation>
+<sense id="5914fde3-09ae-48c6-ae70-c67d3fe28ce1">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>dog</text></gloss>
+<reversal type="en"><form lang="en"><text>dog</text></form>
+</reversal>
+</sense>
+</entry>
+<entry dateCreated="2026-02-01T16:20:14Z" dateModified="2026-02-01T16:20:14Z" id="tonlig_5c3e83b3-8a7c-4a50-8465-1d8b2a7a35d3" guid="5c3e83b3-8a7c-4a50-8465-1d8b2a7a35d3">
+<lexical-unit>
+<form lang="ood-x-pima"><text>tonlig</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="6e8e9109-bde5-4fee-b787-c114b72b4679">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>light</text></gloss>
+<reversal type="en"><form lang="en"><text>light</text></form>
+</reversal>
+</sense>
+</entry>
+<entry dateCreated="2026-02-01T16:24:23Z" dateModified="2026-02-01T16:24:23Z" id="tapial_ec8c5ad9-8cea-4efb-8269-5c077d6fa87a" guid="ec8c5ad9-8cea-4efb-8269-5c077d6fa87a">
+<lexical-unit>
+<form lang="ood-x-pima"><text>tapial</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="3bf08e25-cd1a-4fbf-a360-e49cd51287fb">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>paper</text></gloss>
+</sense>
+</entry>
+</lift>
