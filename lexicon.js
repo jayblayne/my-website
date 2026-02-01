@@ -1056,7 +1056,7 @@ const lexicon = [
     "partOfSpeech": "noun",
     "pronunciation": "[ˈt̪ɑp.iɑɽ̥]",
     "reduplicated": "tatpial",
-    "redup_pronunciation": "[ˈt̪ɑtp.jɑɽ̥]",
+    "redup_pronunciation": "[ˈt̪ɑt.pjɑɽ̥]",
     "redup_meaning": "papers",
     "dialect": "",
     "examples": "’O’ohon g ’e-ce:gig ’id ’ab tapial.::Sign your name on this paper.",
