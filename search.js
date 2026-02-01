@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const div = document.createElement("div");
       div.className = "card";
 
+      // Prepare examples
       let examplesHTML = "";
       if (entry.examples) {
         const exampleList = entry.examples.split("||");
@@ -59,8 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
         examplesHTML = `<p><strong>Examples:</strong><br>${examplesHTML}</p>`;
       }
 
+      // Build entry HTML
       div.innerHTML = `
         ${entry.oodham ? `<p><strong>O’odham:</strong> ${entry.oodham}</p>` : ""}
+        ${entry.audio ? `<p><strong>Audio:</strong> <audio controls src="${entry.audio}"></audio></p>` : ""}
         ${entry.english ? `<p><strong>English:</strong> ${entry.english}</p>` : ""}
         ${entry.pos ? `<p><strong>Part of Speech:</strong> ${entry.pos}</p>` : ""}
         ${entry.pattern ? `<p><strong>Pattern:</strong> ${entry.pattern}</p>` : ""}
@@ -70,12 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ${entry.redup_meaning ? `<p><strong>Reduplicated Meaning:</strong> ${entry.redup_meaning}</p>` : ""}
         ${entry.dialect ? `<p><strong>Dialect:</strong> ${entry.dialect}</p>` : ""}
         ${examplesHTML ? examplesHTML : ""}
-        ${entry.audio ? `<audio controls src="${entry.audio}"></audio>` : ""}
         ${entry.image ? `<img src="${entry.image}" alt="${entry.english || 'image'}">` : ""}
       `;
-
-
-
 
       resultsDiv.appendChild(div);
     });
