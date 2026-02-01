@@ -1426,5 +1426,19 @@ const lexicon = [
     "examples": "Napt 'am o ce:gim g ma:kai?::Are you going to go see the doctor?",
     "audio": "",
     "image": ""
+  },
+  {
+    "﻿oodham": "’u’uhig",
+    "english": "bird / birds",
+    "pattern": "",
+    "partOfSpeech": "noun",
+    "pronunciation": "[ˈʔu.ʔu.hig̥]",
+    "reduplicated": "",
+    "redup_pronunciation": "",
+    "redup_meaning": "",
+    "dialect": "",
+    "examples": "Mu’i ’o ’an ñe:ñhim g ’u’uhig.::There are a lot of birds flying by.",
+    "audio": "",
+    "image": ""
   }
 ];
