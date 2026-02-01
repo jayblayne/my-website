@@ -1,0 +1,121 @@
+﻿.letHead{
+	-moz-column-count:1;
+	-webkit-column-count:1;
+	column-count:1;
+	clear:both;
+	width:100%;
+	text-align:center;
+	text-indent:-12pt;
+	margin-left:21pt;
+	flex-line-height:12pt;
+	line-height:12pt;
+	padding-bottom:3pt;
+	padding-top:12pt;
+}
+body{
+	font-size:10pt;
+}
+span[lang='en']{
+	font-family:'Charis SIL',serif;
+	font-size:10pt;
+}
+span[lang='ood-x-pima']{
+	font-family:'Charis SIL',serif;
+	font-size:10pt;
+}
+.letter[lang='en']{
+	font-size:14pt;
+	font-weight:bold;
+}
+.letter[lang='ood-x-pima']{
+	font-size:14pt;
+	font-weight:bold;
+}
+a{
+	text-decoration:inherit;
+	color:inherit;
+}
+*[dir='ltr'], *[dir='rtl']{
+	unicode-bidi:isolate;
+	unicode-bidi:-ms-isolate;
+	unicode-bidi:-moz-isolate;
+}
+.entry{
+	clear:both;
+	white-space:pre-wrap;
+}
+.entry{
+	text-indent:-12pt;
+	margin-left:21pt;
+	flex-line-height:12pt;
+	line-height:12pt;
+	padding-bottom:2pt;
+	padding-top:1pt;
+	font-size:10pt;
+}
+.entry span[lang='en']{
+	font-size:10pt;
+}
+.entry span[lang='ood-x-pima']{
+	font-size:10pt;
+}
+.entry .mainheadword> .mainheadwor+ .mainheadwor:before{
+	content:' ';
+}
+.entry .mainheadword> span:last-child:after{
+	content:' ';
+}
+.entry .mainheadword> span[lang='ood-x-pima']{
+	font-weight:bold;
+}
+.entry .mainheadword> span{
+	font-weight:bold;
+}
+.entry .mainheadword> span span[lang='en']{
+	font-weight:bold;
+}
+.entry .mainheadword> span span[lang='ood-x-pima']{
+	font-weight:bold;
+}
+.entry .senses>  span.sensecontent +  span:before{
+	content:'  ';
+}
+.entry .senses:before{
+	content:' ';
+}
+.entry .senses:after{
+	content:'  ';
+}
+.entry .senses > .sensecontent .sensenumber{
+	font-weight:bold;
+}
+.entry .senses > .sensecontent .sensenumber:after{
+	content:') ';
+}
+.entry .senses .morphosyntaxanalysis:after{
+	content:'  ';
+}
+.entry .senses .morphosyntaxanalysis{
+	font-style:italic;
+}
+.entry .senses .morphosyntaxanalysis span[lang='en']{
+	font-style:italic;
+}
+.entry .senses .morphosyntaxanalysis span[lang='ood-x-pima']{
+	font-style:italic;
+}
+.entry .senses .morphosyntaxanalysis .partofspeech> .partofspeec+ .partofspeec:before{
+	content:' ';
+}
+.entry .senses .definitionorgloss> .definitionorglos+ .definitionorglos:before{
+	content:' ';
+}
+.entry .pronunciations> .pronunciation + .pronunciation:before{
+	content:', ';
+}
+.entry .pronunciations:after{
+	content:' ';
+}
+.entry .pronunciations .mediafiles:before{
+	content:' ';
+}

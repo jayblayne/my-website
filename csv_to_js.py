@@ -1,20 +1,19 @@
 import csv
 import json
 
-input_file = "lexicon.csv"
-output_file = "lexicon.js"
+# File names
+csv_file = 'lexicon.csv'
+js_file = 'lexicon.js'
 
-entries = []
+# Read CSV
+with open(csv_file, newline='', encoding='utf-8') as f:
+    reader = csv.DictReader(f)  # uses first row as headers
+    entries = [row for row in reader]
 
-with open(input_file, newline="", encoding="utf-8-sig") as f:
-    reader = csv.DictReader(f)
-    for row in reader:
-        entries.append(row)
+# Write JS file
+with open(js_file, 'w', encoding='utf-8') as f:
+    f.write('const lexicon = ')
+    json.dump(entries, f, indent=2, ensure_ascii=False)
+    f.write(';')
 
-with open(output_file, "w", encoding="utf-8") as f:
-    f.write("const lexicon = ")
-    json.dump(entries, f, ensure_ascii=False, indent=2)
-    f.write(";")
-
-print("lexicon.js created!")
-
+print(f"✅ {js_file} created with {len(entries)} entries.")

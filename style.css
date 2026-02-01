@@ -343,3 +343,218 @@ ul {
   padding-left: 40px;
 }
 
+/* ---------- Lists ---------- */
+ul {
+  padding-left: 40px; /* keep existing indentation for bullets */
+}
+
+ol {
+  padding-left: 40px; /* indent numbered lists the same as bullets */
+  margin-bottom: 1rem; /* optional spacing after list */
+}
+
+ol li {
+  margin-bottom: 0.5rem; /* optional spacing between numbers */
+}
+
+/* ---------- Tables ---------- */
+
+
+.example-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  table-layout: fixed; /* fixes column widths */
+}
+
+.example-table th, 
+.example-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+  overflow-wrap: break-word; /* wrap long text properly */
+}
+
+.example-table th:nth-child(1) { width: 20%; } /* Singular */
+.example-table th:nth-child(2) { width: 25%; } /* Plural */
+.example-table th:nth-child(3) { width: 15%; } /* Pattern */
+.example-table th:nth-child(4) { width: 40%; } /* Meaning */
+
+.example-table th {
+  background-color: #3498db;
+  color: #fff;
+  text-align: left;
+}
+
+.example-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+
+/* ---------- reference chart ---------- */
+
+
+.reference-chart {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* fixes column widths */
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reference-chart th, .reference-chart td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  vertical-align: top;
+}
+
+.reference-chart th {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.reference-chart tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Set fixed column widths */
+.reference-chart th:nth-child(1),
+.reference-chart td:nth-child(1) { width: 10%; }  /* Pattern */
+.reference-chart th:nth-child(2),
+.reference-chart td:nth-child(2) { width: 25%; }  /* What to Copy */
+.reference-chart th:nth-child(3),
+.reference-chart td:nth-child(3) { width: 25%; }  /* Vowel Change */
+.reference-chart th:nth-child(4),
+.reference-chart td:nth-child(4) { width: 40%; }  /* Example */
+
+
+/* Set fixed column widths */
+
+.reference-chart th:nth-child(1),
+.reference-chart td:nth-child(1) {
+  width: 15%;  /* increase from 10% to 15% */
+}
+
+/* Set fixed column wrap */
+
+
+.reference-chart th {
+  background-color: #3498db;
+  color: #fff;
+  white-space: nowrap; /* prevent wrapping */
+}
+
+
+/* formatting for reduplication patterns */
+
+
+.redup-patterns-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.redup-patterns-table th, .redup-patterns-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  vertical-align: top;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.redup-patterns-table th {
+  background-color: #3498db;
+  color: #fff;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.redup-patterns-table td:first-child {
+  width: 20%; /* Pattern column */
+  font-weight: bold;
+}
+
+.redup-patterns-table td:nth-child(2) {
+  width: 40%; /* Rule/Description column */
+}
+
+.redup-patterns-table td:nth-child(3) {
+  width: 40%; /* Example column */
+}
+
+.redup-patterns-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+
+/* center search box */
+
+
+
+.search-container {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 10px;              /* space between input and dropdown */
+  margin: 20px 0;         /* spacing above and below */
+}
+
+.search-container input,
+.search-container select {
+  width: 300px;           /* or a % like 50% for responsive width */
+  max-width: 90%;         /* ensures it fits on mobile */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/*search results spacing */
+/* Center the search container */
+.search-container {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+/* Inputs and select centered and styled */
+#searchInput, #dialectSelect {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Results cards */
+#results .card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+#results .card img {
+  max-width: 200px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+#results .card audio {
+  margin-top: 10px;
+}

@@ -79,27 +79,261 @@
 </header>
 
 <main>
-  <h2>Reduplication Dictionary</h2>
-  <p>The Reduplication Dictionary is meant to help learners find reduplicated forms of words
-    easily. You can search by English word or O’odham word. If you already know the reduplicated
-    word, you can type it in and find its unreduplicated form and meaning. 
-    <br> Some words may
-    be tagged by dialect. If a word has multiple entries across different dialects, you can use 
-  the drop down menu to narrow your search. If you choose a dialect from the drop down menu without searching
-  a word, all the words that are tagged with that dialect will appear..
-  </p>
+ <h1>How to Use the Reduplication Dictionary</h1>
+    
+    <ul>
+        <li><strong>What can you search?</strong>
+            <ul>
+                <li>English words</li>
+                <li>O'odham words (reduplicated or unreduplicated)</li>
+            </ul>
+        </li>
+        
+        <li><strong>How to search:</strong>
+            <ul>
+                <li>If you know an English word: Type it in to find the O'odham reduplicated form</li>
+                <li>If you know an O'odham word (but not its reduplicated form): Type it in to find the reduplicated version</li>
+                <li>If you already know the reduplicated word: Type it in to find the base form and meaning</li>
+            </ul>
+        </li>
+        
+        <li><strong>Working with dialects:</strong>
+            <ul>
+                <li>Some words are marked by dialect</li>
+                <li>Use the drop-down menu to filter by dialect</li>
+                <li>To see all words from a specific dialect, select it from the drop-down without typing a search term</li>
+            </ul>
+        </li>
+        
+        <li><strong>Understanding entry groups:</strong> Each dictionary entry includes information about which reduplication group it belongs to. Groups are based on different reduplicative patterns in O'odham. You can learn more about what each pattern means in the section below.</li>
+    </ul>
+    <br>
 
   <!-- Search inputs -->
+ <div class="search-container">
   <input type="text" id="searchInput" placeholder="Search English, O'odham, or Reduplicated form..." />
   <select id="dialectSelect">
     <option value="">All Dialects</option>
     <!-- Options will be auto-populated from lexicon.js -->
   </select>
+  <div id="results"></div>
+</div>
+
+<!-- Include lexicon.js first, then search.js -->
+<script src="lexicon.js"></script>
+<script src="search.js"></script>
+
+
+<hr>
+  <br>
+  
+  <h1>O'odham Reduplication Patterns Guide</h1>
+<p></p>    
+    <p>In O'odham, most nouns form their plural by <strong>reduplication</strong> – copying part of the word and inserting it back into the word. There are six main patterns to learn, a seventh category for irregular forms that don't follow predictable patterns  and one special rule for words that begin with <em><b>w</b></em> or <em><b>v</b></em>.</p>
+    
+    <hr>
+    <br>
+    <h2>The Seven Reduplication Patterns</h2>
+    
+    <table class="redup-patterns-table">
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Rule / Description</th>
+      <th>Example(s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pattern 1: Copy C</td>
+      <td>Copy the first consonant (C) and insert it after the first vowel</td>
+      <td><strong>gaso</strong> → ga-<strong>g</strong>-so (fox → foxes)</td>
+    </tr>
+    <tr>
+      <td>Pattern 2: Copy CV</td>
+      <td>Copy the first consonant AND vowel (CV) and insert after the first vowel</td>
+      <td><strong>novĭ</strong> → no-<strong>no</strong>-vĭ (hand → hands)</td>
+    </tr>
+    <tr>
+      <td>Pattern 3: Copy C and Shorten First Vowel</td>
+      <td>Copy the first consonant (C), insert it, and shorten the first vowel (ā → a)</td>
+      <td><strong>pa:do</strong> → pa-<strong>p</strong>-do (duck → ducks)</td>
+    </tr>
+    <tr>
+      <td>Pattern 4: Copy CV and Shorten First Vowel</td>
+      <td>Copy the first consonant and vowel (CV), insert them, and shorten the first vowel (ī → i)</td>
+      <td><strong>si:s</strong> → si-<strong>si</strong>-s (sibling → siblings)</td>
+    </tr>
+    <tr>
+      <td>Pattern 5: Copy CV and Lengthen First Vowel</td>
+      <td>Copy the first consonant and vowel (CV), insert them, and lengthen the first vowel (a → ā)</td>
+      <td><strong>ban</strong> → ba:-<strong>ba</strong>-n (coyote → coyotes)</td>
+    </tr>
+    <tr>
+      <td>Pattern 6: Glottal Stop and Copy VC</td>
+      <td>Insert a glottal stop (') after the first vowel, then copy the first vowel and consonant (VC) and insert after the glottal stop</td>
+      <td><strong>sikol</strong> → si-<strong>'is</strong>-kol (circle → circles)</td>
+    </tr>
+    <tr>
+      <td>Pattern 7: Irregular Plurals</td>
+      <td>These plurals cannot be predicted—they must be memorized individually</td>
+      <td>
+        <strong>viappoi</strong> → vi:piop (boy → boys)<br>
+        <strong>bahi</strong> → ba:bhai (tail → tails)<br>
+        <strong>'ali</strong> → 'a'al (baby → babies)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+    
+    <hr>
+    
+   <p>
+     <h2>Special Rule: Words Beginning with <em>W</em> or <em>V</em></h2>
+    
+    <p>When a word begins with <strong>w</strong> or <strong>v</strong>, follow these steps:</p>
+    <ol>
+        <li>Change the <strong>w</strong> or <strong>v</strong> to <strong>p</strong></li>
+        <li>Make any other changes as usual</li>
+      
+    </ol>
+    
+    <h3>Examples:</h3>
+    
+   <table class="example-table">
+  <thead>
+    <tr>
+      <th>Singular</th>
+      <th>Plural</th>
+      <th>Pattern</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>vakial</td>
+      <td>va<strong>p</strong>kial</td>
+      <td>Pattern 1</td>
+      <td>cowboy → cowboys</td>
+    </tr>
+    <tr>
+      <td>vaika</td>
+      <td>va<strong>pa</strong>ika</td>
+      <td>Pattern 2</td>
+      <td>ditch → ditches</td>
+    </tr>
+    <tr>
+      <td>va:so</td>
+      <td>va<strong>p</strong>so</td>
+      <td>Pattern 3</td>
+      <td>can → cans</td>
+    </tr>
+    <tr>
+      <td>vo:g</td>
+      <td>vo<strong>p</strong>og</td>
+      <td>Pattern 3</td>
+      <td>road → roads</td>
+    </tr>
+    <tr>
+      <td>vag</td>
+      <td>va:<strong>pa</strong>g</td>
+      <td>Pattern 5</td>
+      <td>hole → holes</td>
+    </tr>
+    <tr>
+      <td>vadadk</td>
+      <td>va<strong>'ap</strong>dadk</td>
+      <td>Pattern 6</td>
+      <td>shiny/bald → (pl.) shiny/bald</td>
+    </tr>
+  </tbody>
+</table>
+    <p>
+    
+    <div class="key-pattern">
+        <strong>Key pattern:</strong> w/v → <strong>p</strong> + copy vowel
+    </div>
+    </p>
+    <hr>
+    
+   <p> <h2>Quick Reference Chart</h2>
+    
+    <table class="reference-chart">
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>What to Copy</th>
+      <th>Vowel Change</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>C only</td>
+      <td>no change</td>
+      <td>gaso → gagso</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>CV</td>
+      <td>no change</td>
+      <td>novĭ → nonovĭ</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>C only</td>
+      <td><strong>shorten</strong></td>
+      <td>pa:do → papdo</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>CV</td>
+      <td><strong>shorten</strong></td>
+      <td>si:s → sisis</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>CV</td>
+      <td><strong>lengthen</strong></td>
+      <td>ban → bā:ban</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>VC (after ')</td>
+      <td>insert ' first</td>
+      <td>sikol → si'iskol</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><strong>irregular</strong></td>
+      <td>varies</td>
+      <td>viappoi → vi:piop</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    <p>
+    <hr>
+    
+    <p><h2>Reduplication Tips</h2>
+    
+    <ol>
+        <li><strong>Identify the first consonant and vowel</strong> in the singular form</li>
+        <li><strong>Determine which pattern</strong> the word follows (this requires memorization)</li>
+        <li><strong>Apply the copying rule</strong> for that pattern</li>
+        <li><strong>Check vowel length</strong> – does it stay the same, shorten, or lengthen?</li>
+        <li><strong>Remember the w/v rule</strong> – these consonants always change to p!</li>
+    </ol>
+    
+    <hr>
 
   <div id="results"></div>
 
-<script src="lexicon.js"></script>
-<script src="search.js"></script>
+
 
 </main>
 
