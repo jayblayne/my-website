@@ -2,6 +2,7 @@ const lexicon = [
   {
     "﻿oodham": "’ali",
     "english": "baby",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔɑ.ɽi]",
     "reduplicated": "’a’al",
@@ -15,6 +16,7 @@ const lexicon = [
   {
     "﻿oodham": "hoa",
     "english": "basket",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[hwɑ]",
     "reduplicated": "hoaha",
@@ -28,6 +30,7 @@ const lexicon = [
   {
     "﻿oodham": "vo’ikuḍ",
     "english": "bed",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈvɔ.ʔi.kuɖ̥]",
     "reduplicated": "vo:pikuḍ/wo:pikuḍ",
@@ -41,6 +44,7 @@ const lexicon = [
   {
     "﻿oodham": "’iks",
     "english": "blanket, cloth",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ʔiks]",
     "reduplicated": "’i’iks",
@@ -54,6 +58,7 @@ const lexicon = [
   {
     "﻿oodham": "kahon",
     "english": "box",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɑ.hɔn̥]",
     "reduplicated": "kakhon",
@@ -67,6 +72,7 @@ const lexicon = [
   {
     "﻿oodham": "viappoi",
     "english": "boy, boys",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈvjɑp.pɔi]",
     "reduplicated": "vi:piop",
@@ -80,6 +86,7 @@ const lexicon = [
   {
     "﻿oodham": "’oag",
     "english": "brain",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[wɑ̰g̥]",
     "reduplicated": "’oa’ag",
@@ -93,6 +100,7 @@ const lexicon = [
   {
     "﻿oodham": "mi:tol",
     "english": "cat",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmiː.t̪ɔɽ̥]",
     "reduplicated": "mimitol",
@@ -106,10 +114,11 @@ const lexicon = [
   {
     "﻿oodham": "mi:stol",
     "english": "cat",
+    "pattern": "3",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmiː.t̪ɔɽ̥]",
     "reduplicated": "mimitol",
-    "redup_pronunciation": "[ˈmi.mi.tɔɽ̥]",
+    "redup_pronunciation": "[ˈmims.tɔɽ̥]",
     "redup_meaning": "cats",
     "dialect": "Tohono O’odham",
     "examples": "Napt gegos g mi:tol?::Did you feed the cat?",
@@ -119,6 +128,7 @@ const lexicon = [
   {
     "﻿oodham": "daikuḍ",
     "english": "chair",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈd̪ɑi.kuɖ̥]",
     "reduplicated": "dadaikuḍ",
@@ -132,6 +142,7 @@ const lexicon = [
   {
     "﻿oodham": "gogs",
     "english": "dog",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[gɔg̥s]",
     "reduplicated": "gogogs",
@@ -145,6 +156,7 @@ const lexicon = [
   {
     "﻿oodham": "’ipuḍ",
     "english": "dress",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔi.puɖ̥]",
     "reduplicated": "’i’ipuḍ",
@@ -158,6 +170,7 @@ const lexicon = [
   {
     "﻿oodham": "wuhi",
     "english": "eye",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈwṳi]",
     "reduplicated": "vu:pui/wu:pui",
@@ -171,6 +184,7 @@ const lexicon = [
   {
     "﻿oodham": "cehia",
     "english": "girl",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈcɯ.hjɑ]",
     "reduplicated": "cecia",
@@ -184,6 +198,7 @@ const lexicon = [
   {
     "﻿oodham": "mo’o",
     "english": "head",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmɔ.ʔɔ]",
     "reduplicated": "mo:mĭ",
@@ -197,6 +212,7 @@ const lexicon = [
   {
     "﻿oodham": "kanjul",
     "english": "lamp, electric light",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɑn.ɟuɽ̥]",
     "reduplicated": "kakanjul",
@@ -210,6 +226,7 @@ const lexicon = [
   {
     "﻿oodham": "tonlig",
     "english": "light",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈtɔn.ɽig̥]",
     "reduplicated": "",
@@ -223,6 +240,7 @@ const lexicon = [
   {
     "﻿oodham": "kulañ",
     "english": "medicine",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈku.ɽɑɲ̥]",
     "reduplicated": "kuklañ",
@@ -236,6 +254,7 @@ const lexicon = [
   {
     "﻿oodham": "viohog",
     "english": "mesquite bean",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈvjɔ.hɔg̥]",
     "reduplicated": "",
@@ -249,6 +268,7 @@ const lexicon = [
   {
     "﻿oodham": "kui",
     "english": "mesquite tree, tree (general)",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[kwi]",
     "reduplicated": "kukui",
@@ -262,6 +282,7 @@ const lexicon = [
   {
     "﻿oodham": "ṣaliv",
     "english": "pair of pants",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʂɑ.ɽiv̥]",
     "reduplicated": "ṣaṣaliv",
@@ -275,6 +296,7 @@ const lexicon = [
   {
     "﻿oodham": "tapial",
     "english": "paper",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈt̪ɑp.iɑɽ̥]",
     "reduplicated": "tatpial",
@@ -288,6 +310,7 @@ const lexicon = [
   {
     "﻿oodham": "mo’ockuḍ",
     "english": "pillow",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmɔ.ʔɔc.kuɖ̥]",
     "reduplicated": "mo:mckuḍ",
@@ -301,6 +324,7 @@ const lexicon = [
   {
     "﻿oodham": "hodi",
     "english": "rock, stone",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈhɔ.d̪i]",
     "reduplicated": "hohodi",
@@ -314,6 +338,7 @@ const lexicon = [
   {
     "﻿oodham": "mumku",
     "english": "sick, being sick",
+    "pattern": "",
     "partOfSpeech": "verb, intransitive",
     "pronunciation": "[ˈmum.ku]",
     "reduplicated": "",
@@ -327,6 +352,7 @@ const lexicon = [
   {
     "﻿oodham": "vindoñ",
     "english": "window",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈvin.d̪ɔɲ̥]",
     "reduplicated": "vipindoñ",
@@ -340,6 +366,7 @@ const lexicon = [
   {
     "﻿oodham": "ki:",
     "english": "house",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[kiː]",
     "reduplicated": "ki:kĭ",
@@ -353,6 +380,7 @@ const lexicon = [
   {
     "﻿oodham": "hoas-ha’a",
     "english": "plate",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈhwɑ.sɑ.ʔɑ]",
     "reduplicated": "hoahas-haha’a",
@@ -366,6 +394,7 @@ const lexicon = [
   {
     "﻿oodham": "’uskonakuḍ",
     "english": "fork",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔus.kɔ.nɑ.kuɖ̥]",
     "reduplicated": "’u’uskonakuḍ",
@@ -379,6 +408,7 @@ const lexicon = [
   {
     "﻿oodham": "kusal",
     "english": "spoon",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈku.sɑɽ̥]",
     "reduplicated": "kuksal",
@@ -392,6 +422,7 @@ const lexicon = [
   {
     "﻿oodham": "ku:paḍag",
     "english": "door",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkuː.pɑ.ɖɑg̥]",
     "reduplicated": "ku:kpaḍag",
@@ -405,6 +436,7 @@ const lexicon = [
   {
     "﻿oodham": "kotoñ",
     "english": "shirt",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɔ.t̪ɔɲ]",
     "reduplicated": "koktoñ",
@@ -418,6 +450,7 @@ const lexicon = [
   {
     "﻿oodham": "kamiṣ",
     "english": "shirt",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɑ.miʂ]",
     "reduplicated": "kakmiṣ",
@@ -431,6 +464,7 @@ const lexicon = [
   {
     "﻿oodham": "kalsi:do",
     "english": "sock",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɑɽ.siː.d̪ɔ]",
     "reduplicated": "kakalsi:do",
@@ -444,6 +478,7 @@ const lexicon = [
   {
     "﻿oodham": "ṣu:ṣk",
     "english": "shoe, pair of shoes",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[ʂuːʂk]",
     "reduplicated": "ṣuṣuṣk",
@@ -457,6 +492,7 @@ const lexicon = [
   {
     "﻿oodham": "kolhi",
     "english": "fence",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɔɽ.hi]",
     "reduplicated": "kokolhi",
@@ -470,6 +506,7 @@ const lexicon = [
   {
     "﻿oodham": "kahio",
     "english": "leg",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɑ̤.jɔ]",
     "reduplicated": "kakkio",
@@ -483,6 +520,7 @@ const lexicon = [
   {
     "﻿oodham": "taḍ",
     "english": "foot",
+    "pattern": "5",
     "partOfSpeech": "noun",
     "pronunciation": "[t̪ɑɖ̥]",
     "reduplicated": "ta:taḍ",
@@ -496,9 +534,10 @@ const lexicon = [
   {
     "﻿oodham": "mi:ṣ",
     "english": "table",
+    "pattern": "3",
     "partOfSpeech": "noun",
     "pronunciation": "[miːʂ]",
-    "reduplicated": "mi:mṣ",
+    "reduplicated": "mimṣ",
     "redup_pronunciation": "[ˈmimʂ]",
     "redup_meaning": "tables",
     "dialect": "",
@@ -509,6 +548,7 @@ const lexicon = [
   {
     "﻿oodham": "mi:sa",
     "english": "table",
+    "pattern": "3",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmiː.sɑ]",
     "reduplicated": "mimsa",
@@ -522,6 +562,7 @@ const lexicon = [
   {
     "﻿oodham": "ha’a",
     "english": "pot",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈhɑ.ʔɑ]",
     "reduplicated": "haha’a",
@@ -535,6 +576,7 @@ const lexicon = [
   {
     "﻿oodham": "dagkoanakuḍ",
     "english": "towel; napkin",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈd̪ɑg̥.kɔɑ.nɑ.kuɖ̥]",
     "reduplicated": "dadagkoanakuḍ",
@@ -548,6 +590,7 @@ const lexicon = [
   {
     "﻿oodham": "tovaṣ",
     "english": "handkerchief",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈtɔ.vɑʂ]",
     "reduplicated": "totvaṣ",
@@ -561,6 +604,7 @@ const lexicon = [
   {
     "﻿oodham": "monjel",
     "english": "headscarf",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmɔn.ɟɯɽ̥]",
     "reduplicated": "momonjel",
@@ -574,6 +618,7 @@ const lexicon = [
   {
     "﻿oodham": "bayuka",
     "english": "necklace",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈbɑ.ju.kɑ]",
     "reduplicated": "babyuka",
@@ -587,6 +632,7 @@ const lexicon = [
   {
     "﻿oodham": "maskal",
     "english": "neckerchief",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmɑs.kɑɽ̥]",
     "reduplicated": "mamskal",
@@ -600,6 +646,7 @@ const lexicon = [
   {
     "﻿oodham": "hu’u",
     "english": "star",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈhu.ʔu]",
     "reduplicated": "huhu’u",
@@ -613,6 +660,7 @@ const lexicon = [
   {
     "﻿oodham": "do’ag",
     "english": "mountain",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[d̪ɔ̰ɑg̥]",
     "reduplicated": "do:do’ag",
@@ -626,6 +674,7 @@ const lexicon = [
   {
     "﻿oodham": "vo:g",
     "english": "road",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[vɔːg̥]",
     "reduplicated": "vopog",
@@ -639,6 +688,7 @@ const lexicon = [
   {
     "﻿oodham": "vainomĭ",
     "english": "knife",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈvɑi.nɔ.mĭ̥]",
     "reduplicated": "vapainomĭ",
@@ -652,6 +702,7 @@ const lexicon = [
   {
     "﻿oodham": "kavyu",
     "english": "horse",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɑv.ju]",
     "reduplicated": "kakavyu",
@@ -665,6 +716,7 @@ const lexicon = [
   {
     "﻿oodham": "ma:gina",
     "english": "car",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmɑː.gi.nɑ]",
     "reduplicated": "mamagina",
@@ -678,6 +730,7 @@ const lexicon = [
   {
     "﻿oodham": "kalit",
     "english": "car",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɑ.ɽit]",
     "reduplicated": "kaklit",
@@ -691,6 +744,7 @@ const lexicon = [
   {
     "﻿oodham": "’o’ohon",
     "english": "book",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔɔ.ʔɔ̆.hɔn]",
     "reduplicated": "’o’’ohon",
@@ -704,6 +758,7 @@ const lexicon = [
   {
     "﻿oodham": "’i:bdag",
     "english": "heart",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔiːb.d̪ɑg̥]",
     "reduplicated": "’i’ibdag",
@@ -717,6 +772,7 @@ const lexicon = [
   {
     "﻿oodham": "da:k",
     "english": "nose",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[d̪ɑːk]",
     "reduplicated": "da:dk",
@@ -730,6 +786,7 @@ const lexicon = [
   {
     "﻿oodham": "na:k",
     "english": "ear",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[nɑːk]",
     "reduplicated": "na:nk",
@@ -743,6 +800,7 @@ const lexicon = [
   {
     "﻿oodham": "kusvo",
     "english": "neck",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkus.vɔ]",
     "reduplicated": "kuksvo",
@@ -756,6 +814,7 @@ const lexicon = [
   {
     "﻿oodham": "ba:ṣo",
     "english": "chest",
+    "pattern": "3",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈbɑː.ʂɔ]",
     "reduplicated": "babṣo",
@@ -769,6 +828,7 @@ const lexicon = [
   {
     "﻿oodham": "kotva",
     "english": "shoulder",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɔt.vɑ]",
     "reduplicated": "koktva",
@@ -782,6 +842,7 @@ const lexicon = [
   {
     "﻿oodham": "to:n",
     "english": "knee",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[tɔːn̥]",
     "reduplicated": "to:ton",
@@ -795,6 +856,7 @@ const lexicon = [
   {
     "﻿oodham": "’a:ñilo",
     "english": "ring",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔɑː.ɲi.ɽɔ]",
     "reduplicated": "’a’añilo",
@@ -808,6 +870,7 @@ const lexicon = [
   {
     "﻿oodham": "nahagio",
     "english": "mouse; earring",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈnɑ̤ɑg.jɔ]",
     "reduplicated": "nanhagio",
@@ -821,6 +884,7 @@ const lexicon = [
   {
     "﻿oodham": "vagtalig",
     "english": "jacket; sweater",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈvɑg̥.tɑ.ɽig̥] ",
     "reduplicated": "vapagtalig",
@@ -834,6 +898,7 @@ const lexicon = [
   {
     "﻿oodham": "la:bis",
     "english": "pencil",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈɽɑː.bis] ",
     "reduplicated": "lalabis",
@@ -847,6 +912,7 @@ const lexicon = [
   {
     "﻿oodham": "cevagĭ",
     "english": "cloud / clouds",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[cɯː.vɑ.gĭ] ",
     "reduplicated": "",
@@ -860,6 +926,7 @@ const lexicon = [
   {
     "﻿oodham": "taḍai",
     "english": "roadrunner",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[t̪ɑ.ɖɑi]",
     "reduplicated": "tataḍai",
@@ -873,6 +940,7 @@ const lexicon = [
   {
     "﻿oodham": "sa:vano",
     "english": "bedsheet",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈsɑː.vɑ.nɔ]",
     "reduplicated": "sasavano",
@@ -886,6 +954,7 @@ const lexicon = [
   {
     "﻿oodham": "’oidag",
     "english": "field",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔɔi.d̪ɑg̥]",
     "reduplicated": "’o’oidag",
@@ -899,6 +968,7 @@ const lexicon = [
   {
     "﻿oodham": "ñe:ñ",
     "english": "tongue",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[ɲɯːɲ]",
     "reduplicated": "ñeñeñ",
@@ -912,10 +982,11 @@ const lexicon = [
   {
     "﻿oodham": "ta:tamĭ",
     "english": "tooth / teeth",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[t̪ɑː.t̪ɑ.mĭ]",
     "reduplicated": "",
-    "redup_pronunciation": "boots",
+    "redup_pronunciation": "",
     "redup_meaning": "",
     "dialect": "",
     "examples": "Kegcun g ’e-ta:tamĭ!::Brush your teeth!",
@@ -925,6 +996,7 @@ const lexicon = [
   {
     "﻿oodham": "tatk",
     "english": "root / roots",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[t̪ɑt̪k]",
     "reduplicated": "",
@@ -938,6 +1010,7 @@ const lexicon = [
   {
     "﻿oodham": "vo:k",
     "english": "stomach; belly",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[vɔːk]",
     "reduplicated": "vo:pk",
@@ -951,6 +1024,7 @@ const lexicon = [
   {
     "﻿oodham": "ka:m",
     "english": "cheek (of the face)",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[kɑːm]",
     "reduplicated": "ka:kam",
@@ -964,6 +1038,7 @@ const lexicon = [
   {
     "﻿oodham": "’at",
     "english": "butt; bottom",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ʔɑt̪]",
     "reduplicated": "’a’at",
@@ -977,6 +1052,7 @@ const lexicon = [
   {
     "﻿oodham": "hujuḍ",
     "english": "lizard",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈhu.ɟuɖ̥]",
     "reduplicated": "huhujuḍ",
@@ -990,6 +1066,7 @@ const lexicon = [
   {
     "﻿oodham": "votoñ",
     "english": "button",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈvɔ.t̪ɔɲ]",
     "reduplicated": "voptoñ",
@@ -1003,6 +1080,7 @@ const lexicon = [
   {
     "﻿oodham": "vo:da",
     "english": "boot",
+    "pattern": "3",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈvɔː.d̪ɑ]",
     "reduplicated": "vopda",
@@ -1016,6 +1094,7 @@ const lexicon = [
   {
     "﻿oodham": "’u:s",
     "english": "stick",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔuːs]",
     "reduplicated": "’u’us",
@@ -1029,6 +1108,7 @@ const lexicon = [
   {
     "﻿oodham": "kalna:yo",
     "english": "pomegranate / pomegranates",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[kɑɽ.ˈnɑː.jɔ]",
     "reduplicated": "",
@@ -1042,6 +1122,7 @@ const lexicon = [
   {
     "﻿oodham": "ṣa:mt",
     "english": "brick / bricks",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[ʂɑːmt̪]",
     "reduplicated": "",
@@ -1055,6 +1136,7 @@ const lexicon = [
   {
     "﻿oodham": "’o:",
     "english": "back (of the body)",
+    "pattern": "4",
     "partOfSpeech": "noun",
     "pronunciation": "[ʔɔː]",
     "reduplicated": "’o’o",
@@ -1068,6 +1150,7 @@ const lexicon = [
   {
     "﻿oodham": "cekva",
     "english": "ankle",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈcɯk.vɑ]",
     "reduplicated": "ceckva",
@@ -1081,6 +1164,7 @@ const lexicon = [
   {
     "﻿oodham": "ce:gig",
     "english": "name",
+    "pattern": "3",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈcɯː.gig̥]",
     "reduplicated": "cecgig",
@@ -1094,6 +1178,7 @@ const lexicon = [
   {
     "﻿oodham": "ṣondal",
     "english": "soldier",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʂɔn.d̪ɑɽ̥]",
     "reduplicated": "ṣoṣondal",
@@ -1107,6 +1192,7 @@ const lexicon = [
   {
     "﻿oodham": "ṣavkuḍ",
     "english": "rattle",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʂɑv̥.kuɖ̥]",
     "reduplicated": "ṣaṣavkuḍ",
@@ -1120,6 +1206,7 @@ const lexicon = [
   {
     "﻿oodham": "’o:’o",
     "english": "bone / bones",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔɔː.ʔɔ]",
     "reduplicated": "",
@@ -1133,6 +1220,7 @@ const lexicon = [
   {
     "﻿oodham": "koṣva",
     "english": "skull",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈkɔʂ.vɑ]",
     "reduplicated": "kokṣva",
@@ -1146,6 +1234,7 @@ const lexicon = [
   {
     "﻿oodham": "mavid",
     "english": "mountain lion",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmɑ.vid̪]",
     "reduplicated": "maipid",
@@ -1159,6 +1248,7 @@ const lexicon = [
   {
     "﻿oodham": "gevo",
     "english": "bobcat",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈgɯ.vɔ]",
     "reduplicated": "gegevo",
@@ -1172,6 +1262,7 @@ const lexicon = [
   {
     "﻿oodham": "cevo",
     "english": "gopher",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈcɯ.vɔ]",
     "reduplicated": "cecevo",
@@ -1185,6 +1276,7 @@ const lexicon = [
   {
     "﻿oodham": "navoj",
     "english": "friend",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈnɑ.vɔɟ̥]",
     "reduplicated": "naupoj",
@@ -1198,6 +1290,7 @@ const lexicon = [
   {
     "﻿oodham": "ho’ibaḍ",
     "english": "needle",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈhɔ.ʔi.bɑɖ̥]",
     "reduplicated": "hoho’ibaḍ",
@@ -1211,6 +1304,7 @@ const lexicon = [
   {
     "﻿oodham": "cemait",
     "english": "tortilla",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈcɯ.mɑit̥]",
     "reduplicated": "cecemait",
@@ -1224,6 +1318,7 @@ const lexicon = [
   {
     "﻿oodham": "tlo:gi",
     "english": "truck",
+    "pattern": "7",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈtɽɔː.gi]",
     "reduplicated": "tlolgi",
@@ -1237,6 +1332,7 @@ const lexicon = [
   {
     "﻿oodham": "maṣcamakuḍ",
     "english": "school",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmɑʂ.cɑ.mɑ.kuɖ̥]",
     "reduplicated": "mamṣcamakuḍ",
@@ -1250,6 +1346,7 @@ const lexicon = [
   {
     "﻿oodham": "ma:kig",
     "english": "gift; present / gifts; presents",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmɑː.kig̥]",
     "reduplicated": "",
@@ -1263,6 +1360,7 @@ const lexicon = [
   {
     "﻿oodham": "’e:’eḍ",
     "english": "blood",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈʔɯː.ʔɯɖ̥]",
     "reduplicated": "",
@@ -1276,6 +1374,7 @@ const lexicon = [
   {
     "﻿oodham": "maṣad",
     "english": "moon; month",
+    "pattern": "1",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈmɑ.ʂɑd̪̥]",
     "reduplicated": "mamṣad",
@@ -1289,6 +1388,7 @@ const lexicon = [
   {
     "﻿oodham": "taṣ",
     "english": "day; sun; time",
+    "pattern": "",
     "partOfSpeech": "noun",
     "pronunciation": "[t̪ɑʂ]",
     "reduplicated": "",
@@ -1302,13 +1402,28 @@ const lexicon = [
   {
     "﻿oodham": "givuḍ",
     "english": "belt",
+    "pattern": "2",
     "partOfSpeech": "noun",
     "pronunciation": "[ˈgi.vuɖ̥]",
     "reduplicated": "gigivuḍ",
-    "redup_pronunciation": "belt",
+    "redup_pronunciation": "belts",
     "redup_meaning": "[ˈgi.vuɖ̥]",
     "dialect": "",
     "examples": "",
+    "audio": "",
+    "image": ""
+  },
+  {
+    "﻿oodham": "ma:kai",
+    "english": "doctor",
+    "pattern": "4",
+    "partOfSpeech": "noun",
+    "pronunciation": "[ˈmɑː.kɑi]",
+    "reduplicated": "mamakai",
+    "redup_pronunciation": "doctors",
+    "redup_meaning": "[ˈmɑ.mɑ.kɑi]",
+    "dialect": "",
+    "examples": "Napt 'am o ce:gim g ma:kai?::Are you going to go see the doctor?",
     "audio": "",
     "image": ""
   }
