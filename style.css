@@ -571,3 +571,30 @@ ol li {
 #results .card audio {
   margin-top: 10px;
 }
+
+
+.entry-headword {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.audio-icon {
+  cursor: pointer;
+  margin-left: 0.4rem;
+}
+
+.entry-english {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.entry-grammar,
+.entry-ipa,
+.entry-plural {
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.entry-examples {
+  margin-top: 0.5rem;
+}

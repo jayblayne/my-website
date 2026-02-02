@@ -15,7 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
     dialectSelect.appendChild(option);
   });
 
-  // Main search function
+  function playAudio(id) {
+    const audio = document.getElementById(id);
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+  }
+
   function performSearch() {
     const query = searchInput.value.toLowerCase().trim();
     const selectedDialect = dialectSelect.value.toLowerCase();
@@ -41,40 +48,66 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    matches.forEach(entry => {
+    matches.forEach((entry, index) => {
       const div = document.createElement("div");
       div.className = "card";
 
-      // Prepare examples
+      const singularAudioId = `singular-audio-${index}`;
+      const pluralAudioId = `plural-audio-${index}`;
+
+      // Examples
       let examplesHTML = "";
       if (entry.examples) {
         const exampleList = entry.examples.split("||");
         examplesHTML = exampleList
           .map(example => {
-            const [oodhamPhrase, englishTranslation] = example.split("::");
-            return englishTranslation
-              ? `${oodhamPhrase.trim()} – <em>${englishTranslation.trim()}</em>`
-              : oodhamPhrase.trim();
+            const [oodham, english] = example.split("::");
+            return `<div>${oodham.trim()} – <em>${english.trim()}</em></div>`;
           })
-          .join("<br>");
-        examplesHTML = `<p><strong>Examples:</strong><br>${examplesHTML}</p>`;
+          .join("");
       }
 
-      // Build entry HTML with separate audio files
       div.innerHTML = `
-        ${entry.oodham ? `<p><strong>O’odham:</strong> ${entry.oodham}</p>` : ""}
-        ${entry.audio_singular ? `<p><strong>Audio Singular:</strong> <audio controls src="${entry.audio_singular}"></audio></p>` : ""}
-        ${entry.english ? `<p><strong>English:</strong> ${entry.english}</p>` : ""}
-        ${entry.pos ? `<p><strong>Part of Speech:</strong> ${entry.pos}</p>` : ""}
-        ${entry.pattern ? `<p><strong>Pattern:</strong> ${entry.pattern}</p>` : ""}
-        ${entry.pronunciation ? `<p><strong>Pronunciation:</strong> ${entry.pronunciation}</p>` : ""}
-        ${entry.reduplicated ? `<p><strong>Reduplicated:</strong> ${entry.reduplicated}</p>` : ""}
-        ${entry.audio_red ? `<p><strong>Audio Reduplicated:</strong> <audio controls src="${entry.audio_red}"></audio></p>` : ""}
-        ${entry.redup_pronunciation ? `<p><strong>Reduplicated Pronunciation:</strong> ${entry.redup_pronunciation}</p>` : ""}
-        ${entry.redup_meaning ? `<p><strong>Reduplicated Meaning:</strong> ${entry.redup_meaning}</p>` : ""}
-        ${entry.dialect ? `<p><strong>Dialect:</strong> ${entry.dialect}</p>` : ""}
-        ${examplesHTML ? examplesHTML : ""}
-        ${entry.image ? `<img src="${entry.image}" alt="${entry.english || 'image'}">` : ""}
+        <div class="entry-headword">
+          <strong>${entry.oodham || ""}</strong>
+          ${entry.audio_singular ? `
+            <span class="audio-icon" onclick="(${playAudio})('${singularAudioId}')">🔈</span>
+            <audio id="${singularAudioId}" src="${entry.audio_singular}"></audio>
+          ` : ""}
+        </div>
+
+        <div class="entry-english">
+          ${entry.english || ""}
+        </div>
+
+        <div class="entry-grammar">
+  ${entry.partOfSpeech ? entry.partOfSpeech : ""}
+  ${entry.partOfSpeech && entry.pattern ? ", " : ""}
+  ${entry.pattern ? `Pattern ${entry.pattern}` : ""}
+</div>
+
+        ${entry.pronunciation ? `
+          <div class="entry-ipa">
+            <strong>IPA:</strong> ${entry.pronunciation}
+          </div>
+        ` : ""}
+
+        ${entry.reduplicated ? `
+          <div class="entry-plural">
+            <strong>Plural:</strong> ${entry.reduplicated}
+            ${entry.audio_red ? `
+              <span class="audio-icon" onclick="(${playAudio})('${pluralAudioId}')">🔈</span>
+              <audio id="${pluralAudioId}" src="${entry.audio_red}"></audio>
+            ` : ""}
+          </div>
+        ` : ""}
+
+        ${examplesHTML ? `
+          <div class="entry-examples">
+            <strong>Example(s):</strong>
+            ${examplesHTML}
+          </div>
+        ` : ""}
       `;
 
       resultsDiv.appendChild(div);
