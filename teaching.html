@@ -4,18 +4,51 @@
   <meta charset="UTF-8">
   <title>Jeremy Johns – Teaching & Outreach</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Rounded rectangle images */
+    .rounded-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 1rem;
+    }
+
+    /* Floats for images */
+    .float-left-img {
+      float: left;
+      margin-right: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .float-right-img {
+      float: right;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Text alignment wrappers */
+    .text-left { text-align: left; }
+
+    /* Clear floats after section */
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <h1>Jeremy Johns</h1>
-   <nav>
+  <nav>
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="cv.html">CV</a></li>
       <li><a href="teaching.html">Teaching/Outreach</a></li>
-
+    
       <li class="dropdown">
         <a href="#">Language Resources ▾</a>
         <ul class="dropdown-menu">
@@ -24,7 +57,7 @@
           <li><a href="lab.html">'O'odham Lab</a></li>
         </ul>
       </li>
-
+    
     </ul>
   </nav>
 </header>
@@ -33,37 +66,62 @@
 
   <h2>Teaching & Outreach</h2>
 
-   <section class="philosophy-section">
-    <h3>Teaching Philosophy</h3>
-   <p> I view my role as a facilitator who provides students with the tools and resources they need to access and absorb knowledge, emphasizing active engagement over rote memorization. My teaching approach is grounded in Indigenous pedagogical traditions that center learning in the student through guided practice, consistent feedback, and the opportunity to explore and learn from mistakes without fear of negative consequences. I believe the most effective learning happens when students can make real-world connections to material and gain confidence through experimentation and growing mastery of a topic.
-</p> <p>
-This philosophy shapes my work in both language and linguistics courses. In my language classes, where most students are heritage learners reconnecting with their ancestral language, I create low-stakes environments that acknowledge the connection between language learning and identity, allowing students to make mistakes and build confidence through detailed feedback and opportunities for correction. In linguistics courses, I encourage students to "play" with abstract concepts before applying them in assignments—whether that involves recording speech for phonetic analysis or jointly creating fictional societies to explore sociolinguistic interactions. I actively encourage students to communicate openly with me, challenge what they learn, and feel empowered to propose new solutions in their academic work, recognizing that they are in control of their educational journey while I serve as their guide.
+  <!-- Teaching Philosophy (image right, text left) -->
+ <!-- Teaching Philosophy (image right, text left, text wraps around image) -->
+<section class="section" style="margin-bottom:3rem;">
+  <h3 class="text-left">Teaching Philosophy</h3>
+  <img src="images/tic.jpg" alt="teaching in community" class="float-right-img rounded-img">
+  <p class="text-left">
+    I view my role as a facilitator who provides students with the tools and resources they
+    need to access and absorb knowledge, emphasizing active engagement over rote memorization.
+    My teaching approach is grounded in Indigenous pedagogical traditions that center learning
+    in the student through guided practice, consistent feedback, and the opportunity to explore
+    and learn from mistakes without fear of negative consequences. I believe the most effective
+    learning happens when students can make real-world connections to material and gain
+    confidence through experimentation and growing mastery of a topic.
+  </p>
+
+  <p class="text-left">
+    This philosophy shapes my work in both language and linguistics courses. In my language
+    classes, where most students are heritage learners reconnecting with their ancestral
+    language, I create low-stakes environments that acknowledge the connection between language
+    learning and identity, allowing students to make mistakes and build confidence through
+    detailed feedback and opportunities for correction. In linguistics courses, I encourage
+    students to "play" with abstract concepts before applying them in assignments—whether that
+    involves recording speech for phonetic analysis or jointly creating fictional societies to
+    explore sociolinguistic interactions. I actively encourage students to communicate openly
+    with me, challenge what they learn, and feel empowered to propose new solutions in their
+    academic work, recognizing that they are in control of their educational journey while I
+    serve as their guide.
   </p>
 </section>
 
 
-  <section class="outreach-section">
-    <h3>Outreach</h3>
-    <ul>
-      <li>2025: “Culturally Responsive Language Goals: Reimagining Assessment and Pedagogy for Indigenous Revitalization.” 21st Annual Gila River Indian Community Reservation-Wide Teacher In-Service.</li>
+  <!-- Outreach (image right, text left) -->
+  <section class="section-left" style="margin-bottom: 3rem;">
+    <img src="images/certification.jpg" alt="teacher certification" class="float-right-img rounded-img">
+    <div class="text-left">
+      <h3>Outreach</h3>
+      <ul>
+        <li>2025: “Culturally Responsive Language Goals: Reimagining Assessment and Pedagogy for Indigenous Revitalization.” 21st Annual Gila River Indian Community Reservation-Wide Teacher In-Service.</li>
         <li>2025: “Centering Heritage Learners in O'odham Language Revitalization: Challenges, Support, and Community Planning.” Culture Teacher Gathering, Salt River Pima-Maricopa Indian Community.</li>
-     <li>2024: UofA Special Talk: “An analysis of O’odham reduplication and its implications for language revitalization”</li>
-      <li>2023: Project lead for the production of the Ak‑Chin O’odham language dictionary and language survey</li>
-      <li>2023: UofA Language Revitalization Series: “Language Revitalization and Research at Ak‑Chin”</li>
-      <li>2023: CCSU Fall Linguistics Colloquium: “Language Revitalization at the Interfaces…”</li>
-      <li>2022: NAMA Lecture Series (YouTube)</li>
-      <li>2021: “Native American Languages at Yale: Past, Present and Future,” panel discussion</li>
-    </ul>
+        <li>2024: UofA Special Talk: “An analysis of O’odham reduplication and its implications for language revitalization”</li>
+        <li>2023: Project lead for the production of the Ak-Chin O’odham language dictionary and language survey</li>
+        <li>2023: UofA Language Revitalization Series: “Language Revitalization and Research at Ak-Chin”</li>
+        <li>2023: CCSU Fall Linguistics Colloquium: “Language Revitalization at the Interfaces…”</li>
+        <li><a href="https://www.youtube.com/watch?v=lrDR_FXJ0Ng">2022: NAMA Lecture Series (YouTube)</a></li>
+        <li>2021: “Native American Languages at Yale: Past, Present and Future,” panel discussion</li>
+      </ul>
+    </div>
   </section>
-
- 
 
 </main>
 
 <footer>
-  <p>© 2026 Jeremy Johns | <a href="mailto:jeremyjohns@arizona.edu">jeremyjohns@arizona.edu</a></p>
+  <p>© 2026 Jeremy Johns |
+    <a href="mailto:jeremyjohns@arizona.edu">jeremyjohns@arizona.edu</a>
+  </p>
 </footer>
-
 
 </body>
 </html>

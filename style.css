@@ -598,3 +598,43 @@ ol li {
 .entry-examples {
   margin-top: 0.5rem;
 }
+
+
+
+/* Float left image with margin so text wraps around */
+.float-left-img {
+  float: left;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem; /* space below image for wrapping */
+}
+
+/* Float right image with margin so text wraps */
+.float-right-img {
+  float: right;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Section container clears float after content */
+.section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Optional: header and paragraph alignment */
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
