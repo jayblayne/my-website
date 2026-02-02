@@ -15,13 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
     dialectSelect.appendChild(option);
   });
 
-  function playAudio(id) {
+  // Global audio player (required for inline onclick)
+  window.playAudio = function (id) {
     const audio = document.getElementById(id);
     if (audio) {
       audio.currentTime = 0;
       audio.play();
     }
-  }
+  };
 
   function performSearch() {
     const query = searchInput.value.toLowerCase().trim();
@@ -55,24 +56,45 @@ document.addEventListener("DOMContentLoaded", () => {
       const singularAudioId = `singular-audio-${index}`;
       const pluralAudioId = `plural-audio-${index}`;
 
-      // Examples
+      /* ---------- Examples + Example Audio ---------- */
       let examplesHTML = "";
       if (entry.examples) {
         const exampleList = entry.examples.split("||");
+        const audioList = entry.example_audio
+          ? entry.example_audio.split("||")
+          : [];
+
         examplesHTML = exampleList
-          .map(example => {
+          .map((example, i) => {
             const [oodham, english] = example.split("::");
-            return `<div>${oodham.trim()} – <em>${english.trim()}</em></div>`;
+            const exampleAudioId = `example-audio-${index}-${i}`;
+
+            return `
+              <div class="example-line">
+                ${oodham.trim()} – <em>${english.trim()}</em>
+                ${
+                  audioList[i]
+                    ? `
+                      <span class="audio-icon"
+                            onclick="playAudio('${exampleAudioId}')">🔈</span>
+                      <audio id="${exampleAudioId}" src="${audioList[i]}"></audio>
+                    `
+                    : ""
+                }
+              </div>
+            `;
           })
           .join("");
       }
 
+      /* ---------- Entry HTML ---------- */
       div.innerHTML = `
         <div class="entry-headword">
           <strong>${entry.oodham || ""}</strong>
-          ${entry.audio_singular ? `
-            <span class="audio-icon" onclick="(${playAudio})('${singularAudioId}')">🔈</span>
-            <audio id="${singularAudioId}" src="${entry.audio_singular}"></audio>
+          ${entry.sing_audio ? `
+            <span class="audio-icon"
+                  onclick="playAudio('${singularAudioId}')">🔈</span>
+            <audio id="${singularAudioId}" src="${entry.sing_audio}"></audio>
           ` : ""}
         </div>
 
@@ -81,10 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <div class="entry-grammar">
-  ${entry.partOfSpeech ? entry.partOfSpeech : ""}
-  ${entry.partOfSpeech && entry.pattern ? ", " : ""}
-  ${entry.pattern ? `Pattern ${entry.pattern}` : ""}
-</div>
+          ${entry.partOfSpeech ? entry.partOfSpeech : ""}
+          ${entry.partOfSpeech && entry.pattern ? ", " : ""}
+          ${entry.pattern ? `Pattern ${entry.pattern}` : ""}
+        </div>
 
         ${entry.pronunciation ? `
           <div class="entry-ipa">
@@ -95,9 +117,10 @@ document.addEventListener("DOMContentLoaded", () => {
         ${entry.reduplicated ? `
           <div class="entry-plural">
             <strong>Plural:</strong> ${entry.reduplicated}
-            ${entry.audio_red ? `
-              <span class="audio-icon" onclick="(${playAudio})('${pluralAudioId}')">🔈</span>
-              <audio id="${pluralAudioId}" src="${entry.audio_red}"></audio>
+            ${entry.pl_audio ? `
+              <span class="audio-icon"
+                    onclick="playAudio('${pluralAudioId}')">🔈</span>
+              <audio id="${pluralAudioId}" src="${entry.pl_audio}"></audio>
             ` : ""}
           </div>
         ` : ""}
