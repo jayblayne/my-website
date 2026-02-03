@@ -209,7 +209,7 @@ footer {
   text-align: center;
   margin: 40px 0 20px;
   padding: 2rem;
-  background-color: whitesmoke;
+  background-color: none;
   color: black;
 }
 
@@ -249,15 +249,64 @@ footer {
   }
 }
 
-/* ---------- Teaching & Outreach Page ---------- */
-main.teaching-page {
+/* ---------- CV Page ---------- */
+main.cv-page {
   padding: 2rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.50); /* ← transparent */
   border-radius: 8px;
   margin: 20px auto;
   max-width: 900px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
 }
+
+
+main.cv-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+main.cv-page section {
+  margin-top: 1.5rem;
+}
+
+main.cv-page section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2563eb; /* use accent color */
+}
+
+main.cv-page p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+main.cv-page ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+main.cv-page ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/* ---------- Teaching & Outreach Page ---------- */
+main.teaching-page {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.50); /* ← transparent */
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
 
 main.teaching-page h2 {
   font-size: 2rem;
@@ -637,4 +686,342 @@ ol li {
 
 .text-left {
   text-align: left;
+}
+
+
+/* Teaching & Outreach Page Body Class */
+body.teaching::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/tic.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*CV page body class*/
+body.cv-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/saguaro.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*right align text */
+.section.text-right {
+  max-width: 600px;  /* width of the text block */
+  margin-left: auto; /* push it to the right */
+  margin-right: 0;
+  text-align: right;
+}
+
+
+/* ---------- Research Page ---------- */
+main.research-page {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.50); /* ← transparent */
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+
+main.research-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+main.research-page section {
+  margin-top: 1.5rem;
+}
+
+main.research-page section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2563eb; /* use accent color */
+}
+
+main.research-page p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+main.research-page ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+main.research-page ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/*research page body class*/
+body.research-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/saguaros.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------- Home Page ---------- */
+main.home-page {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.20); /* ← transparent */
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+
+main.home-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+main.home-page section {
+  margin-top: 1.5rem;
+}
+
+main.home-page section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2563eb; /* use accent color */
+}
+
+main.home-page p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+main.home-page ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+main.home-page ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/*home page body class*/
+body.home-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/sunset.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------- term Page ---------- */
+main.term-page {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.75); /* ← transparent */
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+
+main.term-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+main.term-page section {
+  margin-top: 1.5rem;
+}
+
+main.term-page section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2563eb; /* use accent color */
+}
+
+main.term-page p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+main.term-page ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+main.term-page ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/*term page body class*/
+body.term-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/wren.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------- redup Page ---------- */
+main.redup-page {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.75); /* ← transparent */
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+
+main.redup-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+main.redup-page section {
+  margin-top: 1.5rem;
+}
+
+main.redup-page section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2563eb; /* use accent color */
+}
+
+main.redup-page p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+main.redup-page ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+main.redup-page ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/*redup page body class*/
+body.redup-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/hanam.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------- lab Page ---------- */
+main.lab-page {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.75); /* ← transparent */
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+
+main.lab-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+main.lab-page section {
+  margin-top: 1.5rem;
+}
+
+main.lab-page section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2563eb; /* use accent color */
+}
+
+main.lab-page p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+main.lab-page ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+main.lab-page ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/*lab page body class*/
+body.lab-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/dictionary.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
 }
