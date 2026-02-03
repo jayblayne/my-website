@@ -3,9 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const dialectSelect = document.getElementById("dialectSelect");
   const resultsDiv = document.getElementById("results");
 
+  // Normalize CSV keys just in case
+  const normalizedLexicon = lexicon.map(entry => {
+    const normalizedEntry = {};
+    for (let key in entry) {
+      normalizedEntry[key.trim()] = entry[key];
+    }
+    return normalizedEntry;
+  });
+
   // Auto-populate dialect dropdown
   const dialectSet = new Set();
-  lexicon.forEach(entry => {
+  normalizedLexicon.forEach(entry => {
     if (entry.dialect) dialectSet.add(entry.dialect);
   });
   dialectSet.forEach(dialect => {
@@ -15,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dialectSelect.appendChild(option);
   });
 
-  // Global audio player (required for inline onclick)
+  // Global audio player
   window.playAudio = function (id) {
     const audio = document.getElementById(id);
     if (audio) {
@@ -31,11 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!query && !selectedDialect) return;
 
-    const matches = lexicon.filter(entry => {
+    const matches = normalizedLexicon.filter(entry => {
       const wordMatch =
-        (entry.english && entry.english.toLowerCase().startsWith(query)) ||
-        (entry.oodham && entry.oodham.toLowerCase().startsWith(query)) ||
-        (entry.reduplicated && entry.reduplicated.toLowerCase().startsWith(query));
+        (entry.english && entry.english.toLowerCase().includes(query)) ||          // main English
+        (entry.oodham && entry.oodham.toLowerCase().includes(query)) ||            // O'odham word
+        (entry.reduplicated && entry.reduplicated.toLowerCase().includes(query)) || // reduplicated word
+        (entry.redup_meaning && entry.redup_meaning.toLowerCase().includes(query)); // meaning of reduplicated
 
       const dialectMatch = selectedDialect
         ? entry.dialect && entry.dialect.toLowerCase() === selectedDialect
@@ -56,13 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const singularAudioId = `singular-audio-${index}`;
       const pluralAudioId = `plural-audio-${index}`;
 
-      /* ---------- Examples + Example Audio ---------- */
+      // Examples
       let examplesHTML = "";
       if (entry.examples) {
         const exampleList = entry.examples.split("||");
-        const audioList = entry.example_audio
-          ? entry.example_audio.split("||")
-          : [];
+        const audioList = entry.example_audio ? entry.example_audio.split("||") : [];
 
         examplesHTML = exampleList
           .map((example, i) => {
@@ -87,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .join("");
       }
 
-      /* ---------- Entry HTML ---------- */
+      // Entry HTML
       div.innerHTML = `
         <div class="entry-headword">
           <strong>${entry.oodham || ""}</strong>
@@ -115,15 +123,17 @@ document.addEventListener("DOMContentLoaded", () => {
         ` : ""}
 
         ${entry.reduplicated ? `
-          <div class="entry-plural">
-            <strong>Plural:</strong> ${entry.reduplicated}
-            ${entry.pl_audio ? `
-              <span class="audio-icon"
-                    onclick="playAudio('${pluralAudioId}')">🔈</span>
-              <audio id="${pluralAudioId}" src="${entry.pl_audio}"></audio>
-            ` : ""}
-          </div>
-        ` : ""}
+  <div class="entry-plural">
+    <strong>Plural:</strong> ${entry.reduplicated}
+    ${entry.redup_meaning ? `<div class="entry-redup-meaning"><em>${entry.redup_meaning}</em></div>` : ""}
+    ${entry.pl_audio ? `
+      <span class="audio-icon"
+            onclick="playAudio('${pluralAudioId}')">🔈</span>
+      <audio id="${pluralAudioId}" src="${entry.pl_audio}"></audio>
+    ` : ""}
+  </div>
+` : ""}
+
 
         ${examplesHTML ? `
           <div class="entry-examples">
