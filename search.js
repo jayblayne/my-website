@@ -118,13 +118,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         ${entry.pronunciation ? `
           <div class="entry-ipa">
-            <strong>IPA:</strong> ${entry.pronunciation}
+            <strong>Singular IPA:</strong> ${entry.pronunciation}
           </div>
         ` : ""}
 
         ${entry.reduplicated ? `
   <div class="entry-plural">
     <strong>Plural:</strong> ${entry.reduplicated}
+    ${entry.redup_pronunciation ? `
+      <div class="entry-redup-ipa">
+        <strong>Plural IPA:</strong> ${entry.redup_pronunciation}
+      </div>
+    ` : ""}
     ${entry.redup_meaning ? `<div class="entry-redup-meaning"><em>${entry.redup_meaning}</em></div>` : ""}
     ${entry.pl_audio ? `
       <span class="audio-icon"
@@ -133,7 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ` : ""}
   </div>
 ` : ""}
-
 
         ${examplesHTML ? `
           <div class="entry-examples">
