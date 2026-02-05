@@ -588,7 +588,7 @@ const lexicon = [
     "redup_meaning": "pairs of shoes",
     "dialect": "Any",
     "examples": "Ñeid g ñ-ṣu:ṣk!::Look at my shoes!",
-    "sing_audio": "audio/shoe.mp3",
+    "sing_audio": "audio/shoes.mp3",
     "pl_audio": "audio/shoespairs.mp3",
     "image": "",
     "example_audio": "audio/examples/lookatmyshoes.mp3",
