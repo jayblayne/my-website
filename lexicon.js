@@ -8,12 +8,12 @@ const lexicon = [
     "reduplicated": "’a’al",
     "redup_pronunciation": "[ˈʔɑ.ʔɑɽ̥]",
     "redup_meaning": "children",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "No ṣoak g ’ali?::Is the baby crying? || Do: ’o ’am ha-ñu:kud g ’a’al?::Who’s taking care of the children?",
     "sing_audio": "audio/baby.mp3",
     "pl_audio": "audio/babies.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/isthebabycrying.mp3||audio/examples/whostakingcareofthechildren.mp3"
   },
   {
     "oodham": "hoa",
@@ -28,8 +28,8 @@ const lexicon = [
     "examples": "Ñ-vi:vi’ibaḍ ’at na:to ’i:da hoa.::My great-grandma made this basket. || ’Ant o ha’i ha-gagḍa g hoaha.::I’m going to sell some of the baskets.",
     "sing_audio": "audio/basket.mp3",
     "pl_audio": "audio/baskets.mp3",
-    "image": "",
-    "example_audio": ""
+    "image": "images/basket.jpg",
+    "example_audio": "audio/examples/mygreatgrandmamadethisbasket.mp3||audio/examples/imgoingtosellsomeofthebaskets.mp3"
   },
   {
     "oodham": "vo’ikuḍ",
@@ -40,12 +40,12 @@ const lexicon = [
     "reduplicated": "vo:pikuḍ/wo:pikuḍ",
     "redup_pronunciation": "[ˈvɔː.pi.kuɖ̥]",
     "redup_meaning": "bed",
-    "dialect": "",
-    "examples": "Napt ’apec g ’e-vo’ikuḍ?::Did you make your bed?||Do: t o ha-ke:g c vo:pikuḍ?::Who’s going to clean the beds?",
+    "dialect": "Any",
+    "examples": "Napt ’apec g ’e-vo’ikuḍ?::Did you make your bed?||Do: t o ha-ke:gc g vo:pikuḍ?::Who’s going to clean the beds?",
     "sing_audio": "audio/bed.mp3",
     "pl_audio": "audio/beds.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/didyoumakeyourbed.mp3||audio/examples/whosgoingtocleanthebeds.mp3"
   },
   {
     "oodham": "’iks",
@@ -56,12 +56,12 @@ const lexicon = [
     "reduplicated": "’i’iks",
     "redup_pronunciation": "[ˈʔi.ʔiks]",
     "redup_meaning": "blankets, cloths",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’I be:kai hegi ’iks mant o ñ-ce’ewi.::Bring me that blanket to cover with.||Ṣa:cu pt o na:to ’idam ’i’ikskaj?::What are you going to make with these pieces of cloth?",
     "sing_audio": "audio/blanketcloth.mp3",
     "pl_audio": "audio/blankets.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/bringmethatblankettocoverwith.mp3||audio/examples/whatareyougoingtomakewiththesepiecesofcloth.mp3"
   },
   {
     "oodham": "kahon",
@@ -72,12 +72,12 @@ const lexicon = [
     "reduplicated": "kakhon",
     "redup_pronunciation": "[ˈkɑk.kɔn]",
     "redup_meaning": "boxes",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’U:pam ce:k ’i:da kahon.::Put this box back.||’Oig ’am ha-ku:kpiok hegam kakhon.::Go ahead and open those boxes.",
     "sing_audio": "audio/box.mp3",
     "pl_audio": "audio/boxes.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/puthisboxback.mp3||audio/examples/goaheadandopenthoseboxes.mp3"
   },
   {
     "oodham": "viappoi",
@@ -88,12 +88,12 @@ const lexicon = [
     "reduplicated": "vi:piop",
     "redup_pronunciation": "[ˈviː.pjɔp]",
     "redup_meaning": "boys",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Do: ’o wuḍ hegi viappoi?::Who is that boy?||Hegam vi:piop ’at ’an o cicvi g ṣoñgivul.::Those boys are going to play kickball.",
     "sing_audio": "audio/boy.mp3",
     "pl_audio": "audio/boys.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/whoisthatboy.mp3||audio/examples/thoseboysaregoingtoplaykickball.mp3"
   },
   {
     "oodham": "’oag",
@@ -104,12 +104,12 @@ const lexicon = [
     "reduplicated": "’oa’ag",
     "redup_pronunciation": "[wɑʔɑg̥]",
     "redup_meaning": "brains",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ñeo’okĭ ’o wuḍ hegi mo ’an hab cu’ig t-’oag ’eḍ.::Language is what exists in our brains.",
     "sing_audio": "audio/brain.mp3",
     "pl_audio": "audio/brains.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/languageiswhatexistsinourbrain.mp3"
   },
   {
     "oodham": "mi:tol",
@@ -125,7 +125,7 @@ const lexicon = [
     "sing_audio": "audio/catmitol.mp3",
     "pl_audio": "audio/catsmitol.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/didyoufeedthecat.mp3"
   },
   {
     "oodham": "mi:stol",
@@ -141,7 +141,7 @@ const lexicon = [
     "sing_audio": "audio/catmistol.mp3",
     "pl_audio": "audio/catsmistol.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/didyoufeedthecat.mp3"
   },
   {
     "oodham": "daikuḍ",
@@ -152,12 +152,12 @@ const lexicon = [
     "reduplicated": "dadaikuḍ",
     "redup_pronunciation": "[ˈd̪ɑ.d̪ɑi.kuɖ̥]",
     "redup_meaning": "chair",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’I be:kai hegi daikuḍ.::Bring that chair.",
     "sing_audio": "audio/chair.mp3",
     "pl_audio": "audio/chairs.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/bringthatchair.mp3"
   },
   {
     "oodham": "gogs",
@@ -168,12 +168,12 @@ const lexicon = [
     "reduplicated": "gogogs",
     "redup_pronunciation": "[ˈgɔ.gɔg̥s]",
     "redup_meaning": "dogs",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Hegi 'o ḍ ñ-gogsga.::That’s my dog.",
     "sing_audio": "audio/dog.mp3",
     "pl_audio": "audio/dogs.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thatsmydog.mp3"
   },
   {
     "oodham": "’ipuḍ",
@@ -184,12 +184,12 @@ const lexicon = [
     "reduplicated": "’i’ipuḍ",
     "redup_pronunciation": "[ˈʔi.ʔi.puɖ̥]",
     "redup_meaning": "dresses",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Napt ’am daphiu g ñ-’ipuḍ?::Did you iron my dress?||’Att o va ha’i nolavt g vepcij ’i’ipuḍ.::We’re going to buy some new dresses.",
     "sing_audio": "audio/dress.mp3",
     "pl_audio": "audio/dresses.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/didyouironmydress.mp3||audio/examples/weregoingtobuysomenewdresses.mp3"
   },
   {
     "oodham": "wuhi",
@@ -200,12 +200,12 @@ const lexicon = [
     "reduplicated": "vu:pui/wu:pui",
     "redup_pronunciation": "[ˈvuː.pwi]",
     "redup_meaning": "eyes",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Pi g ’ab hu ṣa’i ta:tam g ’e-wuhi!::Don’t touch your eye!||S-momhogid g ñ-vu:pui.::My eyes itch.",
     "sing_audio": "audio/eye.mp3",
     "pl_audio": "audio/eyes.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/donttouchyoureye.mp3||audio/examples/myeyesitch.mp3"
   },
   {
     "oodham": "cehia",
@@ -216,12 +216,12 @@ const lexicon = [
     "reduplicated": "cecia",
     "redup_pronunciation": "[ˈcɯ.cja]",
     "redup_meaning": "girls",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Nap s-ma:c hegi cehia?::Do you know that girl?",
     "sing_audio": "audio/girl.mp3",
     "pl_audio": "audio/girls.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/doyouknowthatgirl.mp3"
   },
   {
     "oodham": "mo’o",
@@ -232,12 +232,12 @@ const lexicon = [
     "reduplicated": "mo:mĭ",
     "redup_pronunciation": "[ˈmɔː.mĭ]",
     "redup_meaning": "heads",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Gaswuañ g ’ali mo’o.::Brush the baby’s hair.",
     "sing_audio": "audio/head.mp3",
     "pl_audio": "audio/heads.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/brushthebabyshair.mp3"
   },
   {
     "oodham": "kanjul",
@@ -248,12 +248,12 @@ const lexicon = [
     "reduplicated": "kakanjul",
     "redup_pronunciation": "[ˈkɑ.kɑn.ɟuɽ̥]",
     "redup_meaning": "lamps, lights",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’Ant o nai g ñ-kanjul.::I’ll turn my light on.||Sa’i si s-mams g kakanul.::The lights are real bright.",
     "sing_audio": "audio/lightlamp.mp3",
     "pl_audio": "audio/lightslamp.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/illturnmylighton.mp3||audio/examples/thelightsarerealbright.mp3"
   },
   {
     "oodham": "tonlig",
@@ -264,12 +264,12 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Nap ñeid hegi tonlig?::Do you see that light?",
     "sing_audio": "audio/light.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/doyouseethatlight.mp3"
   },
   {
     "oodham": "kulañ",
@@ -280,12 +280,12 @@ const lexicon = [
     "reduplicated": "kuklañ",
     "redup_pronunciation": "[ˈkuk.ɽɑɲ̥]",
     "redup_meaning": "medicines",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ba’iñ g ’e-kulañ!::Take your medicine!||Hegi maṣ ḍ kulañ gagḍadam ’o si s-ma:c g na:nko ma:s kuklañ.::The pharmacists knows a lot about different types of medicine.",
     "sing_audio": "audio/medicine.mp3",
     "pl_audio": "audio/medicines.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/takeyourmedicine.mp3||audio/examples/thepharmacist.mp3"
   },
   {
     "oodham": "viohog",
@@ -301,7 +301,7 @@ const lexicon = [
     "sing_audio": "audio/mesquitebean.mp3",
     "pl_audio": "",
     "image": "images/mesquitebean.png",
-    "example_audio": ""
+    "example_audio": "audio/examples/imgoingtochewonsomemesquitebeans.mp3"
   },
   {
     "oodham": "kui",
@@ -312,12 +312,12 @@ const lexicon = [
     "reduplicated": "kukui",
     "redup_pronunciation": "[ˈku.kwi]",
     "redup_meaning": "mesquites, trees",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Cevaj g kui.::The tree is tall.",
     "sing_audio": "audio/mesquitetree.mp3",
     "pl_audio": "audio/mesquitetrees.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thetreeistall.mp3"
   },
   {
     "oodham": "ṣaliv",
@@ -328,12 +328,12 @@ const lexicon = [
     "reduplicated": "ṣaṣaliv",
     "redup_pronunciation": "[ˈʂɑ.ʂɑ.ɽiv̥]",
     "redup_meaning": "pairs of pants",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’Ant o vakoa g ñ-ṣaliv.::I’m going to wash my pants.||’An g ha-na:ngia g ṣaṣaliv.::Hang up the pairs of pants.",
     "sing_audio": "audio/pants.mp3",
     "pl_audio": "audio/pantspairs.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/imgoingtowashmypants.mp3||audio/examples/hangupthepairsofpants.mp3"
   },
   {
     "oodham": "tapial",
@@ -344,12 +344,12 @@ const lexicon = [
     "reduplicated": "tatpial",
     "redup_pronunciation": "[ˈt̪ɑtp.jɑɽ̥]",
     "redup_meaning": "papers",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’O’ohon g ’e-ce:gig ’id ’ab tapial.::Sign your name on this paper.",
     "sing_audio": "audio/paper.mp3",
     "pl_audio": "audio/papers.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/signyournameonthispaper.mp3"
   },
   {
     "oodham": "mo’ockuḍ",
@@ -360,12 +360,12 @@ const lexicon = [
     "reduplicated": "mo:mckuḍ",
     "redup_pronunciation": "[ˈmɔːmc.kuɖ̥]",
     "redup_meaning": "pillows",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ge habaḍk g ñ-mo’ockuḍ!::My pillow’s just flat!",
     "sing_audio": "audio/pillow.mp3",
     "pl_audio": "audio/pillows.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/mypillowsjustflat.mp3"
   },
   {
     "oodham": "hodi",
@@ -376,12 +376,12 @@ const lexicon = [
     "reduplicated": "hohodi",
     "redup_pronunciation": "[ˈhɔ.hɔ.d̪i]",
     "redup_meaning": "rocks, stones",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Hema g da’icud g hodi!::Throw a rock!",
     "sing_audio": "audio/rock.mp3",
     "pl_audio": "audio/rocks.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/throwarock.mp3"
   },
   {
     "oodham": "mumku",
@@ -392,12 +392,12 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Nap mumku?::Are you sick?",
     "sing_audio": "audio/sick.mp3",
     "pl_audio": "audio/sicks.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/areyousick.mp3"
   },
   {
     "oodham": "vindoñ",
@@ -408,12 +408,12 @@ const lexicon = [
     "reduplicated": "vipindoñ",
     "redup_pronunciation": "[ˈvi.pin.d̪ɔɲ̥]",
     "redup_meaning": "windows",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’I ku:p g vindoñ.::Close the window.||Ṣa s-bibtagĭ g vipindoñ.::The windows are kind of dirty.",
     "sing_audio": "audio/window.mp3",
     "pl_audio": "audio/windows.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/closethewindow.mp3||audio/examples/thewindowsarekindofdirty.mp3"
   },
   {
     "oodham": "ki:",
@@ -424,12 +424,12 @@ const lexicon = [
     "reduplicated": "ki:kĭ",
     "redup_pronunciation": "[ˈkiː.kĭ]",
     "redup_meaning": "houses",
-    "dialect": "",
-    "examples": "Hebi ke:k g ’e-ki:?::Where is your house?||Go:k ki:k ’o cu:c ’im hab ha’ap.::There are two houses on the other side of there.",
+    "dialect": "Any",
+    "examples": "Hebi ke:k g m-ki:?::Where is your house?||Go:k ki:k ’o cu:c ’im hab ha’ap.::There are two houses on the other side of there.",
     "sing_audio": "audio/house.mp3",
     "pl_audio": "audio/houses.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/whereisyourhouse.mp3||audio/examples/therearetwohousesontheothersideofthere.mp3"
   },
   {
     "oodham": "hoas-ha’a",
@@ -440,12 +440,12 @@ const lexicon = [
     "reduplicated": "hoahas-haha’a",
     "redup_pronunciation": "[ˈhwɑ.hɑ.ˌsɑ.hɑ.ʔɑ]",
     "redup_meaning": "plates",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Hema g hekaj g hoas-ha’a.::Use a plate.||M o si ha-vapkoa g hoahas-haha’a.::Wash the plates good.",
     "sing_audio": "audio/plate.mp3",
     "pl_audio": "audio/plates.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/useaplate.mp3||audio/examples/washtheplatesgood.mp3"
   },
   {
     "oodham": "’uskonakuḍ",
@@ -456,12 +456,12 @@ const lexicon = [
     "reduplicated": "’u’uskonakuḍ",
     "redup_pronunciation": "[ˈʔu.ʔus.kɔ.nɑ.kuɖ̥]",
     "redup_meaning": "forks",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Hema ñ-ma:k g ’uskonakuḍ.::Give me a fork.||Pi ’am hu vi’is g ’u’uskonakuḍ.::There are no forks left.",
     "sing_audio": "audio/fork.mp3",
     "pl_audio": "audio/forks.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/givemeafork.mp3||audio/examples/therearenoforksleft.mp3"
   },
   {
     "oodham": "kusal",
@@ -472,12 +472,12 @@ const lexicon = [
     "reduplicated": "kuksal",
     "redup_pronunciation": "[ˈkuk.sɑɽ̥]",
     "redup_meaning": "spoons",
-    "dialect": "",
-    "examples": "Hugiñ g ’e-kusalkaj.::Eat it with your spoon.||Ha’i ’i ’u’ukai g kuksal.::Bring some spoons.",
+    "dialect": "Any",
+    "examples": "Hugiñ g ’e-kusalkaj.::Eat it with your spoon.||Ha’i g ’i ’u’ukai g kuksal.::Bring some spoons.",
     "sing_audio": "audio/spoon.mp3",
     "pl_audio": "audio/spoons.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/eatitwithyourspoon.mp3||audio/examples/bringsomespoons.mp3"
   },
   {
     "oodham": "ku:paḍag",
@@ -488,12 +488,12 @@ const lexicon = [
     "reduplicated": "ku:kpaḍag",
     "redup_pronunciation": "[ˈkuːk.pɑ.ɖɑg̥]",
     "redup_meaning": "doors",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’I ku:p g ku:paḍag!::Close the door!",
     "sing_audio": "audio/door.mp3",
     "pl_audio": "audio/doors.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/closethedoor.mp3"
   },
   {
     "oodham": "kotoñ",
@@ -504,12 +504,12 @@ const lexicon = [
     "reduplicated": "koktoñ",
     "redup_pronunciation": "[ˈkɔk.t̪ɔɲ]",
     "redup_meaning": "shirts",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’Ab g va:kid ’i:da kotoñ.::Put this shirt on.",
-    "sing_audio": "audio/shirtkamis.mp3",
-    "pl_audio": "audio/shirtskamis.mp3",
+    "sing_audio": "audio/shirtkoton.mp3",
+    "pl_audio": "audio/shirtskoton.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/putthisshirton.mp3"
   },
   {
     "oodham": "kamiṣ",
@@ -520,28 +520,28 @@ const lexicon = [
     "reduplicated": "kakmiṣ",
     "redup_pronunciation": "[ˈkɑk.miʂ]",
     "redup_meaning": "shirts",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’I naggia hegi kotoñ::Hang that shirt up.",
-    "sing_audio": "audio/shirtkoton.mp3",
-    "pl_audio": "audio/shirtskoton.mp3",
+    "sing_audio": "audio/shirtkamis.mp3",
+    "pl_audio": "audio/shirtskamis.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/hangthatshirtup.mp3"
   },
   {
     "oodham": "kalsi:do",
     "english": "sock",
     "partOfSpeech": "noun",
     "pattern": "2",
-    "pronunciation": "[ˈkɑɽ.siː.d̪ɔ]",
+    "pronunciation": "[ˌkɑɽ.ˈsiː.d̪ɔ]",
     "reduplicated": "kakalsi:do",
-    "redup_pronunciation": "[ˈkɑ.kɑɽ.siː.d̪ɔ]",
+    "redup_pronunciation": "[ˌkɑ.kɑɽ.ˈsiː.d̪ɔ]",
     "redup_meaning": "socks",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Gḍ g hu toa’i g ’e-kakalsi:do.::Put your socks away.",
     "sing_audio": "audio/sock.mp3",
     "pl_audio": "audio/socks.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/putyoursocksaway.mp3"
   },
   {
     "oodham": "ṣu:ṣk",
@@ -552,12 +552,12 @@ const lexicon = [
     "reduplicated": "ṣuṣuṣk",
     "redup_pronunciation": "[ˈʂu.ʂuʂk]",
     "redup_meaning": "pairs of shoes",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ñeid g ñ-ṣu:ṣk!::Look at my shoes!",
     "sing_audio": "audio/shoe.mp3",
     "pl_audio": "audio/shoespairs.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/lookatmyshoes.mp3"
   },
   {
     "oodham": "kolhi",
@@ -568,12 +568,12 @@ const lexicon = [
     "reduplicated": "kokolhi",
     "redup_pronunciation": "[ˈkɔ.kɔɽ.hi]",
     "redup_meaning": "fences",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Hi:m k ku:piok g kolhi.::Go open the fence.",
     "sing_audio": "audio/fence.mp3",
     "pl_audio": "audio/fences.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/goopenthefence.mp3"
   },
   {
     "oodham": "kahio",
@@ -584,12 +584,12 @@ const lexicon = [
     "reduplicated": "kakkio",
     "redup_pronunciation": "[ˈkɑk.kjɔ]",
     "redup_meaning": "legs",
-    "dialect": "",
-    "examples": "S-mohogid g ñ-kahi.::My leg itches.||No s-kokok g ’em-kakkio?::Do your legs hurt?",
+    "dialect": "Any",
+    "examples": "S-mohogid g ñ-kahio.::My leg itches.||No s-kokok g ’em-kakkio?::Do your legs hurt?",
     "sing_audio": "audio/leg.mp3",
     "pl_audio": "audio/legs.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/mylegitches.mp3||audio/examples/doyourlegshurt.mp3"
   },
   {
     "oodham": "taḍ",
@@ -600,12 +600,12 @@ const lexicon = [
     "reduplicated": "ta:taḍ",
     "redup_pronunciation": "[ˈt̪ɑː.t̪ɑɖ̥]",
     "redup_meaning": "feet",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-kokok g ñ-ta:taḍ.::My feet hurt.",
     "sing_audio": "audio/foot.mp3",
     "pl_audio": "audio/feet.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/myfeethurt.mp3"
   },
   {
     "oodham": "mi:ṣ",
@@ -616,12 +616,12 @@ const lexicon = [
     "reduplicated": "mimṣ",
     "redup_pronunciation": "[ˈmimʂ]",
     "redup_meaning": "tables",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’An g da:ṣ g ko:ba mi:ṣ da:m.::Set the cup on the table.||M o si ha-dadagkoa g mimṣ.::Wipe the tables down.",
     "sing_audio": "audio/table.mp3",
     "pl_audio": "audio/tables.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/setthecuponthetable.mp3||audio/examples/wipthetablesdown.mp3"
   },
   {
     "oodham": "mi:sa",
@@ -632,12 +632,12 @@ const lexicon = [
     "reduplicated": "mimsa",
     "redup_pronunciation": "[ˈmim.sɑ]",
     "redup_meaning": "tables",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Napt dagĭto g ’e-lialga ’an mi:sa da:m?::Did you leave your money on the table?",
     "sing_audio": "audio/tablemisa.mp3",
     "pl_audio": "audio/tablesmisa.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/didyouleaveyourmoneyonthetable.mp3"
   },
   {
     "oodham": "ha’a",
@@ -648,12 +648,12 @@ const lexicon = [
     "reduplicated": "haha’a",
     "redup_pronunciation": "[ˈhɑ.hɑ.ʔɑ]",
     "redup_meaning": "pots",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’Ant o hekaj ’i:da ha’a mant o na:to g mu:ñ.::I’m going to use this pot to make beans.",
     "sing_audio": "audio/pot.mp3",
     "pl_audio": "audio/pots.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/imgoingtousethispottomakebeans.mp3"
   },
   {
     "oodham": "dagkoanakuḍ",
@@ -664,12 +664,12 @@ const lexicon = [
     "reduplicated": "dadagkoanakuḍ",
     "redup_pronunciation": "[ˈd̪ɑ.d̪ɑg̥.kɔɑ.nɑ.kuɖ̥]",
     "redup_meaning": "towels; napkins",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Kiap s-vapḍag g dadagkoanakuḍ.::The towels are still wet.",
     "sing_audio": "audio/towel.mp3",
     "pl_audio": "audio/towels.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thetowelsarestillwet.mp3"
   },
   {
     "oodham": "tovaṣ",
@@ -680,12 +680,12 @@ const lexicon = [
     "reduplicated": "totvaṣ",
     "redup_pronunciation": "[ˈtɔt.vɑʂ]",
     "redup_meaning": "handkerchiefs",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Dagkoan g ’ali wuhioṣa g ’e-tovaṣkaj.::Wipe the baby’s face with your handkerchief.",
     "sing_audio": "audio/handkerchief.mp3",
     "pl_audio": "audio/handkerchief.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/wipethebabysfacewithyourhandkerchief.mp3"
   },
   {
     "oodham": "monjel",
@@ -696,12 +696,12 @@ const lexicon = [
     "reduplicated": "momonjel",
     "redup_pronunciation": "[ˈmɔ.mɔn.ɟɯɽ̥]",
     "redup_meaning": "headscarves",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-ke:gaj g monjelij.::Her headscarf is pretty.",
     "sing_audio": "audio/headscarf.mp3",
     "pl_audio": "audio/headscarfs.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/herheadscarfispretty.mp3"
   },
   {
     "oodham": "bayuka",
@@ -712,12 +712,12 @@ const lexicon = [
     "reduplicated": "babyuka",
     "redup_pronunciation": "[ˈbɑb.ju.kɑ]",
     "redup_meaning": "necklaces",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ñ-bayuka ’o ḍ ’o:la.::My necklace is gold.",
     "sing_audio": "audio/necklace.mp3",
     "pl_audio": "audio/necklaces.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/mynecklaceisgold.mp3"
   },
   {
     "oodham": "maskal",
@@ -728,12 +728,12 @@ const lexicon = [
     "reduplicated": "mamskal",
     "redup_pronunciation": "[ˈmɑms.kɑɽ̥]",
     "redup_meaning": "neckerchiefs",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-vegĭ maskal g vakial.::The cowboy has a red neckerchief.",
     "sing_audio": "audio/neckerchief.mp3",
     "pl_audio": "audio/neckerchiefs.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "taudio/examples/thecowboyhasaredneckerchief.mp3"
   },
   {
     "oodham": "hu’u",
@@ -744,12 +744,12 @@ const lexicon = [
     "reduplicated": "huhu’u",
     "redup_pronunciation": "[ˈhu.hu.ʔu]",
     "redup_meaning": "stars",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Si tonoḍ g huhu’u.::The stars are really shining.",
     "sing_audio": "audio/star.mp3",
     "pl_audio": "audio/stars.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thestarsarereallyshining.mp3"
   },
   {
     "oodham": "do’ag",
@@ -760,12 +760,12 @@ const lexicon = [
     "reduplicated": "do:do’ag",
     "redup_pronunciation": "[ˈd̪ɔː.dɑ.ʔɑg̥]",
     "redup_meaning": "mountains",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Heg o gḍ hu ki: do’ag da:m.::He lives on top of the mountain.",
     "sing_audio": "audio/mountain.mp3",
     "pl_audio": "audio/mountains.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/helivesontopofthemountain.mp3"
   },
   {
     "oodham": "vo:g",
@@ -776,12 +776,12 @@ const lexicon = [
     "reduplicated": "vopog",
     "redup_pronunciation": "[ˈvɔ.pɔg̥]",
     "redup_meaning": "roads",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ba: ’o ka:c g vo:g?::Where is the road?",
     "sing_audio": "audio/road.mp3",
     "pl_audio": "audio/roads.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/whereistheroad.mp3"
   },
   {
     "oodham": "vainomĭ",
@@ -792,12 +792,12 @@ const lexicon = [
     "reduplicated": "vapainomĭ",
     "redup_pronunciation": "[ˈvɑ.pɑi.nɔ.mĭ̥]",
     "redup_meaning": "knives",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Pi g ’am hu ṣa’i hekaj hegi vainomĭ.::Don’t use that knife.",
     "sing_audio": "audio/knife.mp3",
     "pl_audio": "audio/knives.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/dontusethatknife.mp3"
   },
   {
     "oodham": "kavyu",
@@ -808,12 +808,12 @@ const lexicon = [
     "reduplicated": "kakavyu",
     "redup_pronunciation": "[ˈkɑ.kɑv.ju]",
     "redup_meaning": "horses",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "No ’i:da ḍ m-kavyuga?::Is this your horse?",
     "sing_audio": "audio/horse.mp3",
     "pl_audio": "audio/horses.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/isthisyourhorse.mp3"
   },
   {
     "oodham": "ma:gina",
@@ -824,12 +824,12 @@ const lexicon = [
     "reduplicated": "mamagina",
     "redup_pronunciation": "[ˈmɑ.mɑ.gi.nɑ]",
     "redup_meaning": "cars",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "No meḍ g ma:gina?::Is the car running?",
     "sing_audio": "audio/carmagina.mp3",
     "pl_audio": "audio/carsmagina.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/isthecarrunning.mp3"
   },
   {
     "oodham": "kalit",
@@ -840,12 +840,12 @@ const lexicon = [
     "reduplicated": "kaklit",
     "redup_pronunciation": "[ˈkɑk.ɽit]",
     "redup_meaning": "cars",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’Ant o vakoa g ñ-kalit.::I’m going to wash my car.",
     "sing_audio": "audio/carkalit.mp3",
     "pl_audio": "audio/carskalit.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/imgoingtowashmycar.mp3"
   },
   {
     "oodham": "’o’ohon",
@@ -856,12 +856,12 @@ const lexicon = [
     "reduplicated": "’o’’ohon",
     "redup_pronunciation": "[ˈʔɔʔ.ʔɔ̆.hɔn]",
     "redup_meaning": "books",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ñeokculid g ’o’ohon.::Read the book.",
     "sing_audio": "audio/book.mp3",
     "pl_audio": "audio/books.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/readthebook.mp3"
   },
   {
     "oodham": "’i:bdag",
@@ -872,12 +872,12 @@ const lexicon = [
     "reduplicated": "’i’ibdag",
     "redup_pronunciation": "[ˈʔi.ʔib.d̪ɑg̥]",
     "redup_meaning": "hearts",
-    "dialect": "",
-    "examples": "B ’o ma:s mo g ’i:bdag.::It looks like a heart.",
+    "dialect": "Any",
+    "examples": "B ’o ṣa ma:s mo g ’i:bdag.::It looks kind of like a heart.",
     "sing_audio": "audio/heart.mp3",
     "pl_audio": "audio/hearts.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/itlookskindoflikeaheart.mp3"
   },
   {
     "oodham": "da:k",
@@ -888,12 +888,12 @@ const lexicon = [
     "reduplicated": "da:dk",
     "redup_pronunciation": "[ˈd̪ɑːd̪k]",
     "redup_meaning": "noses",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-mohogid g ñ-da:k.::My nose itches.",
     "sing_audio": "audio/nose.mp3",
     "pl_audio": "audio/noses.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/mynoseitches.mp3"
   },
   {
     "oodham": "na:k",
@@ -904,12 +904,12 @@ const lexicon = [
     "reduplicated": "na:nk",
     "redup_pronunciation": "[ˈnɑːn̥k]",
     "redup_meaning": "ears",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-ko’ok g ñ-na:k.::I have an earache.",
     "sing_audio": "audio/ear.mp3",
     "pl_audio": "audio/ears.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/ihaveanearache.mp3"
   },
   {
     "oodham": "kusvo",
@@ -920,12 +920,12 @@ const lexicon = [
     "reduplicated": "kuksvo",
     "redup_pronunciation": "[ˈkuks.vɔ]",
     "redup_meaning": "necks",
-    "dialect": "",
-    "examples": "Hukṣ ’at g ñ-kusvo.::S/he scratched my neck.",
+    "dialect": "Any",
+    "examples": "Hegi mi:tol ’at ’an si hukṣ g ñ-kusvo.::That cat really scratched my neck.",
     "sing_audio": "audio/neck.mp3",
     "pl_audio": "audio/necks.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thatcatreallyscratchedmyneck.mp3"
   },
   {
     "oodham": "ba:ṣo",
@@ -936,12 +936,12 @@ const lexicon = [
     "reduplicated": "babṣo",
     "redup_pronunciation": "[ˈbɑb.ʂɔ]",
     "redup_meaning": "chests",
-    "dialect": "",
-    "examples": "Si ñ-ṣoñhi ’an ñ-ba:ṣo ’an.::He sure punched my chest.",
+    "dialect": "Any",
+    "examples": "Si ñ-ṣoñhi ’an ñ-ba:ṣo ’an.::He sure punched me in the chest.",
     "sing_audio": "audio/chest.mp3",
     "pl_audio": "audio/chests.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/hesurepunchedmeintheches.mp3"
   },
   {
     "oodham": "kotva",
@@ -952,12 +952,12 @@ const lexicon = [
     "reduplicated": "koktva",
     "redup_pronunciation": "[ˈkɔkt.vɑ]",
     "redup_meaning": "shoulders",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "No s-kokok g m-koktva?::Do you shoulders hurt?",
     "sing_audio": "audio/shoulder.mp3",
     "pl_audio": "audio/shoulders.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/doyourshouldershurt.mp3"
   },
   {
     "oodham": "to:n",
@@ -968,12 +968,12 @@ const lexicon = [
     "reduplicated": "to:ton",
     "redup_pronunciation": "[ˈtɔː.tɔn̥]",
     "redup_meaning": "knees",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Mant s-ko’okam ju: g ñ-to:n.::I hurt my knee.",
     "sing_audio": "audio/knee.mp3",
     "pl_audio": "audio/knees.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/ihurtmyknee.mp3"
   },
   {
     "oodham": "’añilo",
@@ -984,12 +984,12 @@ const lexicon = [
     "reduplicated": "’a’añilo",
     "redup_pronunciation": "[ˈʔɑ.ʔɑ.ɲi.ɽɔ]",
     "redup_meaning": "rings",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Hekĭ ’ant hu wua g ñ-’añilo.::I lost my ring.",
     "sing_audio": "audio/ring.mp3",
     "pl_audio": "audio/rings.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/ilostmyring.mp3"
   },
   {
     "oodham": "nahagio",
@@ -1000,12 +1000,12 @@ const lexicon = [
     "reduplicated": "nanhagio",
     "redup_pronunciation": "[ˈnɑn.hɑ.gjɔ]",
     "redup_meaning": "mice; earrings",
-    "dialect": "",
-    "examples": "Mu’i ’o ha’icu g nanhagio heg ’eḍa ’oidag.::There are lot of mice in that field.",
+    "dialect": "Any",
+    "examples": "Mu’i g nanhagio ’o ’am ha’icug heg ’eḍa ’oidag.::There are lots of mice in that field.",
     "sing_audio": "audio/mouse.mp3",
     "pl_audio": "audio/mice.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/therearelotsofmiceinthatfield.mp3"
   },
   {
     "oodham": "vagtalig",
@@ -1016,12 +1016,12 @@ const lexicon = [
     "reduplicated": "vapagtalig",
     "redup_pronunciation": "[vɑ.pɑg̥.tɑ.ɽig̥]",
     "redup_meaning": "jackets; sweaters",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’Ab g va:kid g ’e-vagtalig.::Put your jacket on.",
     "sing_audio": "audio/jacket.mp3",
     "pl_audio": "audio/jackets.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/putyourjacketon.mp3"
   },
   {
     "oodham": "la:bis",
@@ -1032,12 +1032,12 @@ const lexicon = [
     "reduplicated": "lalabis",
     "redup_pronunciation": "[ˈɽɑ.ɽɑ.bis]",
     "redup_meaning": "pencils",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Nap ge la:bis?::Do you have a pencil?",
     "sing_audio": "audio/pencil.mp3",
     "pl_audio": "audio/pencils.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/doyouhaveapencil.mp3"
   },
   {
     "oodham": "cevagĭ",
@@ -1048,12 +1048,12 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-kokmagĭ g cevagĭ.::The clouds are gray.",
     "sing_audio": "audio/cloud.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thecloudsaregray.mp3"
   },
   {
     "oodham": "taḍai",
@@ -1064,12 +1064,12 @@ const lexicon = [
     "reduplicated": "tataḍai",
     "redup_pronunciation": "[t̪ɑ.t̪ɑ.ɖɑi]",
     "redup_meaning": "roadruners",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Gm hu me: g taḍai.::The roadrunner ran over there.",
     "sing_audio": "audio/roadrunner.mp3",
     "pl_audio": "audio/roadrunners.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/theroadrunnerranoverthere.mp3"
   },
   {
     "oodham": "sa:vano",
@@ -1080,12 +1080,12 @@ const lexicon = [
     "reduplicated": "sasavano",
     "redup_pronunciation": "[ˈsɑ.sɑ.vɑ.nɔ]",
     "redup_meaning": "bedsheets",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’I naggia g sa:vano.::Hang up the bedsheet.",
     "sing_audio": "audio/bedsheet.mp3",
     "pl_audio": "audio/bedsheets.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/hangupthebedsheet.mp3"
   },
   {
     "oodham": "’oidag",
@@ -1096,12 +1096,12 @@ const lexicon = [
     "reduplicated": "’o’oidag",
     "redup_pronunciation": "[ˈʔɔ.ʔɔi.d̪ɑg̥]",
     "redup_meaning": "fields",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ṣa:cu m ’e’eṣa heg ’eḍa ’oidag?::What do you guys plant in that field?",
     "sing_audio": "audio/field.mp3",
     "pl_audio": "audio/fields.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/whatdoyouguysplantinthatfield.mp3"
   },
   {
     "oodham": "ñe:ñ",
@@ -1112,12 +1112,12 @@ const lexicon = [
     "reduplicated": "ñeñeñ",
     "redup_pronunciation": "[ˈɲɯ.ɲɯɲ]",
     "redup_meaning": "tongues",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Napt mehi g ’e-ne:ñ?::Did you burn your tongue?",
     "sing_audio": "audio/tongue.mp3",
     "pl_audio": "audio/tongues.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/didyouburnyourtongue.mp3"
   },
   {
     "oodham": "ta:tamĭ",
@@ -1128,12 +1128,12 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "[ˈvɔː.d̪ɑ]",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Kegcun g ’e-ta:tamĭ!::Brush your teeth!",
     "sing_audio": "audio/tooth.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/brushyourteeth.mp3"
   },
   {
     "oodham": "tatk",
@@ -1144,12 +1144,12 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
-    "examples": "Ha’i ’o ’am hi va hekaj g hovij tatk mat o ha-na:to g hoaha.::Some people use banana yucca root to make baskets.",
+    "dialect": "Any",
+    "examples": "Ha’i ’o hi va hekaj g hovij tatk mat o ha-na:to g hoaha.::Some people use banana yucca root to make baskets.",
     "sing_audio": "audio/root.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/somepeopleusebananayuccaroottomakebaskets.mp3"
   },
   {
     "oodham": "vo:k",
@@ -1160,12 +1160,12 @@ const lexicon = [
     "reduplicated": "vo:pk",
     "redup_pronunciation": "[vɔːpk]",
     "redup_meaning": "stomachs; bellies",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-ko’ok g ñ-vo:k.::My stomach hurts.",
     "sing_audio": "audio/stomach.mp3",
     "pl_audio": "audio/stomachs.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/mystomachhurts.mp3"
   },
   {
     "oodham": "ka:m",
@@ -1176,12 +1176,12 @@ const lexicon = [
     "reduplicated": "ka:kam",
     "redup_pronunciation": "[ˈkɑː.kɑm]",
     "redup_meaning": "cheeks (of the face)",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Dagkoan g ’e-ka:m.::Wipe your cheek.",
     "sing_audio": "audio/cheekface.mp3",
     "pl_audio": "audio/cheeks.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/wipeyourcheek.mp3"
   },
   {
     "oodham": "’at",
@@ -1192,12 +1192,12 @@ const lexicon = [
     "reduplicated": "’a’at",
     "redup_pronunciation": "[ˈʔɑ.ʔɑt̪]",
     "redup_meaning": "butts; bottoms",
-    "dialect": "",
-    "examples": "Si ṣoñhi g ñ-’at!::S/he sure hit me on the butt!",
+    "dialect": "Any",
+    "examples": "Si ’at ṣoñhi g ñ-’at!::S/he sure hit me on the butt!",
     "sing_audio": "audio/butt.mp3",
     "pl_audio": "audio/butts.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/hesurehitmeonthebutt.mp3"
   },
   {
     "oodham": "hujuḍ",
@@ -1208,12 +1208,12 @@ const lexicon = [
     "reduplicated": "huhujuḍ",
     "redup_pronunciation": "[ˈhu.ɟuɖ̥]",
     "redup_meaning": "lizards",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Hegi hujuḍ ’o ’an kolhi t-’ab him.::That lizard is crawling on the fence.",
     "sing_audio": "audio/lizard.mp3",
     "pl_audio": "audio/lizards.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thatlizardiscrawlingonthefence.mp3"
   },
   {
     "oodham": "votoñ",
@@ -1224,12 +1224,12 @@ const lexicon = [
     "reduplicated": "voptoñ",
     "redup_pronunciation": "[ˈvɔ.t̪ɔɲ]",
     "redup_meaning": "buttons",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Mu’i voptoñ ’i:da ’ipuḍ.::This dress has many buttons.",
     "sing_audio": "audio/button.mp3",
     "pl_audio": "audio/buttons.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thisdresshasmanybuttons.mp3"
   },
   {
     "oodham": "vo:da",
@@ -1240,12 +1240,12 @@ const lexicon = [
     "reduplicated": "vopda",
     "redup_pronunciation": "[ˈvɔː.d̪ɑ]",
     "redup_meaning": "boots",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ba: pt toa g ñ-vopda?::Where did you put my boots?",
     "sing_audio": "audio/boot.mp3",
     "pl_audio": "audio/boots.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/wheredidyouputmyboots.mp3"
   },
   {
     "oodham": "’u:s",
@@ -1256,12 +1256,12 @@ const lexicon = [
     "reduplicated": "’u’us",
     "redup_pronunciation": "[ˈʔuːs]",
     "redup_meaning": "sticks",
-    "dialect": "",
-    "examples": "Ha’i ’i ’u’ukai g ’u’us.::Bring some sticks over here.",
+    "dialect": "Any",
+    "examples": "Ha’i g ’i ’u’ukai g ’u’us.::Bring some sticks over here.",
     "sing_audio": "audio/stick.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/bringsomesticksoverhere.mp3"
   },
   {
     "oodham": "kalna:yo",
@@ -1272,12 +1272,12 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Si s-io’ovĭ ’i:da kalna:yo.::This pomegranate is really sweet.",
     "sing_audio": "audio/pomegranate.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thispomegranateisreallysweet.mp3"
   },
   {
     "oodham": "ṣa:mt",
@@ -1288,12 +1288,12 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ha’i g na:to g bid ṣa:mt.::Make some adobe bricks.",
     "sing_audio": "audio/brick.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/makesomeadobebricks.mp3"
   },
   {
     "oodham": "’o:",
@@ -1304,12 +1304,12 @@ const lexicon = [
     "reduplicated": "’o’o",
     "redup_pronunciation": "[ˈʔɔ.ʔɔ]",
     "redup_meaning": "backs (of the body)",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-mohogid g ñ-’o:.::My back itches.",
     "sing_audio": "audio/backbody.mp3",
     "pl_audio": "audio/backs.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/mybackitches.mp3"
   },
   {
     "oodham": "cekva",
@@ -1320,12 +1320,12 @@ const lexicon = [
     "reduplicated": "ceckva",
     "redup_pronunciation": "[ˈcɯck.vɑ]",
     "redup_meaning": "ankles",
-    "dialect": "",
-    "examples": "You’re going to hurt your ankle.",
+    "dialect": "Any",
+    "examples": "Vapt o va s-ko’okam ju: g ’e-cekva.::You’re going to hurt your ankle.",
     "sing_audio": "audio/ankle.mp3",
     "pl_audio": "audio/ankles.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/youregoingtohurtyourankle.mp3"
   },
   {
     "oodham": "ce:gig",
@@ -1336,12 +1336,12 @@ const lexicon = [
     "reduplicated": "cecgig",
     "redup_pronunciation": "[ˈcɯc.gig̥]",
     "redup_meaning": "names",
-    "dialect": "",
-    "examples": "Write your name down.",
+    "dialect": "Any",
+    "examples": "’An g ’o’ohon g ’e-ce:gig.::Write your name down.",
     "sing_audio": "audio/name.mp3",
     "pl_audio": "audio/names.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/writeyournamedown.mp3"
   },
   {
     "oodham": "ṣondal",
@@ -1352,12 +1352,12 @@ const lexicon = [
     "reduplicated": "ṣoṣondal",
     "redup_pronunciation": "[ˈʂɔ.ʂɔn.d̪ɑɽ̥]",
     "redup_meaning": "soldiers",
-    "dialect": "",
-    "examples": "Is your child a soldier (in the army)?",
+    "dialect": "Any",
+    "examples": "No ḍ ge ṣondal g m-maḍ?::Is your child a soldier (in the army)?",
     "sing_audio": "audio/soldier.mp3",
     "pl_audio": "audio/soldiers.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/isyourchildasoldier.mp3"
   },
   {
     "oodham": "ṣavkuḍ",
@@ -1368,12 +1368,12 @@ const lexicon = [
     "reduplicated": "ṣaṣavkuḍ",
     "redup_pronunciation": "[ˈʂɑ.ʂɑv̥.kuɖ̥]",
     "redup_meaning": "rattles",
-    "dialect": "",
-    "examples": "Do: t m-na:tojul ’i:da ṣavkuḍ?",
+    "dialect": "Any",
+    "examples": "Do: t m-na:tojul ’i:da ṣavkuḍ?::Who made you this rattle?",
     "sing_audio": "audio/rattle.mp3",
     "pl_audio": "audio/rattles.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/whomadeyouthisrattle.mp3"
   },
   {
     "oodham": "’o:’o",
@@ -1384,12 +1384,12 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "He’ekio ’o:’o ’an hab cu’ig t-cu:kug ’eḍa?::How many bones do we have in our body?",
     "sing_audio": "audio/bone.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/howmanybonesdowehaveinourbody.mp3"
   },
   {
     "oodham": "koṣva",
@@ -1400,12 +1400,12 @@ const lexicon = [
     "reduplicated": "kokṣva",
     "redup_pronunciation": "[ˈkɔkʂ.vɑ]",
     "redup_meaning": "skulls",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’I:da s-kavk ha’icu mo ’an hab cu’ig t-mo’o ’eḍ ’o ḍ \"koṣva\".::This hard thing in our heads is the skull.",
     "sing_audio": "audio/skull.mp3",
     "pl_audio": "audio/skulls.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thishardthinginourheadisaskull.mp3"
   },
   {
     "oodham": "mavid",
@@ -1416,12 +1416,12 @@ const lexicon = [
     "reduplicated": "maipid",
     "redup_pronunciation": "[ˈmɑi.pid̪]",
     "redup_meaning": "mountain lions",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Nap hebi hema ñeid g mavid?::Have you ever seen a mountain lion?",
     "sing_audio": "audio/mountainlion.mp3",
     "pl_audio": "audio/mountainlions.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/haveyouheverseenamountainlion.mp3"
   },
   {
     "oodham": "gevo",
@@ -1432,12 +1432,12 @@ const lexicon = [
     "reduplicated": "gegevo",
     "redup_pronunciation": "[ˈgɯ.gɯ.vɔ]",
     "redup_meaning": "bobcats",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-’a’amḍak g gegevo.::The bobcats are friendly.",
     "sing_audio": "audio/bobcat.mp3",
     "pl_audio": "audio/bobcats.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thebobcatsarefriendly.mp3"
   },
   {
     "oodham": "cevo",
@@ -1448,12 +1448,12 @@ const lexicon = [
     "reduplicated": "cecevo",
     "redup_pronunciation": "[ˈcɯ.cɯ.vɔ]",
     "redup_meaning": "gophers",
-    "dialect": "",
-    "examples": "Hegi mo ’am si mu’i vapagt ’o hab ’e-’a’aga \"cevo\".::The thing that makes a bunch of holes in the groud is a \"gopher\".",
+    "dialect": "Any",
+    "examples": "Hegi ha’icu doakam mo ’an si mu’i va:pagt ’o hab ’e-’a’aga \"cevo\".::The animal that makes a bunch of holes in the groud is called \"gopher\".",
     "sing_audio": "audio/gopher.mp3",
     "pl_audio": "audio/gophers.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/theanimalthatmakesalotofholesinthegroundiscalledgopher.mp3"
   },
   {
     "oodham": "navoj",
@@ -1464,12 +1464,12 @@ const lexicon = [
     "reduplicated": "naupoj",
     "redup_pronunciation": "[ˈnɑu.pɔɟ̥]",
     "redup_meaning": "friends",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "No ḍ ’i:da g m-navoj?::Is this your friend?",
     "sing_audio": "audio/friend.mp3",
     "pl_audio": "audio/friends.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/isthisyourfriend.mp3"
   },
   {
     "oodham": "ho’ibaḍ",
@@ -1480,12 +1480,12 @@ const lexicon = [
     "reduplicated": "hoho’ibaḍ",
     "redup_pronunciation": "[ˈhɔ..hɔ.ʔi.bɑɖ̥]",
     "redup_meaning": "needles",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "S-mu’uk g ho’ibaḍ.::The needle is sharp.",
     "sing_audio": "audio/needle.mp3",
     "pl_audio": "audio/needles.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/theneedleissharp.mp3"
   },
   {
     "oodham": "cemait",
@@ -1496,12 +1496,12 @@ const lexicon = [
     "reduplicated": "cecemait",
     "redup_pronunciation": "[ˈcɯ.cɯ.mɑit̥]",
     "redup_meaning": "tortillas",
-    "dialect": "",
-    "examples": "Hema ñ-ma:k g cemait.::Pass me a tortilla.",
+    "dialect": "Any",
+    "examples": "Hema ñ-ma:k g cemait.::Give me a tortilla.",
     "sing_audio": "audio/tortilla.mp3",
     "pl_audio": "audio/tortillas.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/givemeatortilla.mp3"
   },
   {
     "oodham": "tlo:gi",
@@ -1512,12 +1512,12 @@ const lexicon = [
     "reduplicated": "tlolgi",
     "redup_pronunciation": "[ˈtɽɔɽ.gi]",
     "redup_meaning": "trucks",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Napt nolavt hegi tlo:gi?::Did you buy that truck?",
     "sing_audio": "audio/truck.mp3",
     "pl_audio": "audio/trucks.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/didyoubuythattruck.mp3"
   },
   {
     "oodham": "maṣcamakuḍ",
@@ -1528,12 +1528,12 @@ const lexicon = [
     "reduplicated": "mamṣcamakuḍ",
     "redup_pronunciation": "[ˈmɑmʂ.cɑ.mɑ.kuɖ̥]",
     "redup_meaning": "schools",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Ba: ’o ke:k g maṣcamakuḍ?::Where is the school located?",
     "sing_audio": "audio/school.mp3",
     "pl_audio": "audio/schools.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/whereistheschoollocated.mp3"
   },
   {
     "oodham": "ma:kig",
@@ -1544,7 +1544,7 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "audio/gift.mp3",
     "pl_audio": "",
@@ -1560,7 +1560,7 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "audio/blood.mp3",
     "pl_audio": "",
@@ -1576,7 +1576,7 @@ const lexicon = [
     "reduplicated": "mamṣad",
     "redup_pronunciation": "[ˈmɑm.ʂɑd̪̥]",
     "redup_meaning": "moons; months",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "audio/moon.mp3",
     "pl_audio": "audio/moons.mp3",
@@ -1592,7 +1592,7 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "audio/sun.mp3",
     "pl_audio": "",
@@ -1608,7 +1608,7 @@ const lexicon = [
     "reduplicated": "gigivuḍ",
     "redup_pronunciation": "[ˈgi.vuɖ̥]",
     "redup_meaning": "belt",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "audio/belt.mp3",
     "pl_audio": "audio/belts.mp3",
@@ -1624,12 +1624,12 @@ const lexicon = [
     "reduplicated": "bobol",
     "redup_pronunciation": "[ˈbɔ.bɔɽ̥]",
     "redup_meaning": "balls",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "Hegam 'a'al 'o 'am cicvi g bo:l.::Those kids are playing ball.",
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/thosekidsareplayingball.mp3"
   },
   {
     "oodham": "cekṣañ",
@@ -1640,12 +1640,12 @@ const lexicon = [
     "reduplicated": "ceckṣañ",
     "redup_pronunciation": "[ˈcɯck.ʂɑɲ]",
     "redup_meaning": "lines, boundaries (of land), borders",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "’An g ’o’ohon g cekṣañ ’i:ya.::Draw a line here.",
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/drawalinehere.mp3"
   },
   {
     "oodham": "nanakmel",
@@ -1656,7 +1656,7 @@ const lexicon = [
     "reduplicated": "",
     "redup_pronunciation": "",
     "redup_meaning": "",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1672,7 +1672,7 @@ const lexicon = [
     "reduplicated": "vopnamĭ",
     "redup_pronunciation": "[ˈvɔp.nɑ.mĭ]",
     "redup_meaning": "hats",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1688,12 +1688,12 @@ const lexicon = [
     "reduplicated": "sisisl",
     "redup_pronunciation": "[ˈsi.siɽ̥]",
     "redup_meaning": "saddles",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "I naggia g si:l.::Hang up the saddle.",
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "audio/examples/hangupthesaddle.mp3"
   },
   {
     "oodham": "je’e",
@@ -1704,7 +1704,7 @@ const lexicon = [
     "reduplicated": "je:j",
     "redup_pronunciation": "[ɟɯːɟ̥]",
     "redup_meaning": "moms, mothers",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1720,7 +1720,7 @@ const lexicon = [
     "reduplicated": "’o’og",
     "redup_pronunciation": "[ʔɔ.ʔɔg̥]",
     "redup_meaning": "dads, fathers",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1736,7 +1736,7 @@ const lexicon = [
     "reduplicated": "je:jes",
     "redup_pronunciation": "[ˈɟɯː.ɟɯs]",
     "redup_meaning": "uncles, mom’s older brothers",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1752,7 +1752,7 @@ const lexicon = [
     "reduplicated": "da:da’a",
     "redup_pronunciation": "[d̪ɑː.d̪̥ɑ.ʔɑ]",
     "redup_meaning": "aunts, mom’s older sisters",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1768,7 +1768,7 @@ const lexicon = [
     "reduplicated": "ta:tal",
     "redup_pronunciation": "[ˈt̪ɑː.t̪ɑɽ̥]",
     "redup_meaning": "uncles, mom’s younger brothers",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1800,7 +1800,7 @@ const lexicon = [
     "reduplicated": "kekel",
     "redup_pronunciation": "[ˈkɯ.kɯɽ]",
     "redup_meaning": "uncles, dad’s older brothers",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1816,7 +1816,7 @@ const lexicon = [
     "reduplicated": "’o’oksi",
     "redup_pronunciation": "[ˈʔɔ.ʔɔk.si]",
     "redup_meaning": "aunts, dad’s older sisters",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1832,7 +1832,7 @@ const lexicon = [
     "reduplicated": "ha:kit",
     "redup_pronunciation": "[ˈhɑː.kit̪]",
     "redup_meaning": "uncles, dad’s younger brothers",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1848,7 +1848,7 @@ const lexicon = [
     "reduplicated": "vopoit",
     "redup_pronunciation": "[ˈvɔ.pɔit̪]",
     "redup_meaning": "aunts, dad’s younger sisters",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1896,7 +1896,7 @@ const lexicon = [
     "reduplicated": "vopsk",
     "redup_pronunciation": "[vɔpsk]",
     "redup_meaning": "grandpas, fathers of fathers",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1944,7 +1944,7 @@ const lexicon = [
     "reduplicated": "’a’alidag",
     "redup_pronunciation": "[ˈʔɑ.ʔɑ.ɽi.d̪ɑg̥]",
     "redup_meaning": "children of a man",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1960,7 +1960,7 @@ const lexicon = [
     "reduplicated": "mo:ms",
     "redup_pronunciation": "[mɔːms]",
     "redup_meaning": "grandchildren of mom’s mom",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1976,7 +1976,7 @@ const lexicon = [
     "reduplicated": "ba:bmaḍ",
     "redup_pronunciation": "[ˈbɑːb.mɑɖ̻]",
     "redup_meaning": "grandchildren of mom’s dad",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -1992,7 +1992,7 @@ const lexicon = [
     "reduplicated": "vopsmaḍ",
     "redup_pronunciation": "[ˈvɔps.mɑɖ̻]",
     "redup_meaning": "grandchildren of dad’s dad",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -2008,7 +2008,7 @@ const lexicon = [
     "reduplicated": "ka:kmaḍ",
     "redup_pronunciation": "[ˈkɑːk.mɑɖ̻]",
     "redup_meaning": "grandchildren of dad’s mom",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -2024,7 +2024,7 @@ const lexicon = [
     "reduplicated": "mama’i",
     "redup_pronunciation": "[ˈmɑ.mɑ.ʔi]",
     "redup_meaning": "nephews or nieces of mom’s younger siblings",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -2040,7 +2040,7 @@ const lexicon = [
     "reduplicated": "cu:ccuḍ",
     "redup_pronunciation": "[ˈcuːc.cuɖ̥]",
     "redup_meaning": "nephews or nieces of dad’s older siblings",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -2056,7 +2056,7 @@ const lexicon = [
     "reduplicated": "ha:kimaḍ",
     "redup_pronunciation": "[ˈhaː.ki.mɑɖ̥]",
     "redup_meaning": "nephews or nieces of dad’s younger siblings",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -2072,7 +2072,7 @@ const lexicon = [
     "reduplicated": "vepnag",
     "redup_pronunciation": "[ˈvɯp.vɑg̥]",
     "redup_meaning": "siblings; cousins",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -2088,7 +2088,7 @@ const lexicon = [
     "reduplicated": "sisis",
     "redup_pronunciation": "[si.sis]",
     "redup_meaning": "older siblings",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -2104,7 +2104,7 @@ const lexicon = [
     "reduplicated": "siskul",
     "redup_pronunciation": "[ˈsis.kuɽ̥]",
     "redup_meaning": "younger siblings",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -2120,7 +2120,7 @@ const lexicon = [
     "reduplicated": "hahajuñ",
     "redup_pronunciation": "[ˈhɑ.hɑ.ɟuɲ̥]",
     "redup_meaning": "relatives",
-    "dialect": "",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
@@ -2136,7 +2136,71 @@ const lexicon = [
     "reduplicated": "vipjina",
     "redup_pronunciation": "[ˈvip.ɟi.nɑ]",
     "redup_meaning": "ropes",
-    "dialect": "",
+    "dialect": "Any",
+    "examples": "",
+    "sing_audio": "",
+    "pl_audio": "",
+    "image": "",
+    "example_audio": ""
+  },
+  {
+    "oodham": "kostal",
+    "english": "bag",
+    "partOfSpeech": "noun",
+    "pattern": "1",
+    "pronunciation": "[ˈkɔs.tɑɽ̥]",
+    "reduplicated": "kokstal",
+    "redup_pronunciation": "[ˈkɔks.tɑɽ̥]",
+    "redup_meaning": "bags",
+    "dialect": "Any",
+    "examples": "",
+    "sing_audio": "",
+    "pl_audio": "",
+    "image": "",
+    "example_audio": ""
+  },
+  {
+    "oodham": "hoa",
+    "english": "basket",
+    "partOfSpeech": "noun",
+    "pattern": "1",
+    "pronunciation": "[hɔɑ]",
+    "reduplicated": "hoha",
+    "redup_pronunciation": "[ˈhɔ.hɑ]",
+    "redup_meaning": "baskets",
+    "dialect": "Tohono O'odham",
+    "examples": "",
+    "sing_audio": "",
+    "pl_audio": "",
+    "image": "",
+    "example_audio": ""
+  },
+  {
+    "oodham": "ko:ba",
+    "english": "cup",
+    "partOfSpeech": "noun",
+    "pattern": "4",
+    "pronunciation": "[ˈkɔː.bɑ]",
+    "reduplicated": "kokoba",
+    "redup_pronunciation": "[ˈkɔ.kɔ.bɑ]",
+    "redup_meaning": "cups",
+    "dialect": "Any",
+    "examples": "",
+    "sing_audio": "",
+    "pl_audio": "",
+    "image": "",
+    "example_audio": ""
+  },
+  {
+    "oodham": "vaika",
+    "english": "ditch",
+    "partOfSpeech": "noun",
+    "pattern": "2",
+    "pronunciation": "[ˈvɑi.kɑ]",
+    "reduplicated": "vapaika",
+    "redup_pronunciation": "[ˈvɑ.pɑi.kɑ]",
+    "redup_meaning": "ditches",
+    "dialect": "Any",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",
