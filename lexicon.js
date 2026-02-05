@@ -659,7 +659,7 @@ const lexicon = [
     "sing_audio": "audio/table.mp3",
     "pl_audio": "audio/tables.mp3",
     "image": "",
-    "example_audio": "audio/examples/setthecuponthetable.mp3||audio/examples/wipthetablesdown.mp3",
+    "example_audio": "audio/examples/setthecuponthetable.mp3||audio/examples/wipethetablesdown.mp3",
     "": ""
   },
   {
