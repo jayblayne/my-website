@@ -2303,7 +2303,7 @@ const lexicon = [
     "reduplicated": "hoha",
     "redup_pronunciation": "[ˈhɔ.hɑ]",
     "redup_meaning": "baskets",
-    "dialect": "Tohono O'odham",
+    "dialect": "Tohono O’odham",
     "examples": "",
     "sing_audio": "",
     "pl_audio": "",

@@ -35,8 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
      Populate dialect dropdown
   -------------------------------- */
   const dialectSet = new Set();
+
   normalizedLexicon.forEach(entry => {
-    if (entry.dialect) dialectSet.add(entry.dialect);
+    if (entry.dialect) {
+      dialectSet.add(entry.dialect);
+    }
   });
 
   dialectSet.forEach(dialect => {
@@ -56,8 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!query && !selectedDialect) return;
 
-    const matches = normalizedLexicon.filter(entry => {
+    let matches = normalizedLexicon.filter(entry => {
+
       const wordMatch =
+        !query ||
         (entry.english && entry.english.toLowerCase().includes(query)) ||
         (entry.oodham && entry.oodham.toLowerCase().includes(query)) ||
         (entry.reduplicated && entry.reduplicated.toLowerCase().includes(query)) ||
@@ -70,6 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
       return wordMatch && dialectMatch;
     });
 
+    /* --------------------------------
+       ✅ SORT alphabetically ONLY when:
+       - dialect selected
+       - query is empty
+    -------------------------------- */
+    if (!query && selectedDialect) {
+      matches.sort((a, b) => {
+        const aWord = (a.oodham || "").toLowerCase();
+        const bWord = (b.oodham || "").toLowerCase();
+        return aWord.localeCompare(bWord);
+      });
+    }
+
     if (matches.length === 0) {
       resultsDiv.innerHTML = "<p>No results found.</p>";
       return;
@@ -78,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* -------------------------------
        Render results
     -------------------------------- */
-    matches.forEach((entry, index) => {
+    matches.forEach(entry => {
       const div = document.createElement("div");
       div.className = "card";
 
