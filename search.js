@@ -21,33 +21,51 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   /* -------------------------------
-     Normalize CSV keys
+     Normalize CSV keys + dialects
   -------------------------------- */
   const normalizedLexicon = lexicon.map(entry => {
     const normalizedEntry = {};
+
     for (let key in entry) {
       normalizedEntry[key.trim()] = entry[key];
     }
+
+    // 🔹 Preserve original casing for display
+    if (normalizedEntry.dialect) {
+      normalizedEntry.dialectsRaw = normalizedEntry.dialect
+        .split("||")
+        .map(d => d.trim());
+
+      normalizedEntry.dialects = normalizedEntry.dialectsRaw
+        .map(d => d.toLowerCase());
+    } else {
+      normalizedEntry.dialectsRaw = [];
+      normalizedEntry.dialects = [];
+    }
+
     return normalizedEntry;
   });
 
   /* -------------------------------
      Populate dialect dropdown
+     (preserve casing, match lowercase)
   -------------------------------- */
-  const dialectSet = new Set();
+  const dialectMap = new Map(); // lowercase → original
 
   normalizedLexicon.forEach(entry => {
-    if (entry.dialect) {
-      dialectSet.add(entry.dialect);
-    }
+    entry.dialectsRaw.forEach((raw, i) => {
+      dialectMap.set(entry.dialects[i], raw);
+    });
   });
 
-  dialectSet.forEach(dialect => {
-    const option = document.createElement("option");
-    option.value = dialect;
-    option.textContent = dialect;
-    dialectSelect.appendChild(option);
-  });
+  [...dialectMap.entries()]
+    .sort((a, b) => a[1].localeCompare(b[1]))
+    .forEach(([value, label]) => {
+      const option = document.createElement("option");
+      option.value = value;     // lowercase for matching
+      option.textContent = label; // original casing for display
+      dialectSelect.appendChild(option);
+    });
 
   /* -------------------------------
      Search logic
@@ -69,14 +87,14 @@ document.addEventListener("DOMContentLoaded", () => {
         (entry.redup_meaning && entry.redup_meaning.toLowerCase().includes(query));
 
       const dialectMatch = selectedDialect
-        ? entry.dialect && entry.dialect.toLowerCase() === selectedDialect
+        ? entry.dialects.includes(selectedDialect)
         : true;
 
       return wordMatch && dialectMatch;
     });
 
     /* --------------------------------
-       ✅ SORT alphabetically ONLY when:
+       Sort alphabetically ONLY when:
        - dialect selected
        - query is empty
     -------------------------------- */
