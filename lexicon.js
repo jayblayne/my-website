@@ -13,7 +13,8 @@ const lexicon = [
     "sing_audio": "audio/baby.mp3",
     "pl_audio": "audio/babies.mp3",
     "image": "",
-    "example_audio": "audio/examples/isthebabycrying.mp3||audio/examples/whostakingcareofthechildren.mp3"
+    "example_audio": "audio/examples/isthebabycrying.mp3||audio/examples/whostakingcareofthechildren.mp3",
+    "": ""
   },
   {
     "oodham": "hoa",
@@ -29,7 +30,8 @@ const lexicon = [
     "sing_audio": "audio/basket.mp3",
     "pl_audio": "audio/baskets.mp3",
     "image": "images/basket.jpg",
-    "example_audio": "audio/examples/mygreatgrandmamadethisbasket.mp3||audio/examples/imgoingtosellsomeofthebaskets.mp3"
+    "example_audio": "audio/examples/mygreatgrandmamadethisbasket.mp3||audio/examples/imgoingtosellsomeofthebaskets.mp3",
+    "": ""
   },
   {
     "oodham": "vo’ikuḍ",
@@ -45,7 +47,8 @@ const lexicon = [
     "sing_audio": "audio/bed.mp3",
     "pl_audio": "audio/beds.mp3",
     "image": "",
-    "example_audio": "audio/examples/didyoumakeyourbed.mp3||audio/examples/whosgoingtocleanthebeds.mp3"
+    "example_audio": "audio/examples/didyoumakeyourbed.mp3||audio/examples/whosgoingtocleanthebeds.mp3",
+    "": ""
   },
   {
     "oodham": "’iks",
@@ -61,7 +64,8 @@ const lexicon = [
     "sing_audio": "audio/blanketcloth.mp3",
     "pl_audio": "audio/blankets.mp3",
     "image": "",
-    "example_audio": "audio/examples/bringmethatblankettocoverwith.mp3||audio/examples/whatareyougoingtomakewiththesepiecesofcloth.mp3"
+    "example_audio": "audio/examples/bringmethatblankettocoverwith.mp3||audio/examples/whatareyougoingtomakewiththesepiecesofcloth.mp3",
+    "": ""
   },
   {
     "oodham": "kahon",
@@ -77,7 +81,8 @@ const lexicon = [
     "sing_audio": "audio/box.mp3",
     "pl_audio": "audio/boxes.mp3",
     "image": "",
-    "example_audio": "audio/examples/puthisboxback.mp3||audio/examples/goaheadandopenthoseboxes.mp3"
+    "example_audio": "audio/examples/puthisboxback.mp3||audio/examples/goaheadandopenthoseboxes.mp3",
+    "": ""
   },
   {
     "oodham": "viappoi",
@@ -93,7 +98,8 @@ const lexicon = [
     "sing_audio": "audio/boy.mp3",
     "pl_audio": "audio/boys.mp3",
     "image": "",
-    "example_audio": "audio/examples/whoisthatboy.mp3||audio/examples/thoseboysaregoingtoplaykickball.mp3"
+    "example_audio": "audio/examples/whoisthatboy.mp3||audio/examples/thoseboysaregoingtoplaykickball.mp3",
+    "": ""
   },
   {
     "oodham": "’oag",
@@ -109,7 +115,8 @@ const lexicon = [
     "sing_audio": "audio/brain.mp3",
     "pl_audio": "audio/brains.mp3",
     "image": "",
-    "example_audio": "audio/examples/languageiswhatexistsinourbrain.mp3"
+    "example_audio": "audio/examples/languageiswhatexistsinourbrain.mp3",
+    "": ""
   },
   {
     "oodham": "mi:tol",
@@ -125,7 +132,8 @@ const lexicon = [
     "sing_audio": "audio/catmitol.mp3",
     "pl_audio": "audio/catsmitol.mp3",
     "image": "",
-    "example_audio": "audio/examples/didyoufeedthecat.mp3"
+    "example_audio": "audio/examples/didyoufeedthecat.mp3",
+    "": ""
   },
   {
     "oodham": "mi:stol",
@@ -141,7 +149,8 @@ const lexicon = [
     "sing_audio": "audio/catmistol.mp3",
     "pl_audio": "audio/catsmistol.mp3",
     "image": "",
-    "example_audio": "audio/examples/didyoufeedthecat.mp3"
+    "example_audio": "audio/examples/didyoufeedthecat.mp3",
+    "": ""
   },
   {
     "oodham": "daikuḍ",
@@ -157,7 +166,8 @@ const lexicon = [
     "sing_audio": "audio/chair.mp3",
     "pl_audio": "audio/chairs.mp3",
     "image": "",
-    "example_audio": "audio/examples/bringthatchair.mp3"
+    "example_audio": "audio/examples/bringthatchair.mp3",
+    "": ""
   },
   {
     "oodham": "gogs",
@@ -173,7 +183,8 @@ const lexicon = [
     "sing_audio": "audio/dog.mp3",
     "pl_audio": "audio/dogs.mp3",
     "image": "",
-    "example_audio": "audio/examples/thatsmydog.mp3"
+    "example_audio": "audio/examples/thatsmydog.mp3",
+    "": ""
   },
   {
     "oodham": "’ipuḍ",
@@ -189,7 +200,8 @@ const lexicon = [
     "sing_audio": "audio/dress.mp3",
     "pl_audio": "audio/dresses.mp3",
     "image": "",
-    "example_audio": "audio/examples/didyouironmydress.mp3||audio/examples/weregoingtobuysomenewdresses.mp3"
+    "example_audio": "audio/examples/didyouironmydress.mp3||audio/examples/weregoingtobuysomenewdresses.mp3",
+    "": ""
   },
   {
     "oodham": "wuhi",
@@ -205,7 +217,8 @@ const lexicon = [
     "sing_audio": "audio/eye.mp3",
     "pl_audio": "audio/eyes.mp3",
     "image": "",
-    "example_audio": "audio/examples/donttouchyoureye.mp3||audio/examples/myeyesitch.mp3"
+    "example_audio": "audio/examples/donttouchyoureye.mp3||audio/examples/myeyesitch.mp3",
+    "": ""
   },
   {
     "oodham": "cehia",
@@ -221,7 +234,8 @@ const lexicon = [
     "sing_audio": "audio/girl.mp3",
     "pl_audio": "audio/girls.mp3",
     "image": "",
-    "example_audio": "audio/examples/doyouknowthatgirl.mp3"
+    "example_audio": "audio/examples/doyouknowthatgirl.mp3",
+    "": ""
   },
   {
     "oodham": "mo’o",
@@ -237,7 +251,8 @@ const lexicon = [
     "sing_audio": "audio/head.mp3",
     "pl_audio": "audio/heads.mp3",
     "image": "",
-    "example_audio": "audio/examples/brushthebabyshair.mp3"
+    "example_audio": "audio/examples/brushthebabyshair.mp3",
+    "": ""
   },
   {
     "oodham": "kanjul",
@@ -253,7 +268,8 @@ const lexicon = [
     "sing_audio": "audio/lightlamp.mp3",
     "pl_audio": "audio/lightslamp.mp3",
     "image": "",
-    "example_audio": "audio/examples/illturnmylighton.mp3||audio/examples/thelightsarerealbright.mp3"
+    "example_audio": "audio/examples/illturnmylighton.mp3||audio/examples/thelightsarerealbright.mp3",
+    "": ""
   },
   {
     "oodham": "tonlig",
@@ -269,7 +285,8 @@ const lexicon = [
     "sing_audio": "audio/light.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/doyouseethatlight.mp3"
+    "example_audio": "audio/examples/doyouseethatlight.mp3",
+    "": ""
   },
   {
     "oodham": "kulañ",
@@ -285,7 +302,8 @@ const lexicon = [
     "sing_audio": "audio/medicine.mp3",
     "pl_audio": "audio/medicines.mp3",
     "image": "",
-    "example_audio": "audio/examples/takeyourmedicine.mp3||audio/examples/thepharmacist.mp3"
+    "example_audio": "audio/examples/takeyourmedicine.mp3||audio/examples/thepharmacist.mp3",
+    "": ""
   },
   {
     "oodham": "viohog",
@@ -301,7 +319,8 @@ const lexicon = [
     "sing_audio": "audio/mesquitebean.mp3",
     "pl_audio": "",
     "image": "images/mesquitebean.png",
-    "example_audio": "audio/examples/imgoingtochewonsomemesquitebeans.mp3"
+    "example_audio": "audio/examples/imgoingtochewonsomemesquitebeans.mp3",
+    "": ""
   },
   {
     "oodham": "kui",
@@ -317,7 +336,8 @@ const lexicon = [
     "sing_audio": "audio/mesquitetree.mp3",
     "pl_audio": "audio/mesquitetrees.mp3",
     "image": "",
-    "example_audio": "audio/examples/thetreeistall.mp3"
+    "example_audio": "audio/examples/thetreeistall.mp3",
+    "": ""
   },
   {
     "oodham": "ṣaliv",
@@ -333,7 +353,8 @@ const lexicon = [
     "sing_audio": "audio/pants.mp3",
     "pl_audio": "audio/pantspairs.mp3",
     "image": "",
-    "example_audio": "audio/examples/imgoingtowashmypants.mp3||audio/examples/hangupthepairsofpants.mp3"
+    "example_audio": "audio/examples/imgoingtowashmypants.mp3||audio/examples/hangupthepairsofpants.mp3",
+    "": ""
   },
   {
     "oodham": "tapial",
@@ -349,7 +370,8 @@ const lexicon = [
     "sing_audio": "audio/paper.mp3",
     "pl_audio": "audio/papers.mp3",
     "image": "",
-    "example_audio": "audio/examples/signyournameonthispaper.mp3"
+    "example_audio": "audio/examples/signyournameonthispaper.mp3",
+    "": ""
   },
   {
     "oodham": "mo’ockuḍ",
@@ -365,7 +387,8 @@ const lexicon = [
     "sing_audio": "audio/pillow.mp3",
     "pl_audio": "audio/pillows.mp3",
     "image": "",
-    "example_audio": "audio/examples/mypillowsjustflat.mp3"
+    "example_audio": "audio/examples/mypillowsjustflat.mp3",
+    "": ""
   },
   {
     "oodham": "hodi",
@@ -381,7 +404,8 @@ const lexicon = [
     "sing_audio": "audio/rock.mp3",
     "pl_audio": "audio/rocks.mp3",
     "image": "",
-    "example_audio": "audio/examples/throwarock.mp3"
+    "example_audio": "audio/examples/throwarock.mp3",
+    "": ""
   },
   {
     "oodham": "mumku",
@@ -397,7 +421,8 @@ const lexicon = [
     "sing_audio": "audio/sick.mp3",
     "pl_audio": "audio/sicks.mp3",
     "image": "",
-    "example_audio": "audio/examples/areyousick.mp3"
+    "example_audio": "audio/examples/areyousick.mp3",
+    "": ""
   },
   {
     "oodham": "vindoñ",
@@ -413,7 +438,8 @@ const lexicon = [
     "sing_audio": "audio/window.mp3",
     "pl_audio": "audio/windows.mp3",
     "image": "",
-    "example_audio": "audio/examples/closethewindow.mp3||audio/examples/thewindowsarekindofdirty.mp3"
+    "example_audio": "audio/examples/closethewindow.mp3||audio/examples/thewindowsarekindofdirty.mp3",
+    "": ""
   },
   {
     "oodham": "ki:",
@@ -429,7 +455,8 @@ const lexicon = [
     "sing_audio": "audio/house.mp3",
     "pl_audio": "audio/houses.mp3",
     "image": "",
-    "example_audio": "audio/examples/whereisyourhouse.mp3||audio/examples/therearetwohousesontheothersideofthere.mp3"
+    "example_audio": "audio/examples/whereisyourhouse.mp3||audio/examples/therearetwohousesontheothersideofthere.mp3",
+    "": ""
   },
   {
     "oodham": "hoas-ha’a",
@@ -445,7 +472,8 @@ const lexicon = [
     "sing_audio": "audio/plate.mp3",
     "pl_audio": "audio/plates.mp3",
     "image": "",
-    "example_audio": "audio/examples/useaplate.mp3||audio/examples/washtheplatesgood.mp3"
+    "example_audio": "audio/examples/useaplate.mp3||audio/examples/washtheplatesgood.mp3",
+    "": ""
   },
   {
     "oodham": "’uskonakuḍ",
@@ -461,7 +489,8 @@ const lexicon = [
     "sing_audio": "audio/fork.mp3",
     "pl_audio": "audio/forks.mp3",
     "image": "",
-    "example_audio": "audio/examples/givemeafork.mp3||audio/examples/therearenoforksleft.mp3"
+    "example_audio": "audio/examples/givemeafork.mp3||audio/examples/therearenoforksleft.mp3",
+    "": ""
   },
   {
     "oodham": "kusal",
@@ -477,7 +506,8 @@ const lexicon = [
     "sing_audio": "audio/spoon.mp3",
     "pl_audio": "audio/spoons.mp3",
     "image": "",
-    "example_audio": "audio/examples/eatitwithyourspoon.mp3||audio/examples/bringsomespoons.mp3"
+    "example_audio": "audio/examples/eatitwithyourspoon.mp3||audio/examples/bringsomespoons.mp3",
+    "": ""
   },
   {
     "oodham": "ku:paḍag",
@@ -493,7 +523,8 @@ const lexicon = [
     "sing_audio": "audio/door.mp3",
     "pl_audio": "audio/doors.mp3",
     "image": "",
-    "example_audio": "audio/examples/closethedoor.mp3"
+    "example_audio": "audio/examples/closethedoor.mp3",
+    "": ""
   },
   {
     "oodham": "kotoñ",
@@ -509,7 +540,8 @@ const lexicon = [
     "sing_audio": "audio/shirtkoton.mp3",
     "pl_audio": "audio/shirtskoton.mp3",
     "image": "",
-    "example_audio": "audio/examples/putthisshirton.mp3"
+    "example_audio": "audio/examples/putthisshirton.mp3",
+    "": ""
   },
   {
     "oodham": "kamiṣ",
@@ -525,7 +557,8 @@ const lexicon = [
     "sing_audio": "audio/shirtkamis.mp3",
     "pl_audio": "audio/shirtskamis.mp3",
     "image": "",
-    "example_audio": "audio/examples/hangthatshirtup.mp3"
+    "example_audio": "audio/examples/hangthatshirtup.mp3",
+    "": ""
   },
   {
     "oodham": "kalsi:do",
@@ -541,7 +574,8 @@ const lexicon = [
     "sing_audio": "audio/sock.mp3",
     "pl_audio": "audio/socks.mp3",
     "image": "",
-    "example_audio": "audio/examples/putyoursocksaway.mp3"
+    "example_audio": "audio/examples/putyoursocksaway.mp3",
+    "": ""
   },
   {
     "oodham": "ṣu:ṣk",
@@ -557,7 +591,8 @@ const lexicon = [
     "sing_audio": "audio/shoe.mp3",
     "pl_audio": "audio/shoespairs.mp3",
     "image": "",
-    "example_audio": "audio/examples/lookatmyshoes.mp3"
+    "example_audio": "audio/examples/lookatmyshoes.mp3",
+    "": ""
   },
   {
     "oodham": "kolhi",
@@ -573,7 +608,8 @@ const lexicon = [
     "sing_audio": "audio/fence.mp3",
     "pl_audio": "audio/fences.mp3",
     "image": "",
-    "example_audio": "audio/examples/goopenthefence.mp3"
+    "example_audio": "audio/examples/goopenthefence.mp3",
+    "": ""
   },
   {
     "oodham": "kahio",
@@ -589,7 +625,8 @@ const lexicon = [
     "sing_audio": "audio/leg.mp3",
     "pl_audio": "audio/legs.mp3",
     "image": "",
-    "example_audio": "audio/examples/mylegitches.mp3||audio/examples/doyourlegshurt.mp3"
+    "example_audio": "audio/examples/mylegitches.mp3||audio/examples/doyourlegshurt.mp3",
+    "": ""
   },
   {
     "oodham": "taḍ",
@@ -605,7 +642,8 @@ const lexicon = [
     "sing_audio": "audio/foot.mp3",
     "pl_audio": "audio/feet.mp3",
     "image": "",
-    "example_audio": "audio/examples/myfeethurt.mp3"
+    "example_audio": "audio/examples/myfeethurt.mp3",
+    "": ""
   },
   {
     "oodham": "mi:ṣ",
@@ -621,7 +659,8 @@ const lexicon = [
     "sing_audio": "audio/table.mp3",
     "pl_audio": "audio/tables.mp3",
     "image": "",
-    "example_audio": "audio/examples/setthecuponthetable.mp3||audio/examples/wipthetablesdown.mp3"
+    "example_audio": "audio/examples/setthecuponthetable.mp3||audio/examples/wipthetablesdown.mp3",
+    "": ""
   },
   {
     "oodham": "mi:sa",
@@ -637,7 +676,8 @@ const lexicon = [
     "sing_audio": "audio/tablemisa.mp3",
     "pl_audio": "audio/tablesmisa.mp3",
     "image": "",
-    "example_audio": "audio/examples/didyouleaveyourmoneyonthetable.mp3"
+    "example_audio": "audio/examples/didyouleaveyourmoneyonthetable.mp3",
+    "": ""
   },
   {
     "oodham": "ha’a",
@@ -653,7 +693,8 @@ const lexicon = [
     "sing_audio": "audio/pot.mp3",
     "pl_audio": "audio/pots.mp3",
     "image": "",
-    "example_audio": "audio/examples/imgoingtousethispottomakebeans.mp3"
+    "example_audio": "audio/examples/imgoingtousethispottomakebeans.mp3",
+    "": ""
   },
   {
     "oodham": "dagkoanakuḍ",
@@ -669,7 +710,8 @@ const lexicon = [
     "sing_audio": "audio/towel.mp3",
     "pl_audio": "audio/towels.mp3",
     "image": "",
-    "example_audio": "audio/examples/thetowelsarestillwet.mp3"
+    "example_audio": "audio/examples/thetowelsarestillwet.mp3",
+    "": ""
   },
   {
     "oodham": "tovaṣ",
@@ -685,7 +727,8 @@ const lexicon = [
     "sing_audio": "audio/handkerchief.mp3",
     "pl_audio": "audio/handkerchief.mp3",
     "image": "",
-    "example_audio": "audio/examples/wipethebabysfacewithyourhandkerchief.mp3"
+    "example_audio": "audio/examples/wipethebabysfacewithyourhandkerchief.mp3",
+    "": ""
   },
   {
     "oodham": "monjel",
@@ -701,7 +744,8 @@ const lexicon = [
     "sing_audio": "audio/headscarf.mp3",
     "pl_audio": "audio/headscarfs.mp3",
     "image": "",
-    "example_audio": "audio/examples/herheadscarfispretty.mp3"
+    "example_audio": "audio/examples/herheadscarfispretty.mp3",
+    "": ""
   },
   {
     "oodham": "bayuka",
@@ -717,7 +761,8 @@ const lexicon = [
     "sing_audio": "audio/necklace.mp3",
     "pl_audio": "audio/necklaces.mp3",
     "image": "",
-    "example_audio": "audio/examples/mynecklaceisgold.mp3"
+    "example_audio": "audio/examples/mynecklaceisgold.mp3",
+    "": ""
   },
   {
     "oodham": "maskal",
@@ -733,7 +778,8 @@ const lexicon = [
     "sing_audio": "audio/neckerchief.mp3",
     "pl_audio": "audio/neckerchiefs.mp3",
     "image": "",
-    "example_audio": "taudio/examples/thecowboyhasaredneckerchief.mp3"
+    "example_audio": "taudio/examples/thecowboyhasaredneckerchief.mp3",
+    "": ""
   },
   {
     "oodham": "hu’u",
@@ -749,7 +795,8 @@ const lexicon = [
     "sing_audio": "audio/star.mp3",
     "pl_audio": "audio/stars.mp3",
     "image": "",
-    "example_audio": "audio/examples/thestarsarereallyshining.mp3"
+    "example_audio": "audio/examples/thestarsarereallyshining.mp3",
+    "": ""
   },
   {
     "oodham": "do’ag",
@@ -765,7 +812,8 @@ const lexicon = [
     "sing_audio": "audio/mountain.mp3",
     "pl_audio": "audio/mountains.mp3",
     "image": "",
-    "example_audio": "audio/examples/helivesontopofthemountain.mp3"
+    "example_audio": "audio/examples/helivesontopofthemountain.mp3",
+    "": ""
   },
   {
     "oodham": "vo:g",
@@ -781,7 +829,8 @@ const lexicon = [
     "sing_audio": "audio/road.mp3",
     "pl_audio": "audio/roads.mp3",
     "image": "",
-    "example_audio": "audio/examples/whereistheroad.mp3"
+    "example_audio": "audio/examples/whereistheroad.mp3",
+    "": ""
   },
   {
     "oodham": "vainomĭ",
@@ -797,7 +846,8 @@ const lexicon = [
     "sing_audio": "audio/knife.mp3",
     "pl_audio": "audio/knives.mp3",
     "image": "",
-    "example_audio": "audio/examples/dontusethatknife.mp3"
+    "example_audio": "audio/examples/dontusethatknife.mp3",
+    "": ""
   },
   {
     "oodham": "kavyu",
@@ -813,7 +863,8 @@ const lexicon = [
     "sing_audio": "audio/horse.mp3",
     "pl_audio": "audio/horses.mp3",
     "image": "",
-    "example_audio": "audio/examples/isthisyourhorse.mp3"
+    "example_audio": "audio/examples/isthisyourhorse.mp3",
+    "": ""
   },
   {
     "oodham": "ma:gina",
@@ -829,7 +880,8 @@ const lexicon = [
     "sing_audio": "audio/carmagina.mp3",
     "pl_audio": "audio/carsmagina.mp3",
     "image": "",
-    "example_audio": "audio/examples/isthecarrunning.mp3"
+    "example_audio": "audio/examples/isthecarrunning.mp3",
+    "": ""
   },
   {
     "oodham": "kalit",
@@ -845,7 +897,8 @@ const lexicon = [
     "sing_audio": "audio/carkalit.mp3",
     "pl_audio": "audio/carskalit.mp3",
     "image": "",
-    "example_audio": "audio/examples/imgoingtowashmycar.mp3"
+    "example_audio": "audio/examples/imgoingtowashmycar.mp3",
+    "": ""
   },
   {
     "oodham": "’o’ohon",
@@ -861,7 +914,8 @@ const lexicon = [
     "sing_audio": "audio/book.mp3",
     "pl_audio": "audio/books.mp3",
     "image": "",
-    "example_audio": "audio/examples/readthebook.mp3"
+    "example_audio": "audio/examples/readthebook.mp3",
+    "": ""
   },
   {
     "oodham": "’i:bdag",
@@ -877,7 +931,8 @@ const lexicon = [
     "sing_audio": "audio/heart.mp3",
     "pl_audio": "audio/hearts.mp3",
     "image": "",
-    "example_audio": "audio/examples/itlookskindoflikeaheart.mp3"
+    "example_audio": "audio/examples/itlookskindoflikeaheart.mp3",
+    "": ""
   },
   {
     "oodham": "da:k",
@@ -893,7 +948,8 @@ const lexicon = [
     "sing_audio": "audio/nose.mp3",
     "pl_audio": "audio/noses.mp3",
     "image": "",
-    "example_audio": "audio/examples/mynoseitches.mp3"
+    "example_audio": "audio/examples/mynoseitches.mp3",
+    "": ""
   },
   {
     "oodham": "na:k",
@@ -909,7 +965,8 @@ const lexicon = [
     "sing_audio": "audio/ear.mp3",
     "pl_audio": "audio/ears.mp3",
     "image": "",
-    "example_audio": "audio/examples/ihaveanearache.mp3"
+    "example_audio": "audio/examples/ihaveanearache.mp3",
+    "": ""
   },
   {
     "oodham": "kusvo",
@@ -925,7 +982,8 @@ const lexicon = [
     "sing_audio": "audio/neck.mp3",
     "pl_audio": "audio/necks.mp3",
     "image": "",
-    "example_audio": "audio/examples/thatcatreallyscratchedmyneck.mp3"
+    "example_audio": "audio/examples/thatcatreallyscratchedmyneck.mp3",
+    "": ""
   },
   {
     "oodham": "ba:ṣo",
@@ -941,7 +999,8 @@ const lexicon = [
     "sing_audio": "audio/chest.mp3",
     "pl_audio": "audio/chests.mp3",
     "image": "",
-    "example_audio": "audio/examples/hesurepunchedmeintheches.mp3"
+    "example_audio": "audio/examples/hesurepunchedmeintheches.mp3",
+    "": ""
   },
   {
     "oodham": "kotva",
@@ -957,7 +1016,8 @@ const lexicon = [
     "sing_audio": "audio/shoulder.mp3",
     "pl_audio": "audio/shoulders.mp3",
     "image": "",
-    "example_audio": "audio/examples/doyourshouldershurt.mp3"
+    "example_audio": "audio/examples/doyourshouldershurt.mp3",
+    "": ""
   },
   {
     "oodham": "to:n",
@@ -973,7 +1033,8 @@ const lexicon = [
     "sing_audio": "audio/knee.mp3",
     "pl_audio": "audio/knees.mp3",
     "image": "",
-    "example_audio": "audio/examples/ihurtmyknee.mp3"
+    "example_audio": "audio/examples/ihurtmyknee.mp3",
+    "": ""
   },
   {
     "oodham": "’añilo",
@@ -989,7 +1050,8 @@ const lexicon = [
     "sing_audio": "audio/ring.mp3",
     "pl_audio": "audio/rings.mp3",
     "image": "",
-    "example_audio": "audio/examples/ilostmyring.mp3"
+    "example_audio": "audio/examples/ilostmyring.mp3",
+    "": ""
   },
   {
     "oodham": "nahagio",
@@ -1005,7 +1067,8 @@ const lexicon = [
     "sing_audio": "audio/mouse.mp3",
     "pl_audio": "audio/mice.mp3",
     "image": "",
-    "example_audio": "audio/examples/therearelotsofmiceinthatfield.mp3"
+    "example_audio": "audio/examples/therearelotsofmiceinthatfield.mp3",
+    "": ""
   },
   {
     "oodham": "vagtalig",
@@ -1021,7 +1084,8 @@ const lexicon = [
     "sing_audio": "audio/jacket.mp3",
     "pl_audio": "audio/jackets.mp3",
     "image": "",
-    "example_audio": "audio/examples/putyourjacketon.mp3"
+    "example_audio": "audio/examples/putyourjacketon.mp3",
+    "": ""
   },
   {
     "oodham": "la:bis",
@@ -1037,7 +1101,8 @@ const lexicon = [
     "sing_audio": "audio/pencil.mp3",
     "pl_audio": "audio/pencils.mp3",
     "image": "",
-    "example_audio": "audio/examples/doyouhaveapencil.mp3"
+    "example_audio": "audio/examples/doyouhaveapencil.mp3",
+    "": ""
   },
   {
     "oodham": "cevagĭ",
@@ -1053,7 +1118,8 @@ const lexicon = [
     "sing_audio": "audio/cloud.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/thecloudsaregray.mp3"
+    "example_audio": "audio/examples/thecloudsaregray.mp3",
+    "": ""
   },
   {
     "oodham": "taḍai",
@@ -1069,7 +1135,8 @@ const lexicon = [
     "sing_audio": "audio/roadrunner.mp3",
     "pl_audio": "audio/roadrunners.mp3",
     "image": "",
-    "example_audio": "audio/examples/theroadrunnerranoverthere.mp3"
+    "example_audio": "audio/examples/theroadrunnerranoverthere.mp3",
+    "": ""
   },
   {
     "oodham": "sa:vano",
@@ -1085,7 +1152,8 @@ const lexicon = [
     "sing_audio": "audio/bedsheet.mp3",
     "pl_audio": "audio/bedsheets.mp3",
     "image": "",
-    "example_audio": "audio/examples/hangupthebedsheet.mp3"
+    "example_audio": "audio/examples/hangupthebedsheet.mp3",
+    "": ""
   },
   {
     "oodham": "’oidag",
@@ -1101,7 +1169,8 @@ const lexicon = [
     "sing_audio": "audio/field.mp3",
     "pl_audio": "audio/fields.mp3",
     "image": "",
-    "example_audio": "audio/examples/whatdoyouguysplantinthatfield.mp3"
+    "example_audio": "audio/examples/whatdoyouguysplantinthatfield.mp3",
+    "": ""
   },
   {
     "oodham": "ñe:ñ",
@@ -1117,7 +1186,8 @@ const lexicon = [
     "sing_audio": "audio/tongue.mp3",
     "pl_audio": "audio/tongues.mp3",
     "image": "",
-    "example_audio": "audio/examples/didyouburnyourtongue.mp3"
+    "example_audio": "audio/examples/didyouburnyourtongue.mp3",
+    "": ""
   },
   {
     "oodham": "ta:tamĭ",
@@ -1133,7 +1203,8 @@ const lexicon = [
     "sing_audio": "audio/tooth.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/brushyourteeth.mp3"
+    "example_audio": "audio/examples/brushyourteeth.mp3",
+    "": ""
   },
   {
     "oodham": "tatk",
@@ -1149,7 +1220,8 @@ const lexicon = [
     "sing_audio": "audio/root.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/somepeopleusebananayuccaroottomakebaskets.mp3"
+    "example_audio": "audio/examples/somepeopleusebananayuccaroottomakebaskets.mp3",
+    "": ""
   },
   {
     "oodham": "vo:k",
@@ -1165,7 +1237,8 @@ const lexicon = [
     "sing_audio": "audio/stomach.mp3",
     "pl_audio": "audio/stomachs.mp3",
     "image": "",
-    "example_audio": "audio/examples/mystomachhurts.mp3"
+    "example_audio": "audio/examples/mystomachhurts.mp3",
+    "": ""
   },
   {
     "oodham": "ka:m",
@@ -1181,7 +1254,8 @@ const lexicon = [
     "sing_audio": "audio/cheekface.mp3",
     "pl_audio": "audio/cheeks.mp3",
     "image": "",
-    "example_audio": "audio/examples/wipeyourcheek.mp3"
+    "example_audio": "audio/examples/wipeyourcheek.mp3",
+    "": ""
   },
   {
     "oodham": "’at",
@@ -1197,7 +1271,8 @@ const lexicon = [
     "sing_audio": "audio/butt.mp3",
     "pl_audio": "audio/butts.mp3",
     "image": "",
-    "example_audio": "audio/examples/hesurehitmeonthebutt.mp3"
+    "example_audio": "audio/examples/hesurehitmeonthebutt.mp3",
+    "": ""
   },
   {
     "oodham": "hujuḍ",
@@ -1213,7 +1288,8 @@ const lexicon = [
     "sing_audio": "audio/lizard.mp3",
     "pl_audio": "audio/lizards.mp3",
     "image": "",
-    "example_audio": "audio/examples/thatlizardiscrawlingonthefence.mp3"
+    "example_audio": "audio/examples/thatlizardiscrawlingonthefence.mp3",
+    "": ""
   },
   {
     "oodham": "votoñ",
@@ -1229,7 +1305,8 @@ const lexicon = [
     "sing_audio": "audio/button.mp3",
     "pl_audio": "audio/buttons.mp3",
     "image": "",
-    "example_audio": "audio/examples/thisdresshasmanybuttons.mp3"
+    "example_audio": "audio/examples/thisdresshasmanybuttons.mp3",
+    "": ""
   },
   {
     "oodham": "vo:da",
@@ -1245,7 +1322,8 @@ const lexicon = [
     "sing_audio": "audio/boot.mp3",
     "pl_audio": "audio/boots.mp3",
     "image": "",
-    "example_audio": "audio/examples/wheredidyouputmyboots.mp3"
+    "example_audio": "audio/examples/wheredidyouputmyboots.mp3",
+    "": ""
   },
   {
     "oodham": "’u:s",
@@ -1261,7 +1339,8 @@ const lexicon = [
     "sing_audio": "audio/stick.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/bringsomesticksoverhere.mp3"
+    "example_audio": "audio/examples/bringsomesticksoverhere.mp3",
+    "": ""
   },
   {
     "oodham": "kalna:yo",
@@ -1277,7 +1356,8 @@ const lexicon = [
     "sing_audio": "audio/pomegranate.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/thispomegranateisreallysweet.mp3"
+    "example_audio": "audio/examples/thispomegranateisreallysweet.mp3",
+    "": ""
   },
   {
     "oodham": "ṣa:mt",
@@ -1293,7 +1373,8 @@ const lexicon = [
     "sing_audio": "audio/brick.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/makesomeadobebricks.mp3"
+    "example_audio": "audio/examples/makesomeadobebricks.mp3",
+    "": ""
   },
   {
     "oodham": "’o:",
@@ -1309,7 +1390,8 @@ const lexicon = [
     "sing_audio": "audio/backbody.mp3",
     "pl_audio": "audio/backs.mp3",
     "image": "",
-    "example_audio": "audio/examples/mybackitches.mp3"
+    "example_audio": "audio/examples/mybackitches.mp3",
+    "": ""
   },
   {
     "oodham": "cekva",
@@ -1325,7 +1407,8 @@ const lexicon = [
     "sing_audio": "audio/ankle.mp3",
     "pl_audio": "audio/ankles.mp3",
     "image": "",
-    "example_audio": "audio/examples/youregoingtohurtyourankle.mp3"
+    "example_audio": "audio/examples/youregoingtohurtyourankle.mp3",
+    "": ""
   },
   {
     "oodham": "ce:gig",
@@ -1341,7 +1424,8 @@ const lexicon = [
     "sing_audio": "audio/name.mp3",
     "pl_audio": "audio/names.mp3",
     "image": "",
-    "example_audio": "audio/examples/writeyournamedown.mp3"
+    "example_audio": "audio/examples/writeyournamedown.mp3",
+    "": ""
   },
   {
     "oodham": "ṣondal",
@@ -1357,7 +1441,8 @@ const lexicon = [
     "sing_audio": "audio/soldier.mp3",
     "pl_audio": "audio/soldiers.mp3",
     "image": "",
-    "example_audio": "audio/examples/isyourchildasoldier.mp3"
+    "example_audio": "audio/examples/isyourchildasoldier.mp3",
+    "": ""
   },
   {
     "oodham": "ṣavkuḍ",
@@ -1373,7 +1458,8 @@ const lexicon = [
     "sing_audio": "audio/rattle.mp3",
     "pl_audio": "audio/rattles.mp3",
     "image": "",
-    "example_audio": "audio/examples/whomadeyouthisrattle.mp3"
+    "example_audio": "audio/examples/whomadeyouthisrattle.mp3",
+    "": ""
   },
   {
     "oodham": "’o:’o",
@@ -1389,7 +1475,8 @@ const lexicon = [
     "sing_audio": "audio/bone.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/howmanybonesdowehaveinourbody.mp3"
+    "example_audio": "audio/examples/howmanybonesdowehaveinourbody.mp3",
+    "": ""
   },
   {
     "oodham": "koṣva",
@@ -1405,7 +1492,8 @@ const lexicon = [
     "sing_audio": "audio/skull.mp3",
     "pl_audio": "audio/skulls.mp3",
     "image": "",
-    "example_audio": "audio/examples/thishardthinginourheadisaskull.mp3"
+    "example_audio": "audio/examples/thishardthinginourheadisaskull.mp3",
+    "": ""
   },
   {
     "oodham": "mavid",
@@ -1421,7 +1509,8 @@ const lexicon = [
     "sing_audio": "audio/mountainlion.mp3",
     "pl_audio": "audio/mountainlions.mp3",
     "image": "",
-    "example_audio": "audio/examples/haveyouheverseenamountainlion.mp3"
+    "example_audio": "audio/examples/haveyoueverseenamountainlion.mp3",
+    "": ""
   },
   {
     "oodham": "gevo",
@@ -1437,7 +1526,8 @@ const lexicon = [
     "sing_audio": "audio/bobcat.mp3",
     "pl_audio": "audio/bobcats.mp3",
     "image": "",
-    "example_audio": "audio/examples/thebobcatsarefriendly.mp3"
+    "example_audio": "audio/examples/thebobcatsarefriendly.mp3",
+    "": ""
   },
   {
     "oodham": "cevo",
@@ -1453,7 +1543,8 @@ const lexicon = [
     "sing_audio": "audio/gopher.mp3",
     "pl_audio": "audio/gophers.mp3",
     "image": "",
-    "example_audio": "audio/examples/theanimalthatmakesalotofholesinthegroundiscalledgopher.mp3"
+    "example_audio": "audio/examples/theanimalthatmakesalotofholesinthegroundiscalledgopher.mp3",
+    "": "4"
   },
   {
     "oodham": "navoj",
@@ -1469,7 +1560,8 @@ const lexicon = [
     "sing_audio": "audio/friend.mp3",
     "pl_audio": "audio/friends.mp3",
     "image": "",
-    "example_audio": "audio/examples/isthisyourfriend.mp3"
+    "example_audio": "audio/examples/isthisyourfriend.mp3",
+    "": ""
   },
   {
     "oodham": "ho’ibaḍ",
@@ -1485,7 +1577,8 @@ const lexicon = [
     "sing_audio": "audio/needle.mp3",
     "pl_audio": "audio/needles.mp3",
     "image": "",
-    "example_audio": "audio/examples/theneedleissharp.mp3"
+    "example_audio": "audio/examples/theneedleissharp.mp3",
+    "": ""
   },
   {
     "oodham": "cemait",
@@ -1501,7 +1594,8 @@ const lexicon = [
     "sing_audio": "audio/tortilla.mp3",
     "pl_audio": "audio/tortillas.mp3",
     "image": "",
-    "example_audio": "audio/examples/givemeatortilla.mp3"
+    "example_audio": "audio/examples/givemeatortilla.mp3",
+    "": ""
   },
   {
     "oodham": "tlo:gi",
@@ -1517,7 +1611,8 @@ const lexicon = [
     "sing_audio": "audio/truck.mp3",
     "pl_audio": "audio/trucks.mp3",
     "image": "",
-    "example_audio": "audio/examples/didyoubuythattruck.mp3"
+    "example_audio": "audio/examples/didyoubuythattruck.mp3",
+    "": ""
   },
   {
     "oodham": "maṣcamakuḍ",
@@ -1533,7 +1628,8 @@ const lexicon = [
     "sing_audio": "audio/school.mp3",
     "pl_audio": "audio/schools.mp3",
     "image": "",
-    "example_audio": "audio/examples/whereistheschoollocated.mp3"
+    "example_audio": "audio/examples/whereistheschoollocated.mp3",
+    "": ""
   },
   {
     "oodham": "ma:kig",
@@ -1549,7 +1645,8 @@ const lexicon = [
     "sing_audio": "audio/gift.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "’e:’eḍ",
@@ -1565,7 +1662,8 @@ const lexicon = [
     "sing_audio": "audio/blood.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "maṣad",
@@ -1581,7 +1679,8 @@ const lexicon = [
     "sing_audio": "audio/moon.mp3",
     "pl_audio": "audio/moons.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "taṣ",
@@ -1597,7 +1696,8 @@ const lexicon = [
     "sing_audio": "audio/sun.mp3",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "givuḍ",
@@ -1613,7 +1713,8 @@ const lexicon = [
     "sing_audio": "audio/belt.mp3",
     "pl_audio": "audio/belts.mp3",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "bo:l",
@@ -1629,7 +1730,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/thosekidsareplayingball.mp3"
+    "example_audio": "audio/examples/thosekidsareplayingball.mp3",
+    "": ""
   },
   {
     "oodham": "cekṣañ",
@@ -1645,7 +1747,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/drawalinehere.mp3"
+    "example_audio": "audio/examples/drawalinehere.mp3",
+    "": ""
   },
   {
     "oodham": "nanakmel",
@@ -1661,7 +1764,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "vonamĭ",
@@ -1677,7 +1781,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "si:l",
@@ -1693,7 +1798,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": "audio/examples/hangupthesaddle.mp3"
+    "example_audio": "audio/examples/hangupthesaddle.mp3",
+    "": ""
   },
   {
     "oodham": "je’e",
@@ -1709,7 +1815,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "’o:g",
@@ -1725,7 +1832,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "je’es",
@@ -1741,7 +1849,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "da:d",
@@ -1757,7 +1866,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "tatal",
@@ -1773,7 +1883,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "ji:ji’i",
@@ -1789,7 +1900,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "ke:li",
@@ -1805,7 +1917,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "’oksi",
@@ -1821,7 +1934,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "hakit",
@@ -1837,7 +1951,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "vovoit",
@@ -1853,7 +1968,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "ba:ba’a",
@@ -1869,7 +1985,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "lu:lu’u",
@@ -1885,7 +2002,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "vosk",
@@ -1901,7 +2019,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "ga:ga’a",
@@ -1917,7 +2036,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "maḍ",
@@ -1933,7 +2053,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "’alidag",
@@ -1949,7 +2070,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "mo:s",
@@ -1965,7 +2087,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "ba’amaḍ",
@@ -1981,7 +2104,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "vosmaḍ",
@@ -1997,7 +2121,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "ka’amaḍ",
@@ -2013,7 +2138,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "ma’i",
@@ -2029,7 +2155,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "cu:cuḍ",
@@ -2045,7 +2172,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "hakimaḍ",
@@ -2061,7 +2189,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "ve:nag",
@@ -2077,7 +2206,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "si:s",
@@ -2093,7 +2223,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "sikul",
@@ -2109,7 +2240,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "hajuñ",
@@ -2125,7 +2257,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "vijina",
@@ -2141,7 +2274,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "kostal",
@@ -2157,7 +2291,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "hoa",
@@ -2173,7 +2308,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "ko:ba",
@@ -2189,7 +2325,8 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   },
   {
     "oodham": "vaika",
@@ -2205,6 +2342,7 @@ const lexicon = [
     "sing_audio": "",
     "pl_audio": "",
     "image": "",
-    "example_audio": ""
+    "example_audio": "",
+    "": ""
   }
 ];

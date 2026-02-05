@@ -3,7 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const dialectSelect = document.getElementById("dialectSelect");
   const resultsDiv = document.getElementById("results");
 
-  // Normalize CSV keys just in case
+  /* -------------------------------
+     TRUE LAZY-LOADED AUDIO PLAYER
+  -------------------------------- */
+  let currentAudio = null;
+
+  window.playAudio = function (src) {
+    if (!src) return;
+
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    currentAudio = new Audio(src);
+    currentAudio.play();
+  };
+
+  /* -------------------------------
+     Normalize CSV keys
+  -------------------------------- */
   const normalizedLexicon = lexicon.map(entry => {
     const normalizedEntry = {};
     for (let key in entry) {
@@ -12,11 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return normalizedEntry;
   });
 
-  // Auto-populate dialect dropdown
+  /* -------------------------------
+     Populate dialect dropdown
+  -------------------------------- */
   const dialectSet = new Set();
   normalizedLexicon.forEach(entry => {
     if (entry.dialect) dialectSet.add(entry.dialect);
   });
+
   dialectSet.forEach(dialect => {
     const option = document.createElement("option");
     option.value = dialect;
@@ -24,15 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
     dialectSelect.appendChild(option);
   });
 
-  // Global audio player
-  window.playAudio = function (id) {
-    const audio = document.getElementById(id);
-    if (audio) {
-      audio.currentTime = 0;
-      audio.play();
-    }
-  };
-
+  /* -------------------------------
+     Search logic
+  -------------------------------- */
   function performSearch() {
     const query = searchInput.value.toLowerCase().trim();
     const selectedDialect = dialectSelect.value.toLowerCase();
@@ -42,10 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const matches = normalizedLexicon.filter(entry => {
       const wordMatch =
-        (entry.english && entry.english.toLowerCase().includes(query)) ||          // main English
-        (entry.oodham && entry.oodham.toLowerCase().includes(query)) ||            // O'odham word
-        (entry.reduplicated && entry.reduplicated.toLowerCase().includes(query)) || // reduplicated word
-        (entry.redup_meaning && entry.redup_meaning.toLowerCase().includes(query)); // meaning of reduplicated
+        (entry.english && entry.english.toLowerCase().includes(query)) ||
+        (entry.oodham && entry.oodham.toLowerCase().includes(query)) ||
+        (entry.reduplicated && entry.reduplicated.toLowerCase().includes(query)) ||
+        (entry.redup_meaning && entry.redup_meaning.toLowerCase().includes(query));
 
       const dialectMatch = selectedDialect
         ? entry.dialect && entry.dialect.toLowerCase() === selectedDialect
@@ -59,34 +75,32 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    /* -------------------------------
+       Render results
+    -------------------------------- */
     matches.forEach((entry, index) => {
       const div = document.createElement("div");
       div.className = "card";
 
-      const singularAudioId = `singular-audio-${index}`;
-      const pluralAudioId = `plural-audio-${index}`;
-
-      // Examples
+      /* -------- Examples -------- */
       let examplesHTML = "";
       if (entry.examples) {
         const exampleList = entry.examples.split("||");
-        const audioList = entry.example_audio ? entry.example_audio.split("||") : [];
+        const audioList = entry.example_audio
+          ? entry.example_audio.split("||")
+          : [];
 
         examplesHTML = exampleList
           .map((example, i) => {
             const [oodham, english] = example.split("::");
-            const exampleAudioId = `example-audio-${index}-${i}`;
 
             return `
               <div class="example-line">
                 ${oodham.trim()} – <em>${english.trim()}</em>
                 ${
                   audioList[i]
-                    ? `
-                      <span class="audio-icon"
-                            onclick="playAudio('${exampleAudioId}')">🔈</span>
-                      <audio id="${exampleAudioId}" src="${audioList[i]}"></audio>
-                    `
+                    ? `<span class="audio-icon"
+                             onclick="playAudio('${audioList[i]}')">🔈</span>`
                     : ""
                 }
               </div>
@@ -95,15 +109,16 @@ document.addEventListener("DOMContentLoaded", () => {
           .join("");
       }
 
-      // Entry HTML
+      /* -------- Entry HTML -------- */
       div.innerHTML = `
         <div class="entry-headword">
           <strong>${entry.oodham || ""}</strong>
-          ${entry.sing_audio ? `
-            <span class="audio-icon"
-                  onclick="playAudio('${singularAudioId}')">🔈</span>
-            <audio id="${singularAudioId}" src="${entry.sing_audio}"></audio>
-          ` : ""}
+          ${
+            entry.sing_audio
+              ? `<span class="audio-icon"
+                       onclick="playAudio('${entry.sing_audio}')">🔈</span>`
+              : ""
+          }
         </div>
 
         <div class="entry-english">
@@ -111,46 +126,67 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <div class="entry-grammar">
-          ${entry.partOfSpeech ? entry.partOfSpeech : ""}
+          ${entry.partOfSpeech || ""}
           ${entry.partOfSpeech && entry.pattern ? ", " : ""}
           ${entry.pattern ? `Pattern ${entry.pattern}` : ""}
         </div>
 
-        ${entry.pronunciation ? `
-          <div class="entry-ipa">
-            <strong>Singular IPA:</strong> ${entry.pronunciation}
-          </div>
-        ` : ""}
+        ${
+          entry.pronunciation
+            ? `<div class="entry-ipa">
+                 <strong>Singular IPA:</strong> ${entry.pronunciation}
+               </div>`
+            : ""
+        }
 
-        ${entry.reduplicated ? `
-  <div class="entry-plural">
-    <strong>Plural:</strong> ${entry.reduplicated}
-    ${entry.redup_pronunciation ? `
-      <div class="entry-redup-ipa">
-        <strong>Plural IPA:</strong> ${entry.redup_pronunciation}
-      </div>
-    ` : ""}
-    ${entry.redup_meaning ? `<div class="entry-redup-meaning"><em>${entry.redup_meaning}</em></div>` : ""}
-    ${entry.pl_audio ? `
-      <span class="audio-icon"
-            onclick="playAudio('${pluralAudioId}')">🔈</span>
-      <audio id="${pluralAudioId}" src="${entry.pl_audio}"></audio>
-    ` : ""}
-  </div>
-` : ""}
+        ${
+          entry.reduplicated
+            ? `<div class="entry-plural">
+                 <strong>Plural:</strong> ${entry.reduplicated}
 
-        ${examplesHTML ? `
-          <div class="entry-examples">
-            <strong>Example(s):</strong>
-            ${examplesHTML}
-          </div>
-        ` : ""}
+                 ${
+                   entry.redup_pronunciation
+                     ? `<div class="entry-redup-ipa">
+                          <strong>Plural IPA:</strong> ${entry.redup_pronunciation}
+                        </div>`
+                     : ""
+                 }
+
+                 ${
+                   entry.redup_meaning
+                     ? `<div class="entry-redup-meaning">
+                          <em>${entry.redup_meaning}</em>
+                        </div>`
+                     : ""
+                 }
+
+                 ${
+                   entry.pl_audio
+                     ? `<span class="audio-icon"
+                              onclick="playAudio('${entry.pl_audio}')">🔈</span>`
+                     : ""
+                 }
+               </div>`
+            : ""
+        }
+
+        ${
+          examplesHTML
+            ? `<div class="entry-examples">
+                 <strong>Example(s):</strong>
+                 ${examplesHTML}
+               </div>`
+            : ""
+        }
       `;
 
       resultsDiv.appendChild(div);
     });
   }
 
+  /* -------------------------------
+     Event listeners
+  -------------------------------- */
   searchInput.addEventListener("input", performSearch);
   dialectSelect.addEventListener("change", performSearch);
 });
