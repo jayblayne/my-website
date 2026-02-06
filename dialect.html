@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dialect Lexicon</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .term-page { max-width: 900px; margin: auto; padding: 2rem; }
+    .search-bar { margin: 1.5rem 0 2rem; }
+    .search-bar input { width: 100%; padding: 0.7rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+    .feature { border-bottom: 1px solid #e5e7eb; padding: 1.2rem 0; }
+    .word { font-weight: 700; font-size: 1.2rem; color: #1d4ed8; margin-bottom: 0.4rem; }
+    .label { font-weight: 600; color: #374151; }
+    .ipa { font-style: italic; color: #6b7280; }
+    audio { margin: 0.4rem 0; display: block; }
+    .example { margin-top: 0.6rem; padding-left: 1rem; }
+    .example-text { display: block; margin-bottom: 0.2rem; }
+    .dialect-profile img { max-width: 100%; margin-top: 0.5rem; border-radius: 6px; border: 1px solid #ccc; }
+    table { border-collapse: collapse; width: 100%; margin-top: 0.8rem; }
+    th, td { border: 1px solid #ccc; padding: 0.4rem 0.6rem; text-align: center; vertical-align: middle; }
+    th { font-weight: normal; color: #111827; background-color: #f3f4f6; }
+    h3.section-header { font-weight: 700; font-size: 1.2rem; color: #1d4ed8; margin-top: 2rem; margin-bottom: 1rem; }
+    #dialectTitle { font-size: 2rem; font-weight: 700; color: #1d4ed8; margin-top: 2rem; margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Jeremy Johns</h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="teaching.html">Teaching/Outreach</a></li>
+      <li class="dropdown">
+        <a href="#">Language Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="login.html?redirect=wordsearch.html">Reduplication Dictionary</a></li>
+            <li><a href="neologisms.html">Linguistic Terminology</a></li>
+            <li><a href="lab.html">'O'odham Lab</a></li>
+            <li><a href="login.html?redirect=map.html">Dialect Map</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="term-page">
+  <a href="map.html">← Back to Map</a>
+
+  <h1 id="dialectTitle"></h1>
+
+  <div id="dialectProfile"></div>
+  <div id="phonemicInventory"></div>
+
+  <h3 class="section-header">Dialect Lexicon Search</h3>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search words in this dialect…">
+  </div>
+  <div id="results">
+    <p>Please enter a search term above to find words in this dialect.</p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Jeremy Johns | <a href="mailto:jeremyjohns@arizona.edu">jeremyjohns@arizona.edu</a></p>
+</footer>
+
+<script src="lexicon.js"></script>
+<script src="dialect_profiles.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const dialectId = params.get("dialect");
+
+  const title = document.getElementById("dialectTitle");
+  const profileContainer = document.getElementById("dialectProfile");
+  const phonemicContainer = document.getElementById("phonemicInventory");
+  const searchInput = document.getElementById("searchInput");
+  const resultsDiv = document.getElementById("results");
+
+  if (!dialectId) {
+    title.textContent = "No dialect selected";
+    return;
+  }
+
+  const profile = dialectProfiles[dialectId];
+  if (profile) {
+    title.textContent = profile.name;
+    let profileHTML = ``;
+
+    if (profile.features && profile.features.length) {
+      profileHTML += `<h3 class="section-header">Dialectal Features</h3><ul>${profile.features.map(f => `<li>${f}</li>`).join("")}</ul>`;
+    }
+    if (profile.grammaticalNotes && profile.grammaticalNotes.length) {
+      profileHTML += `<h3 class="section-header">Grammatical Notes</h3><ul>${profile.grammaticalNotes.map(n => `<li>${n}</li>`).join("")}</ul>`;
+    }
+    if (profile.trajectoryMap) {
+      profileHTML += `<h3 class="section-header">Phonetic Trajectory</h3><img src="${profile.trajectoryMap}" alt="Phonetic trajectory map">`;
+    }
+    profileContainer.innerHTML = profileHTML;
+
+    if (profile.phonemicInventoryCSV) {
+      fetch(profile.phonemicInventoryCSV)
+        .then(resp => resp.text())
+        .then(csvData => {
+          const delimiter = csvData.includes("\t") ? "\t" : ",";
+          const rows = csvData.trim().split("\n");
+          const headers = rows.shift().split(delimiter).map(h => h.trim());
+          const tableHTML = `
+            <h3 class="section-header">Phonemic Inventory (IPA Chart)</h3>
+            <table>
+              <thead><tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr></thead>
+              <tbody>
+                ${rows.map(r => {
+                  const cols = r.split(delimiter);
+                  return `<tr>${cols.map(c => {
+                    const val = c.trim();
+                    if (val && (val.endsWith(".mp3") || val.endsWith(".wav"))) {
+                      return `<td><audio controls preload="none" src="${val}"></audio></td>`;
+                    }
+                    return `<td>${val.replace(/ /g, "&nbsp;&nbsp;&nbsp;")}</td>`;
+                  }).join("")}</tr>`;
+                }).join("")}
+              </tbody>
+            </table>
+          `;
+          phonemicContainer.innerHTML = tableHTML;
+        })
+        .catch(err => {
+          phonemicContainer.innerHTML = "<p>Unable to load IPA chart CSV.</p>";
+          console.error(err);
+        });
+    }
+  } else {
+    title.textContent = "No profile available for this dialect";
+  }
+
+  // Include entries for this dialect OR entries where dialect is "Any"
+  const dialectEntries = lexicon.filter(
+    e => e.dialect_id === dialectId || e.dialect === "Any"
+  );
+
+  function render(entries) {
+    resultsDiv.innerHTML = "";
+    if (!entries.length) { 
+      resultsDiv.innerHTML = "<p>No matching entries.</p>"; 
+      return; 
+    }
+
+    const fragment = document.createDocumentFragment();
+
+    entries.forEach(e => {
+      const exampleSentences = e.examples ? e.examples.split("||") : [];
+      const exampleAudios = e.example_audio ? e.example_audio.split("||") : [];
+      let examplesHTML = "";
+
+      exampleSentences.forEach((s,i) => {
+        let formatted = s;
+        if (s.includes("::")) {
+          const parts = s.split("::");
+          const oodham = parts[0].trim();
+          const english = parts[1].trim();
+          formatted = `<strong>${oodham}</strong> <em>${english}</em>`;
+        }
+        examplesHTML += `<div class="example"><span class="example-text">${formatted}</span>${exampleAudios[i] ? `<audio controls preload="none" src="${exampleAudios[i]}"></audio>` : ""}</div>`;
+      });
+
+      const div = document.createElement("div");
+      div.className = "feature";
+      div.innerHTML = `
+        <div class="word">${e.oodham}</div>
+        ${e.sing_audio ? `<audio controls preload="none" src="${e.sing_audio}"></audio>` : ""}
+        <div><span class="label">English:</span> ${e.english}</div>
+        <div><span class="label">Part of speech:</span> ${e.partOfSpeech || ""}</div>
+        <div><span class="label">Pattern:</span> ${e.pattern || ""}</div>
+        <div class="ipa"><span class="label">Pronunciation:</span> ${e.pronunciation}</div>
+        ${e.reduplicated ? `<div><span class="label">Reduplicated:</span> ${e.reduplicated}<div class="ipa">${e.redup_pronunciation || ""}</div></div>${e.pl_audio ? `<audio controls preload="none" src="${e.pl_audio}"></audio>` : ""}<div><span class="label">Meaning:</span> ${e.redup_meaning || ""}</div>` : ""}
+        ${examplesHTML ? `<div class="label" style="margin-top:0.6rem;">Examples:</div>${examplesHTML}` : ""}
+      `;
+      fragment.appendChild(div);
+    });
+
+    resultsDiv.appendChild(fragment);
+  }
+
+  // Debounce the search for 250ms
+  let searchTimeout;
+  searchInput.addEventListener("input", () => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      const q = searchInput.value.trim().toLowerCase();
+      if (!q) { 
+        resultsDiv.innerHTML = "<p>Start typing to search words in this dialect.</p>"; 
+        return; 
+      }
+      const filtered = dialectEntries.filter(e =>
+        (e.oodham||"").toLowerCase().includes(q) ||
+        (e.english||"").toLowerCase().includes(q) ||
+        (e.partOfSpeech||"").toLowerCase().includes(q) ||
+        (e.pattern||"").toLowerCase().includes(q) ||
+        (e.reduplicated||"").toLowerCase().includes(q) ||
+        (e.redup_meaning||"").toLowerCase().includes(q)
+      );
+      render(filtered);
+    }, 250);
+  });
+});
+</script>
+
+</body>
+</html>

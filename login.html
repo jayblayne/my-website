@@ -1,10 +1,8 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jeremy Johns – Teaching & Outreach</title>
+  <title>Jeremy Johns – Protected Page Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,22 +10,21 @@
 
 <header>
   <h1>My Website</h1>
-   <nav>
+  <nav>
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="cv.html">CV</a></li>
       <li><a href="teaching.html">Teaching/Outreach</a></li>
-
       <li class="dropdown">
         <a href="#">Language Resources ▾</a>
         <ul class="dropdown-menu">
-          <li><a href="wordsearch.html">Reduplication Dictionary</a></li>
-          <li><a href="neologisms.html">Linguistic Terminology</a></li>
-          <li><a href="lab.html">'O'odham Lab</a></li>
+            <li><a href="login.html?redirect=wordsearch.html">Reduplication Dictionary</a></li>
+            <li><a href="neologisms.html">Linguistic Terminology</a></li>
+            <li><a href="lab.html">'O'odham Lab</a></li>
+            <li><a href="login.html?redirect=map.html">Dialect Map</a></li>
         </ul>
       </li>
-
     </ul>
   </nav>
 </header>
@@ -36,14 +33,26 @@
 
   <h2>Enter Password</h2>
 
-  <input type="password" id="pw">
+  <input type="password" id="pw" placeholder="Password">
   <button onclick="checkPassword()">Enter</button>
 
   <script>
+    // Define page passwords
+    const pagePasswords = {
+      "wordsearch.html": "password",
+      "map.html": "password"
+    };
+
+    // Get redirect page from query string, default to wordsearch.html
+    const params = new URLSearchParams(window.location.search);
+    const redirectPage = params.get("redirect") || "wordsearch.html";
+
     function checkPassword() {
       const pw = document.getElementById("pw").value;
-      if (pw === "password") {
-        window.location.href = "wordsearch.html";
+      
+      if (pagePasswords[redirectPage] && pw === pagePasswords[redirectPage]) {
+        // Correct password → redirect
+        window.location.href = redirectPage;
       } else {
         alert("Incorrect password");
       }
@@ -55,7 +64,6 @@
 <footer>
   <p>© 2026 Jeremy Johns | <a href="mailto:jeremyjohns@arizona.edu">jeremyjohns@arizona.edu</a></p>
 </footer>
-
 
 </body>
 </html>

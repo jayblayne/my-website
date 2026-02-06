@@ -1025,3 +1025,22 @@ body.lab-page::before {
   z-index: -1;
   pointer-events: none;
 }
+
+/* phonemic tables centering in dialect pages*/
+#phonemicInventory table th,
+#phonemicInventory table td {
+  text-align: center;      /* Center text horizontally */
+  vertical-align: middle;  /* Center text vertically */
+}
+
+/* Keep header row shaded gray */
+table th {
+  font-weight: normal;
+  color: #111827;
+  background-color: #f3f4f6;
+}
+
+/* Shade first column of body cells */
+table td:first-child {
+  background-color: #f3f4f6;
+}
