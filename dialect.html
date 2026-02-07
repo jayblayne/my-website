@@ -20,6 +20,7 @@
     th, td { border: 1px solid #ccc; padding: 0.4rem 0.6rem; text-align: center; vertical-align: middle; }
     th { font-weight: normal; color: #111827; background-color: #f3f4f6; }
     h3.section-header { font-weight: 700; font-size: 1.2rem; color: #1d4ed8; margin-top: 2rem; margin-bottom: 1rem; }
+    h4.chart-header { font-weight: 600; font-size: 1rem; color: #1e40af; margin-top: 1.5rem; margin-bottom: 0.5rem; }
     #dialectTitle { font-size: 2rem; font-weight: 700; color: #1d4ed8; margin-top: 2rem; margin-bottom: 1.5rem; }
   </style>
 </head>
@@ -37,9 +38,9 @@
         <a href="#">Language Resources ▾</a>
         <ul class="dropdown-menu">
           <li><a href="login.html?redirect=wordsearch.html">Reduplication Dictionary</a></li>
-            <li><a href="neologisms.html">Linguistic Terminology</a></li>
-            <li><a href="lab.html">'O'odham Lab</a></li>
-            <li><a href="login.html?redirect=map.html">Dialect Map</a></li>
+          <li><a href="neologisms.html">Linguistic Terminology</a></li>
+          <li><a href="lab.html">'O'odham Lab</a></li>
+          <li><a href="login.html?redirect=map.html">Dialect Map</a></li>
         </ul>
       </li>
     </ul>
@@ -53,7 +54,6 @@
 
   <div id="dialectProfile"></div>
   
-
   <h3 class="section-header">Dialect Lexicon Search</h3>
   <div class="search-bar">
     <input type="text" id="searchInput" placeholder="Search words in this dialect…">
@@ -91,42 +91,32 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  /* ---------- TITLE ---------- */
   title.textContent = profile.metadata?.label || profile.name || "Dialect";
 
   /* ---------- BUILD PROFILE HTML ---------- */
   let profileHTML = "";
 
-  if (profile.metadata?.location) {
-    profileHTML += `
-      <p>
-        <span class="metadata-label">Location:</span>
-        ${profile.metadata.label || ""}<br>
-        <em>Lat:</em> ${profile.metadata.location.lat},
-        <em>Lng:</em> ${profile.metadata.location.lng}
-      </p>
-    `;
-  }
-
+  // Phonology Section
   if (
     profile.phonology?.notes?.length ||
-    profile.phonology?.allophony?.length ||
-    profile.phonology?.phonemicInventoryCSV
+    profile.phonology?.dialect_allophony?.length ||
+    profile.phonology?.phonemicInventoryCSV ||
+    profile.phonology?.vowelCharts?.length
   ) {
     profileHTML += `<h3 class="section-header">Phonology</h3>`;
-    profileHTML += `
-      <h4>Phonemic Inventory (IPA Chart)</h4>
-      <div id="phonemicChart" style="margin-bottom:1.5rem;">Loading IPA chart…</div>
-    `;
-    if (profile.phonology.notes?.length) {
+
+    // Phonemic Inventory
+    if (profile.phonology.phonemicInventoryCSV) {
       profileHTML += `
-        <h4>General notes</h4>
-        <ul>${profile.phonology.notes.map(n => `<li>${n}</li>`).join("")}</ul>
+        <h4 class="chart-header">Phonemic Inventory (IPA Chart)</h4>
+        <div id="phonemicChart" style="margin-bottom:1.5rem;">Loading IPA chart…</div>
       `;
     }
-    if (profile.phonology.allophony?.length) {
-      profileHTML += `<h4>Allophony</h4><ul>`;
-      profile.phonology.allophony.forEach(rule => {
+
+    // Consonant Allophony at top
+    if (profile.phonology.dialect_allophony?.length) {
+      profileHTML += `<h4>Consonant Allophony</h4><ul>`;
+      profile.phonology.dialect_allophony.forEach(rule => {
         profileHTML += `<li>${rule.label || ""}`;
         if (rule.items?.length) {
           profileHTML += `<ul>${rule.items.map(i => `<li>${i}</li>`).join("")}</ul>`;
@@ -135,28 +125,62 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       profileHTML += `</ul>`;
     }
-  }
 
-  if (profile.grammar?.morphology?.length || profile.grammar?.syntax?.length) {
-    profileHTML += `<h3 class="section-header">Grammar</h3><ul>`;
-    if (profile.grammar.morphology?.length) {
-      profileHTML += profile.grammar.morphology
-        .map(m => `<li><strong>Morphology:</strong> ${m}</li>`)
-        .join("");
-    }
-    if (profile.grammar.syntax?.length) {
-      profileHTML += profile.grammar.syntax
-        .map(s => `<li><strong>Syntax:</strong> ${s}</li>`)
-        .join("");
-    }
-    profileHTML += `</ul>`;
-  }
+    // Vowel and Diphthong Charts
+    if (profile.phonology.vowelCharts?.length) {
+      profile.phonology.vowelCharts.forEach((chart, idx) => {
+        const chartId = `chart-${idx}`;
+        profileHTML += `
+          <h4 class="chart-header">${chart.title}</h4>
+          <div id="${chartId}" style="margin-bottom:0.5rem;">Loading chart…</div>
+        `;
 
-  if (profile.maps?.trajectory) {
-    profileHTML += `
-      <h3 class="section-header">Phonetic Trajectory</h3>
-      <img src="${profile.maps.trajectory}" alt="Phonetic trajectory map">
-    `;
+        // General notes under chart
+        if (chart.generalNotes?.length) {
+          profileHTML += `<h4>General Notes</h4><ul>${chart.generalNotes.map(n => `<li>${n}</li>`).join("")}</ul>`;
+        }
+
+        // Allophony under chart
+        if (chart.allophony?.length) {
+          profileHTML += `<h4>Allophony</h4><ul>`;
+          chart.allophony.forEach(rule => {
+            profileHTML += `<li>${rule.label || ""}`;
+            if (rule.items?.length) {
+              profileHTML += `<ul>${rule.items.map(i => `<li>${i}</li>`).join("")}</ul>`;
+            }
+            profileHTML += `</li>`;
+          });
+          profileHTML += `</ul>`;
+        }
+
+        // Fetch CSV for the chart
+        fetch(chart.csv)
+          .then(resp => resp.text())
+          .then(csvData => {
+            const delimiter = csvData.includes("\t") ? "\t" : ",";
+            const rows = csvData.trim().split("\n");
+            const headers = rows.shift().split(delimiter).map(h => h.trim());
+
+            const tableHTML = `
+              <table>
+                <thead>
+                  <tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr>
+                </thead>
+                <tbody>
+                  ${rows.map(r => {
+                    const cols = r.split(delimiter);
+                    return `<tr>${cols.map(c => `<td>${c.trim().replace(/ /g, "&nbsp;&nbsp;&nbsp;")}</td>`).join("")}</tr>`;
+                  }).join("")}
+                </tbody>
+              </table>
+            `;
+            document.getElementById(chartId).innerHTML = tableHTML;
+          })
+          .catch(() => {
+            document.getElementById(chartId).innerHTML = "<p>Unable to load chart.</p>";
+          });
+      });
+    }
   }
 
   profileContainer.innerHTML = profileHTML;
@@ -178,15 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <tbody>
               ${rows.map(r => {
                 const cols = r.split(delimiter);
-                return `<tr>${cols
-                  .map(c => {
-                    const val = c.trim();
-                    if (val && (val.endsWith(".mp3") || val.endsWith(".wav"))) {
-                      return `<td><audio controls preload="none" src="${val}"></audio></td>`;
-                    }
-                    return `<td>${val.replace(/ /g, "&nbsp;&nbsp;&nbsp;")}</td>`;
-                  })
-                  .join("")}</tr>`;
+                return `<tr>${cols.map(c => `<td>${c.trim().replace(/ /g, "&nbsp;&nbsp;&nbsp;")}</td>`).join("")}</tr>`;
               }).join("")}
             </tbody>
           </table>
@@ -201,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  /* ---------- LEXICON FILTER ---------- */
+  /* ---------- LEXICON SEARCH ---------- */
   const dialectEntries = lexicon.filter(
     e => e.dialect_id === dialectId || e.dialect === "Any"
   );
@@ -297,9 +313,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-
-
-
-
 </body>
 </html>
