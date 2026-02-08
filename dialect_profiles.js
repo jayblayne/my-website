@@ -38,7 +38,7 @@ const dialectProfiles = {
           title: "Vowel Chart (IPA)",
           csv: "dialectprofiles/akchin/akchin_vowels.csv",
           generalNotes: [
-            "Ak-Chin O’odham has a five vowel system with constrative vowel lenght.",
+            "Ak-Chin O’odham has a five vowel system with constrative vowel length.",
             "All vowels can be short or long.",
             "Unlinke other dialects, only the high front vowel /ĭ/ and open-mid back vowel /ɔ̆/ show constrastive extra-short length."
           ],
