@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Allophony under chart
         if (chart.allophony?.length) {
-          profileHTML += `<h4>Allophony</h4><ul>`;
+          profileHTML += `<h4>Diphthong Allophony</h4><ul>`;
           chart.allophony.forEach(rule => {
             profileHTML += `<li>${rule.label || ""}`;
             if (rule.items?.length) {

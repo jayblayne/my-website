@@ -38,25 +38,19 @@ const dialectProfiles = {
           title: "Vowel Chart (IPA)",
           csv: "dialectprofiles/akchin/akchin_vowels.csv",
           generalNotes: [
-            "General notes on vowels go here.",
-            "Vowel allophony details can go here."
+            "Ak-Chin O’odham has a five vowel system with constrative vowel lenght.",
+            "All vowels can be short or long.",
+            "Unlinke other dialects, only the high front vowel /ĭ/ and open-mid back vowel /ɔ̆/ show constrastive extra-short length."
           ],
-          allophony: [
-            {
-              label: "Vowel allophony examples:",
-              items: [
-                "i → [ɪ] in closed syllables",
-                "a → [ɑ] before uvulars"
-              ]
-            }
-          ]
+         
         },
         {
           title: "Diphthong Chart (IPA)",
           csv: "dialectprofiles/akchin/akchin_diphthongs.csv",
           generalNotes: [
-            "General notes on diphthongs go here.",
-            "Diphthong allophony details can go here."
+            "O’odham has a 12 diphtong system.",
+            "Vowels consisting of two back vowels generally only occur in the first syllable, except when the first vowel of the diphthong is /ɔ/ or /u/.",
+            
           ],
           allophony: [
             {
@@ -70,7 +64,8 @@ const dialectProfiles = {
               label: "/ui/ and /uɑ/ tend to become [wi] and[wɑ] in the surface form.",
               items: [
                 "/ui/ → [wu], as in <em>/kui/</em> pronounced as <b>[kwi]</b>, meaning 'mesquite tree'",
-                "/uɑ/ → [wɑ], as in <em>/cuɑ/</em> pronounced as <b>[cwɑ]</b>, meaning 'ground up'"
+                "/uɑ/ → [wɑ], as in <em>/cuɑ/</em> pronounced as <b>[cwɑ]</b>, meaning 'ground up'",
+                "/ɯɔ/ becomes [iɔ] in the surface form, as in <em>/cɯɔɟ/</em> pronounced as <b>[ciɔɟ̥]</b>, meaning 'man, male'. /ɯ/ resurfaces when the form is reduplicated, as in [ciɔɟ̥] 'man, male', becoming <b>[cɯcɔɟ]</b> 'men, males'."
               ]
             }
           ]
