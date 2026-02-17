@@ -2,7 +2,9 @@ const dialectProfiles = {
   akchin: {
     name: "Ak-Chin O'odham",
 
-    metadata: {},
+    metadata: {
+    source: "Data from Johns (2026)"
+  },
 
     phonology: {
       phonemicInventoryCSV: "dialectprofiles/akchin/akchin_inventory.csv",
@@ -85,5 +87,141 @@ const dialectProfiles = {
     maps: {
       trajectory: ""
     }
+  },
+  stanfield: {
+  name: "Stanfield O'odham",
+
+  metadata: {
+    source: "Data from Zepeda (1983)"
+  },
+
+  phonology: {
+    phonemicInventoryCSV: "",
+    notes: [],
+    dialect_allophony: [],
+    vowelCharts: []
+  },
+
+  grammar: {
+    morphology: [],
+    syntax: []
+  },
+
+  lexicon: {
+    tableCSV: ""
+  },
+
+  maps: {
+    trajectory: ""
   }
+},
+sacaton: {
+  name: "Sacaton O'odham",
+
+  metadata: {
+    source: "Data from Munro et al. (2007)"
+  },
+
+  phonology: {
+    phonemicInventoryCSV: "",
+    notes: [],
+    dialect_allophony: [],
+    vowelCharts: []
+  },
+
+  grammar: {
+    morphology: [],
+    syntax: []
+  },
+
+  lexicon: {
+    tableCSV: ""
+  },
+
+  maps: {
+    trajectory: ""
+  }
+},
+caborca: {
+  name: "Caborca O'odham",
+
+  metadata: {
+    source: "Data from Garcia Valencia et al. (2015)."
+  },
+
+  phonology: {
+    phonemicInventoryCSV: "",
+    notes: [],
+    dialect_allophony: [],
+    vowelCharts: []
+  },
+
+  grammar: {
+    morphology: [],
+    syntax: []
+  },
+
+  lexicon: {
+    tableCSV: ""
+  },
+
+  maps: {
+    trajectory: ""
+  }
+},
+sells: {
+  name: "Sells O'odham",
+
+  metadata: {
+    source: "Data from Garcia Saxton, Saxton & Enos (1998)."
+  },
+
+  phonology: {
+    phonemicInventoryCSV: "",
+    notes: [],
+    dialect_allophony: [],
+    vowelCharts: []
+  },
+
+  grammar: {
+    morphology: [],
+    syntax: []
+  },
+
+  lexicon: {
+    tableCSV: ""
+  },
+
+  maps: {
+    trajectory: ""
+  }
+},
+saltriver: {
+  name: "Salt River O'odham",
+
+  metadata: {
+    source: "Data from Garcia Bahr, Paul & Joseph (1997)."
+  },
+
+  phonology: {
+    phonemicInventoryCSV: "",
+    notes: [],
+    dialect_allophony: [],
+    vowelCharts: []
+  },
+
+  grammar: {
+    morphology: [],
+    syntax: []
+  },
+
+  lexicon: {
+    tableCSV: ""
+  },
+
+  maps: {
+    trajectory: ""
+  }
+}
+
 };

@@ -9,7 +9,7 @@
 
 <style>
   .map-wrapper { width: 100%; border-radius: 8px; overflow: hidden; background: none; }
-  #map { width: 100%; height: 600px; display: block; background: none; }
+  #map { width: 100%; height: 850px; display: block; background: none; }
   #featureSelect { padding: 5px; font-size: 14px; }
   footer p { text-align: center; color: #333; }
 
@@ -22,15 +22,18 @@
   }
 
   .dialect-label a {
-    color: black;       /* clickable dialects */
+    color: black;
     text-decoration: underline;
     cursor: pointer;
   }
 
   .dialect-label span {
-    color: gray;        /* non-clickable dialects */
+    color: gray;
     cursor: default;
   }
+
+  /* Legend styling */
+  .info.legend { font-size: 12px; }
 </style>
 </head>
 
@@ -77,11 +80,7 @@
 <script src="dialect_profiles.js"></script>
 
 <script>
-
-// ======================
-// MAP SETUP
-// ======================
-
+// ====================== MAP SETUP ======================
 const map = L.map("map").setView([32.5, -111.95], 7);
 
 L.tileLayer(
@@ -96,15 +95,11 @@ L.tileLayer(
 let percentageData = {};
 let dataLoaded = false;
 
-// ======================
-// COLOR SCALE (Red → Yellow → Blue)
-// ======================
-
+// ====================== COLOR SCALE ======================
 function getContinuousColor(value) {
-  const r1=215,g1=48,b1=39;      // red
-  const r2=254,g2=224,b2=139;    // yellow
-  const r3=38,g3=123,b3=255;     // blue
-
+  const r1=215,g1=48,b1=39; // red
+  const r2=255,g2=255,b2=255; // white
+  const r3=38,g3=123,b3=255; // blue
   let r,g,b;
   if(value < 0.5){
     const t = value*2;
@@ -117,7 +112,6 @@ function getContinuousColor(value) {
     g = g2 + t*(g3-g2);
     b = b2 + t*(b3-b2);
   }
-
   return `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
 }
 
@@ -126,24 +120,16 @@ function toRGBA(rgb, alpha){
   return `rgba(${vals[0]},${vals[1]},${vals[2]},${alpha})`;
 }
 
-// ======================
-// CUSTOM NYT-STYLE HEAT LAYER
-// ======================
-
+// ====================== HEAT LAYER ======================
 const HeatLayer = L.Layer.extend({
-
-  initialize: function(){
-    this._bleed = 50;
-  },
+  initialize: function(){ this._bleed = 50; },
 
   onAdd: function(map){
     this._map = map;
     this._canvas = L.DomUtil.create("canvas");
     this._ctx = this._canvas.getContext("2d");
-
     this._canvas.style.pointerEvents = "none";
     map.getPanes().overlayPane.appendChild(this._canvas);
-
     map.on("move zoom zoomend resize", this._reset, this);
     this._reset();
   },
@@ -155,159 +141,142 @@ const HeatLayer = L.Layer.extend({
 
   _reset: function(){
     if(!dataLoaded) return;
-
     const size = this._map.getSize();
     const bleed = this._bleed;
-
     this._canvas.width  = size.x + bleed*2;
     this._canvas.height = size.y + bleed*2;
-
     const topLeft = this._map.containerPointToLayerPoint([0,0]);
     L.DomUtil.setPosition(this._canvas, L.point(topLeft.x - bleed, topLeft.y - bleed));
-
     this._draw();
   },
 
   _draw: function(){
     if(!dataLoaded) return;
-
     const ctx = this._ctx;
     const bleed = this._bleed;
     const feature = document.getElementById("featureSelect").value;
-
     ctx.clearRect(0,0,this._canvas.width,this._canvas.height);
     ctx.globalCompositeOperation = "lighter";
 
     dialects.forEach(d => {
       const data = percentageData[d.id.toLowerCase()];
       if(!data) return;
+      let value;
+      if(feature === "w_v"){
+          value = ((parseFloat(data['w'])||0) - (parseFloat(data['v'])||0) + 1)/2;
+      } else if(feature === "ea_ia"){
+          value = ((parseFloat(data['ea'])||0) - (parseFloat(data['ia'])||0) + 1)/2;
+      } else if(feature === "apim_aham"){
+          value = ((parseFloat(data['apim'])||0) - (parseFloat(data['aham'])||0) + 1)/2;
+      } else {
+          value = parseFloat(data[feature])||0;
+      }
 
-      const value = parseFloat(data[feature]) || 0;
       const color = getContinuousColor(value);
-
       const point = this._map.latLngToContainerPoint([d.lat,d.lng]);
       const x = point.x + bleed;
       const y = point.y + bleed;
-      const radius = 160;
-
+      const radius = 130;
       const gradient = ctx.createRadialGradient(x,y,0,x,y,radius);
       gradient.addColorStop(0, toRGBA(color,0.5));
       gradient.addColorStop(0.3, toRGBA(color,0.3));
       gradient.addColorStop(0.6, toRGBA(color,0.15));
       gradient.addColorStop(1, toRGBA(color,0));
-
       ctx.beginPath();
       ctx.arc(x,y,radius,0,Math.PI*2);
       ctx.fillStyle = gradient;
       ctx.fill();
     });
-
     ctx.globalCompositeOperation = "source-over";
   }
-
 });
 
 const heatLayer = new HeatLayer();
 map.addLayer(heatLayer);
 
-// ======================
-// LABELS
-// ======================
-
+// ====================== LABELS ======================
 let labelMarkers = [];
-
 function drawDialectLabels() {
   labelMarkers.forEach(m => map.removeLayer(m));
   labelMarkers = [];
-
   dialects.forEach(d => {
     const data = percentageData[d.id.toLowerCase()];
     if(!data) return;
-
-    const hasProfile = dialectProfiles[d.id]; // check if profile exists
-
-    let html;
-    if(hasProfile){
-      html = `<a href="dialect.html?dialect=${d.id}">${d.name}</a>`;
-    } else {
-      html = `<span>${d.name}</span>`;
-    }
-
+    // Always clickable
+    let html = `<a href="dialect.html?dialect=${d.id}">${d.name}</a>`;
     const icon = L.divIcon({
       className: "dialect-label",
       html: html,
       iconSize: [120, 20],
       iconAnchor: [60, -10],
     });
-
     const marker = L.marker([d.lat, d.lng], { icon: icon }).addTo(map);
-
-    if(hasProfile){
-      marker.on("click", () => {
-        window.location.href = `dialect.html?dialect=${d.id}`;
-      });
-
-       // ===== Auto-zoom to available dialect coordinates =====
-  const coords = dialects
-    .filter(d => percentageData[d.id.toLowerCase()]) // only include coordinates with data
-    .map(d => [d.lat, d.lng]);
-
-  if(coords.length > 0){
-    map.fitBounds(coords, { padding: [50, 50] });
-  }
-    }
-
+    marker.on("click", () => { window.location.href = `dialect.html?dialect=${d.id}`; });
     labelMarkers.push(marker);
   });
+  const coords = dialects.filter(d => percentageData[d.id.toLowerCase()]).map(d => [d.lat, d.lng]);
+  if(coords.length > 0) map.fitBounds(coords, { padding: [50,50] });
 }
 
-// ======================
-// DROPDOWN
-// ======================
-
+// ====================== DROPDOWN ======================
 const dropdown = L.control({position:"topright"});
 dropdown.onAdd = function(){
   const div = L.DomUtil.create("div");
   div.innerHTML = `
     <select id="featureSelect">
       <option value="w_v">w/v alternation</option>
-      <option value="ea_ia">ea/ia diphthong alternation</option>
-      <option value="a_pim_a_ham">'a:pim / 'a:ham lexical alternation</option>
+      <option value="ea_ia">ea/ia alternation</option>
+      <option value="apim_aham">'a:pim / 'a:ham alternation</option>
     </select>`;
   L.DomEvent.disableClickPropagation(div);
   return div;
 };
 dropdown.addTo(map);
 
-// ======================
-// LOAD CSV
-// ======================
+// ====================== LEGEND ======================
+const legend = L.control({position: 'bottomright'});
+legend.onAdd = function(map){
+  const div = L.DomUtil.create('div','info legend');
+  div.style.background='white';
+  div.style.padding='10px';
+  div.style.borderRadius='8px';
+  div.style.boxShadow='0 0 15px rgba(0,0,0,0.2)';
+  div.style.fontSize='12px';
+  const feature = document.getElementById("featureSelect").value;
+  let title='', leftLabel='', rightLabel='';
+  if(feature==='w_v'){ title='w-v Dominance'; leftLabel='v'; rightLabel='w'; }
+  else if(feature==='ea_ia'){ title='ea-ia Dominance'; leftLabel='ia'; rightLabel='ea'; }
+  else if(feature==='apim_aham'){ title="'a:pim / 'a:ham Dominance"; leftLabel="'a:ham"; rightLabel="'a:pim"; }
+  div.innerHTML=`<strong>${title}</strong><br>`;
+  const gradient='linear-gradient(to right, rgb(215,48,39), rgb(255,255,255), rgb(38,123,255))';
+  div.innerHTML+=`<div style="width:150px; height:12px; background:${gradient}; margin:5px 0;"></div>`;
+  div.innerHTML+=`<div style="display:flex; justify-content:space-between;"><span>${leftLabel}</span><span>balanced</span><span>${rightLabel}</span></div>`;
+  return div;
+};
+legend.addTo(map);
 
+// Update legend when dropdown changes
+document.getElementById("featureSelect").addEventListener("change", function(){
+  heatLayer._reset();
+  drawDialectLabels();
+  legend.remove();
+  legend.addTo(map);
+});
+
+// ====================== LOAD CSV ======================
 Papa.parse("dialect-data.csv",{
   download:true,
   header:true,
   dynamicTyping:true,
   complete:function(results){
     results.data.forEach(row=>{
-      if(row.id){
-        percentageData[row.id.toLowerCase()] = row;
-      }
+      if(row.id) percentageData[row.id.toLowerCase()] = row;
     });
     dataLoaded = true;
     heatLayer._reset();
     drawDialectLabels();
   }
 });
-
-// ======================
-// UPDATE ON FEATURE CHANGE
-// ======================
-
-document.getElementById("featureSelect").addEventListener("change", function(){
-  heatLayer._reset();
-  drawDialectLabels();
-});
-
 </script>
 
 </body>

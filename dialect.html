@@ -92,227 +92,169 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // Use metadata label if it exists, otherwise name
   title.textContent = profile.metadata?.label || profile.name || "Dialect";
 
-  /* ---------- BUILD PROFILE HTML ---------- */
   let profileHTML = "";
 
-  // Phonology Section
-  if (
-    profile.phonology?.notes?.length ||
-    profile.phonology?.dialect_allophony?.length ||
-    profile.phonology?.phonemicInventoryCSV ||
-    profile.phonology?.vowelCharts?.length
-  ) {
+  // --------- METADATA ---------
+  if(profile.metadata){
+    profileHTML += '<div class="metadata">';
+    for(const [key,value] of Object.entries(profile.metadata)){
+      profileHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+    }
+    profileHTML += '</div>';
+  }
+
+  // --------- PHONOLOGY ---------
+  const phon = profile.phonology;
+  const hasPhonology = phon && (
+    (phon.notes && phon.notes.length > 0) ||
+    (phon.dialect_allophony && phon.dialect_allophony.length > 0) ||
+    phon.phonemicInventoryCSV ||
+    (phon.vowelCharts && phon.vowelCharts.length > 0)
+  );
+
+  if(hasPhonology){
     profileHTML += `<h3 class="section-header">Phonology</h3>`;
 
-    // Phonemic Inventory
-    if (profile.phonology.phonemicInventoryCSV) {
-      profileHTML += `
-        <h4 class="chart-header">Phonemic Inventory (IPA Chart)</h4>
-        <div id="phonemicChart" style="margin-bottom:1.5rem;">Loading IPA chart…</div>
-      `;
+    // Phonemic inventory
+    if(phon.phonemicInventoryCSV){
+      profileHTML += `<h4 class="chart-header">Phonemic Inventory (IPA Chart)</h4>
+                      <div id="phonemicChart">Loading IPA chart…</div>`;
     }
 
-    // Consonant Allophony at top
-    if (profile.phonology.dialect_allophony?.length) {
+    // Consonant allophony
+    if(phon.dialect_allophony?.length){
       profileHTML += `<h4>Consonant Allophony</h4><ul>`;
-      profile.phonology.dialect_allophony.forEach(rule => {
-        profileHTML += `<li>${rule.label || ""}`;
-        if (rule.items?.length) {
-          profileHTML += `<ul>${rule.items.map(i => `<li>${i}</li>`).join("")}</ul>`;
+      phon.dialect_allophony.forEach(rule => {
+        if(rule.items?.length){
+          profileHTML += `<li>${rule.label || ""}<ul>${rule.items.map(i=>`<li>${i}</li>`).join("")}</ul></li>`;
+        } else {
+          profileHTML += `<li>${rule.label}</li>`;
         }
-        profileHTML += `</li>`;
       });
       profileHTML += `</ul>`;
     }
 
-    // Vowel and Diphthong Charts
-    if (profile.phonology.vowelCharts?.length) {
-      profile.phonology.vowelCharts.forEach((chart, idx) => {
-        const chartId = `chart-${idx}`;
-        profileHTML += `
-          <h4 class="chart-header">${chart.title}</h4>
-          <div id="${chartId}" style="margin-bottom:0.5rem;">Loading chart…</div>
-        `;
+    // Vowel charts
+    if(phon.vowelCharts?.length){
+      phon.vowelCharts.forEach((chart, idx)=>{
+        if(!chart.title && !chart.csv && !chart.generalNotes?.length && !chart.allophony?.length) return;
 
-        // General notes under chart
-        if (chart.generalNotes?.length) {
-          profileHTML += `<h4>General Notes</h4><ul>${chart.generalNotes.map(n => `<li>${n}</li>`).join("")}</ul>`;
+        const chartId = `chart-${idx}`;
+        profileHTML += `<h4 class="chart-header">${chart.title}</h4>
+                        <div id="${chartId}">Loading chart…</div>`;
+
+        if(chart.generalNotes?.length){
+          profileHTML += `<h4>General Notes</h4><ul>${chart.generalNotes.map(n=>`<li>${n}</li>`).join("")}</ul>`;
         }
 
-        // Allophony under chart
-        if (chart.allophony?.length) {
+        if(chart.allophony?.length){
           profileHTML += `<h4>Diphthong Allophony</h4><ul>`;
-          chart.allophony.forEach(rule => {
-            profileHTML += `<li>${rule.label || ""}`;
-            if (rule.items?.length) {
-              profileHTML += `<ul>${rule.items.map(i => `<li>${i}</li>`).join("")}</ul>`;
+          chart.allophony.forEach(rule=>{
+            if(rule.items?.length){
+              profileHTML += `<li>${rule.label || ""}<ul>${rule.items.map(i=>`<li>${i}</li>`).join("")}</ul></li>`;
+            } else {
+              profileHTML += `<li>${rule.label}</li>`;
             }
-            profileHTML += `</li>`;
           });
           profileHTML += `</ul>`;
         }
 
-        // Fetch CSV for the chart
-        fetch(chart.csv)
-          .then(resp => resp.text())
-          .then(csvData => {
-            const delimiter = csvData.includes("\t") ? "\t" : ",";
+        // Load CSV
+        if(chart.csv){
+          fetch(chart.csv).then(r=>r.text()).then(csvData=>{
+            const delim = csvData.includes("\t") ? "\t":",";
             const rows = csvData.trim().split("\n");
-            const headers = rows.shift().split(delimiter).map(h => h.trim());
-
-            const tableHTML = `
-              <table>
-                <thead>
-                  <tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr>
-                </thead>
-                <tbody>
-                  ${rows.map(r => {
-                    const cols = r.split(delimiter);
-                    return `<tr>${cols.map(c => `<td>${c.trim().replace(/ /g, "&nbsp;&nbsp;&nbsp;")}</td>`).join("")}</tr>`;
-                  }).join("")}
-                </tbody>
-              </table>
-            `;
+            const headers = rows.shift().split(delim).map(h=>h.trim());
+            const tableHTML = `<table><thead><tr>${headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead>
+                               <tbody>${rows.map(r=>`<tr>${r.split(delim).map(c=>`<td>${c.trim().replace(/ /g,"&nbsp;&nbsp;&nbsp;")}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
             document.getElementById(chartId).innerHTML = tableHTML;
-          })
-          .catch(() => {
-            document.getElementById(chartId).innerHTML = "<p>Unable to load chart.</p>";
-          });
+          }).catch(()=>{document.getElementById(chartId).innerHTML="<p>Unable to load chart.</p>";});
+        }
       });
     }
   }
 
   profileContainer.innerHTML = profileHTML;
 
-  /* ---------- FETCH PHONEMIC INVENTORY CSV ---------- */
-  if (profile.phonology?.phonemicInventoryCSV) {
-    fetch(profile.phonology.phonemicInventoryCSV)
-      .then(resp => resp.text())
-      .then(csvData => {
-        const delimiter = csvData.includes("\t") ? "\t" : ",";
-        const rows = csvData.trim().split("\n");
-        const headers = rows.shift().split(delimiter).map(h => h.trim());
-
-        const chartHTML = `
-          <table>
-            <thead>
-              <tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr>
-            </thead>
-            <tbody>
-              ${rows.map(r => {
-                const cols = r.split(delimiter);
-                return `<tr>${cols.map(c => `<td>${c.trim().replace(/ /g, "&nbsp;&nbsp;&nbsp;")}</td>`).join("")}</tr>`;
-              }).join("")}
-            </tbody>
-          </table>
-        `;
-
-        const chartDiv = document.getElementById("phonemicChart");
-        if (chartDiv) chartDiv.innerHTML = chartHTML;
-      })
-      .catch(() => {
-        const chartDiv = document.getElementById("phonemicChart");
-        if (chartDiv) chartDiv.innerHTML = "<p>Unable to load IPA chart.</p>";
-      });
+  // --------- PHONEMIC INVENTORY ---------
+  if(phon?.phonemicInventoryCSV){
+    fetch(phon.phonemicInventoryCSV).then(r=>r.text()).then(csvData=>{
+      const delim = csvData.includes("\t") ? "\t":",";
+      const rows = csvData.trim().split("\n");
+      const headers = rows.shift().split(delim).map(h=>h.trim());
+      const tableHTML = `<table><thead><tr>${headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead>
+                         <tbody>${rows.map(r=>`<tr>${r.split(delim).map(c=>`<td>${c.trim().replace(/ /g,"&nbsp;&nbsp;&nbsp;")}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+      const chartDiv = document.getElementById("phonemicChart");
+      if(chartDiv) chartDiv.innerHTML = tableHTML;
+    }).catch(()=>{ const chartDiv = document.getElementById("phonemicChart"); if(chartDiv) chartDiv.innerHTML="<p>Unable to load IPA chart.</p>";});
   }
 
-  /* ---------- LEXICON SEARCH ---------- */
-  const dialectEntries = lexicon.filter(
-    e => e.dialect_id === dialectId || e.dialect === "Any"
-  );
+  // --------- LEXICON SEARCH ---------
+  const dialectEntries = lexicon.filter(e=>e.dialect_id===dialectId || e.dialect==="Any");
 
-  function render(entries) {
+  function render(entries){
     resultsDiv.innerHTML = "";
-    if (!entries.length) {
-      resultsDiv.innerHTML = "<p>No matching entries.</p>";
-      return;
-    }
-
+    if(!entries.length){ resultsDiv.innerHTML="<p>No matching entries.</p>"; return; }
     const fragment = document.createDocumentFragment();
 
-    entries.forEach(e => {
-      const exampleSentences = e.examples ? e.examples.split("||") : [];
-      const exampleAudios = e.example_audio ? e.example_audio.split("||") : [];
+    entries.forEach(e=>{
+      const exampleSentences = e.examples ? e.examples.split("||"):[];
+      const exampleAudios = e.example_audio ? e.example_audio.split("||"):[];
       let examplesHTML = "";
-
-      exampleSentences.forEach((s, i) => {
+      exampleSentences.forEach((s,i)=>{
         let formatted = s;
-        if (s.includes("::")) {
-          const [oodham, english] = s.split("::").map(x => x.trim());
-          formatted = `<strong>${oodham}</strong> <em>${english}</em>`;
+        if(s.includes("::")){
+          const [oodham,english]=s.split("::").map(x=>x.trim());
+          formatted=`<strong>${oodham}</strong> <em>${english}</em>`;
         }
-
         let exampleAudioHTML = "";
-        if (exampleAudios[i]) {
-          exampleAudioHTML = `
-            <span class="audio-icon" onclick="document.getElementById('ex-${e.oodham}-${i}').play()">🔊</span>
-            <audio id="ex-${e.oodham}-${i}" class="audio-hidden" src="${exampleAudios[i]}"></audio>
-          `;
+        if(exampleAudios[i]){
+          exampleAudioHTML=`<span class="audio-icon" onclick="document.getElementById('ex-${e.oodham}-${i}').play()">🔊</span>
+                            <audio id="ex-${e.oodham}-${i}" class="audio-hidden" src="${exampleAudios[i]}"></audio>`;
         }
-
         examplesHTML += `<div class="example">${formatted} ${exampleAudioHTML}</div>`;
       });
 
-      let singAudioHTML = "";
-      if (e.sing_audio) {
-        singAudioHTML = `
-          <span class="audio-icon" onclick="document.getElementById('sing-${e.oodham}').play()">🔊</span>
-          <audio id="sing-${e.oodham}" class="audio-hidden" src="${e.sing_audio}"></audio>
-        `;
-      }
-
-      let plAudioHTML = "";
-      if (e.pl_audio) {
-        plAudioHTML = `
-          <span class="audio-icon" onclick="document.getElementById('pl-${e.oodham}').play()">🔊</span>
-          <audio id="pl-${e.oodham}" class="audio-hidden" src="${e.pl_audio}"></audio>
-        `;
-      }
+      let singAudioHTML="", plAudioHTML="";
+      if(e.sing_audio) singAudioHTML=`<span class="audio-icon" onclick="document.getElementById('sing-${e.oodham}').play()">🔊</span>
+                                      <audio id="sing-${e.oodham}" class="audio-hidden" src="${e.sing_audio}"></audio>`;
+      if(e.pl_audio) plAudioHTML=`<span class="audio-icon" onclick="document.getElementById('pl-${e.oodham}').play()">🔊</span>
+                                    <audio id="pl-${e.oodham}" class="audio-hidden" src="${e.pl_audio}"></audio>`;
 
       const div = document.createElement("div");
       div.className = "feature";
-
-      div.innerHTML = `
+      div.innerHTML=`
         <div class="word">${e.oodham} ${singAudioHTML}</div>
         <div><span class="label">English:</span> ${e.english}</div>
-        <div><span class="label">Part of speech:</span> ${e.partOfSpeech || ""}</div>
-        <div><span class="label">Pattern:</span> ${e.pattern || ""}</div>
+        <div><span class="label">Part of speech:</span> ${e.partOfSpeech||""}</div>
+        <div><span class="label">Pattern:</span> ${e.pattern||""}</div>
         <div class="ipa">
           <span class="label">Pronunciation:</span> ${e.pronunciation}
           ${e.reduplicated ? `<br><span class="label">Reduplicated:</span> ${e.reduplicated} ${plAudioHTML}` : ""}
-          ${e.redup_pronunciation ? `<br><span class="label">Redup Pronunciation:</span> ${e.redup_pronunciation}` : ""}
-          ${e.redup_meaning ? `<br><span class="label">Redup Meaning:</span> ${e.redup_meaning}` : ""}
+          ${e.redup_pronunciation ? `<br><span class="label">Redup Pronunciation:</span> ${e.redup_pronunciation}`:""}
+          ${e.redup_meaning ? `<br><span class="label">Redup Meaning:</span> ${e.redup_meaning}`:""}
         </div>
-        ${examplesHTML ? `<div class="label" style="margin-top:0.6rem;">Examples:</div>${examplesHTML}` : ""}
+        ${examplesHTML?`<div class="label" style="margin-top:0.6rem;">Examples:</div>${examplesHTML}`:""}
       `;
-
       fragment.appendChild(div);
     });
-
     resultsDiv.appendChild(fragment);
   }
 
   let searchTimeout;
-  searchInput.addEventListener("input", () => {
+  searchInput.addEventListener("input", ()=>{
     clearTimeout(searchTimeout);
-    searchTimeout = setTimeout(() => {
+    searchTimeout = setTimeout(()=>{
       const q = searchInput.value.trim().toLowerCase();
-      if (!q) {
-        resultsDiv.innerHTML = "<p>Start typing to search words in this dialect.</p>";
-        return;
-      }
-      render(
-        dialectEntries.filter(e =>
-          Object.values(e).some(v =>
-            typeof v === "string" && v.toLowerCase().includes(q)
-          )
-        )
-      );
-    }, 250);
+      if(!q){ resultsDiv.innerHTML="<p>Start typing to search words in this dialect.</p>"; return; }
+      render(dialectEntries.filter(e=>Object.values(e).some(v=>typeof v==="string" && v.toLowerCase().includes(q))));
+    },250);
   });
 });
 </script>
+
 </body>
 </html>
