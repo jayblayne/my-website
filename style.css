@@ -1060,3 +1060,55 @@ table td:first-child {
   line-height: 1;
 }
 
+.map-wrapper {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-top: 1rem;
+  overflow: hidden;        /* hide extra canvas artifacts */
+  background-color: white; /* ensure no gray shows through */
+}
+
+#map {
+  width: 100%;
+  height: 500px;           /* or use calc(100vh - headerHeight) */
+  border: none;
+  background: transparent;
+}
+
+
+/* map page body class */
+body.map-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/saguaros.jpg"); /* your image path */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;           /* ← reduced opacity */
+  z-index: -1;             /* behind everything */
+  pointer-events: none;    /* make background non-interactive */
+}
+
+
+/* Clickable dialect links */
+.dialect-label a {
+  pointer-events: auto; /* allow clicks */
+  color: black;
+  text-decoration: none;
+  font-family: 'Times New Roman', serif;
+  font-size: 12px;
+  text-shadow: 0 0 2px white;
+}
+
+/* Non-clickable dialects */
+.dialect-label span {
+  pointer-events: none; /* not clickable */
+  color: gray;
+  font-family: 'Times New Roman', serif;
+  font-size: 12px;
+  text-shadow: 0 0 2px white;
+}
+
+
+
