@@ -239,7 +239,7 @@
             <li><a href="login.html?redirect=map.html">Dialect Map</a></li>
             <li><a href="neologisms.html">Linguistic Terminology</a></li>
             <li><a href="lab.html">O’odham Lab</a></li>
-            <li><a href="dictionary.html" aria-current="page">Ṣel ’O’odham Ñeo’okĭ ’O’ohon</a></li>
+            <li><a href="dictionary.html" aria-current="page">Ṣel ’O’odham Ñeo’okĭ ’O’ohon</a></li>
           </ul>
         </li>
       </ul>
@@ -283,7 +283,7 @@
       <div class="search-row">
         <label for="dictionary-search" style="position:absolute;left:-9999px">Search dictionary</label>
         <input id="dictionary-search" type="search" placeholder="’An g ha’icu ga:g…" autocomplete="off">
-        <button id="clear-search" type="button">Clear</button>
+        <button id="clear-search" type="button">’I Ga:g</button>
       </div>
       <div id="search-meta" class="search-meta" aria-live="polite"></div>
     </section>
@@ -303,5 +303,106 @@
   <footer class="site-footer">
     <p>© 2026 Jeremy Johns</p>
   </footer>
+
+  <script>
+    (() => {
+      const searchInput = document.getElementById('dictionary-search');
+      const clearButton = document.getElementById('clear-search');
+      const searchMeta = document.getElementById('search-meta');
+      const dictionary = document.getElementById('dictionary');
+      const alphabet = document.getElementById('alphabet');
+
+      if (!searchInput || !clearButton || !searchMeta || !dictionary) return;
+
+      const entries = Array.from(dictionary.querySelectorAll('.entry'));
+      const letterHeads = Array.from(dictionary.querySelectorAll('.letHead'));
+
+      function normalizeText(value) {
+        return (value || '')
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/[’ʼ‘`´]/g, "'")
+          .replace(/\s+/g, ' ')
+          .trim()
+          .toLocaleLowerCase();
+      }
+
+      function buildAlphabet() {
+        if (!alphabet) return;
+        alphabet.innerHTML = '';
+        letterHeads.forEach((heading, index) => {
+          if (!heading.id) heading.id = `letter-${index + 1}`;
+          const text = heading.textContent.trim();
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = `#${heading.id}`;
+          a.textContent = text;
+          li.appendChild(a);
+          alphabet.appendChild(li);
+        });
+      }
+
+      function updateLetterHeadings() {
+        letterHeads.forEach((heading, index) => {
+          const nextHeading = letterHeads[index + 1];
+          let node = heading.nextElementSibling;
+          let hasVisibleEntry = false;
+
+          while (node && node !== nextHeading) {
+            if (node.classList && node.classList.contains('entry') && !node.hidden) {
+              hasVisibleEntry = true;
+              break;
+            }
+            node = node.nextElementSibling;
+          }
+
+          heading.hidden = !hasVisibleEntry;
+          if (alphabet?.children[index]) {
+            alphabet.children[index].hidden = !hasVisibleEntry;
+          }
+        });
+      }
+
+      function runSearch() {
+        const query = normalizeText(searchInput.value);
+        let matches = 0;
+
+        entries.forEach((entry) => {
+          const haystack = normalizeText(entry.textContent);
+          const isMatch = !query || haystack.includes(query);
+          entry.hidden = !isMatch;
+          if (isMatch) matches += 1;
+        });
+
+        updateLetterHeadings();
+
+        if (!query) {
+          searchMeta.textContent = `${entries.length} entries`;
+        } else if (matches === 1) {
+          searchMeta.textContent = '1 entry found';
+        } else {
+          searchMeta.textContent = `${matches} entries found`;
+        }
+      }
+
+      searchInput.addEventListener('input', runSearch);
+      searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          searchInput.value = '';
+          runSearch();
+        }
+      });
+
+      clearButton.addEventListener('click', () => {
+        searchInput.value = '';
+        runSearch();
+        searchInput.focus();
+      });
+
+      buildAlphabet();
+      runSearch();
+    })();
+  </script>
+
 </body>
 </html>
