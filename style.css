@@ -1112,3 +1112,12 @@ body.map-page::before {
 
 
 
+/* Add a space before all links except headwords */
+.entry a::before {
+    content: "\00A0";
+}
+
+.mainheadword a::before {
+    content: "";
+}
+

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Searchable O'odham dictionary">
+  <title>O'odham Dictionary | Jeremy Johns</title>
+  <style>
+    :root {
+      --ink: #222;
+      --muted: #666;
+      --rule: #d9dee7;
+      --soft: #eef2f7;
+      --accent: #2563eb;
+      --page-width: 900px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding: 0 20px;
+      color: var(--ink);
+      background: #f5f7fa;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .site-header {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 28px 0 10px;
+    }
+    .site-title {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      font-weight: 700;
+    }
+    .site-title a { color: var(--ink); }
+    .site-title a:hover { text-decoration: none; color: var(--accent); }
+
+    .site-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .site-nav li { position: relative; }
+    .site-nav a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .site-nav a:hover,
+    .site-nav a[aria-current="page"] {
+      background: #e8eefc;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .dropdown-menu {
+      display: none !important;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      z-index: 30;
+      min-width: 245px;
+      padding: 8px !important;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.10);
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu { display: block !important; }
+    .dropdown-menu a { padding: 9px 10px; }
+
+    main {
+      max-width: var(--page-width);
+      margin: 20px auto;
+      padding: 2rem 3rem 3rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    }
+    .page-intro { margin-bottom: 28px; }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      line-height: 1.2;
+    }
+    .lede { max-width: 720px; margin: 0; color: var(--muted); }
+
+    .search-panel {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      margin: 28px 0 30px;
+      padding: 14px;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      background: rgba(255,255,255,.97);
+      box-shadow: 0 3px 10px rgba(0,0,0,.04);
+      backdrop-filter: blur(8px);
+    }
+    .search-row { display: flex; gap: 10px; }
+    #dictionary-search {
+      width: 100%;
+      min-width: 0;
+      padding: 11px 13px;
+      border: 1px solid #b7bec9;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--ink);
+      font: 1rem system-ui, sans-serif;
+    }
+    #dictionary-search:focus { outline: 2px solid #bfdbfe; border-color: var(--accent); }
+    #clear-search {
+      border: 1px solid #b7bec9;
+      border-radius: 6px;
+      padding: 0 16px;
+      background: var(--soft);
+      cursor: pointer;
+      font: .9rem system-ui, sans-serif;
+    }
+    #clear-search:hover { background: #e3e8ef; }
+    .search-meta { margin-top: 8px; color: var(--muted); font-size: .82rem; }
+
+    .alphabet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 0 0 34px;
+      padding: 0;
+      list-style: none;
+    }
+    .alphabet a {
+      display: block;
+      min-width: 36px;
+      padding: 5px 9px;
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      text-align: center;
+      color: var(--ink);
+      font-size: .88rem;
+    }
+    .alphabet a:hover { background: #e8eefc; color: var(--accent); text-decoration: none; }
+
+    .dictionary { min-width: 0; }
+    .letHead {
+      margin: 42px 0 8px;
+      padding-bottom: 7px;
+      border-bottom: 2px solid var(--accent);
+      color: var(--accent);
+      scroll-margin-top: 115px;
+    }
+    .letter { font-size: 1.65rem; font-weight: 700; }
+    .entry {
+      padding: 15px 0 16px;
+      border-bottom: 1px solid var(--rule);
+      scroll-margin-top: 115px;
+    }
+    .entry[hidden], .letHead[hidden] { display: none !important; }
+    .mainheadword { display: inline; margin-right: .45rem; }
+    .mainheadword > span > a {
+      color: var(--ink);
+      font-size: 1.22rem;
+      font-weight: 700;
+    }
+    .mainheadword > span > a:hover { color: var(--accent); text-decoration: none; }
+    .partofspeech, .agreement, .aspect {
+      display: inline-block;
+      margin-right: .38rem;
+      color: var(--muted);
+      font-size: .85rem;
+      font-style: italic;
+    }
+    .senses { display: inline; }
+    .sensecontent { display: block; margin-top: 4px; }
+    .sense { display: inline; }
+    .sensenumber { margin-right: .35rem; font-weight: 700; }
+    .definitionorgloss { display: inline; }
+    .definitionorgloss > span { font-size: 1rem; }
+    .lexsensereferences { display: block; margin-top: 5px; color: var(--muted); font-size: .92rem; }
+    .ownertype_name { margin-right: .35rem; }
+    .configtargets, .configtarget, .headword { display: inline; }
+    .examplescontents {
+      display: block;
+      margin: 8px 0 0 18px;
+      padding-left: 12px;
+      border-left: 3px solid #bfdbfe;
+    }
+    .example { font-style: italic; }
+    .no-results { display: none; padding: 30px 0; color: var(--muted); }
+
+    .site-footer {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 12px 0 30px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 0 12px; }
+      .site-header { padding-top: 20px; }
+      main { margin-top: 12px; padding: 1.5rem 1.2rem 2.25rem; }
+      .search-row { flex-direction: column; }
+      #clear-search { min-height: 42px; }
+      .dropdown-menu { position: static; min-width: 0; box-shadow: none; margin-top: 4px !important; }
+    }
+    @media print {
+      body { padding: 0; background: #fff; }
+      .site-nav, .search-panel, .alphabet { display: none; }
+      main { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+      .site-header, .site-footer { max-width: none; }
+      .entry { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title"><a href="index.html">Jeremy Johns</a></div>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="teaching.html">Teaching/Outreach</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true">Language Resources ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="login.html?redirect=wordsearch.html">Reduplication Dictionary</a></li>
+            <li><a href="login.html?redirect=map.html">Dialect Map</a></li>
+            <li><a href="neologisms.html">Linguistic Terminology</a></li>
+            <li><a href="lab.html">O’odham Lab</a></li>
+            <li><a href="dictionary.html" aria-current="page">Ṣel ’O’odham Ñeo’okĭ ’O’ohon</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+
+  <h1>Ṣel ’O’odham Ñeo’okĭ ’O’ohon</h1>
+
+  <p class="lede">
+    Mapt o ṣa ha’icu s-ñeidam, ’an g ’o’ohon g ha’icu ce’idag map ’an ga:g,
+    ’o mo has ḍ ’a:ga, ñeo’okĭ vavañ, ’o ’ep mo has ma:s ḍ ñeo’okĭ.
+  </p>
+
+  <section class="abbreviations">
+
+    <h3>Laha’as ’O’’ohona Taṣogida</h3>
+    <p>
+      Mo has ḍ ’a:ga ’idam laha’as ’o’ohon mo ’an hab cu’ig
+      ha-huhugtan g ha’icu ce’idag:
+    </p>
+
+    <ul class="abbr-list">
+      <li><strong>c</strong> — ce:gig</li>
+      <li><strong>’e-k</strong> — ce:gig ’e-kavuḍka</li>
+      <li><strong>h</strong> — hemako</li>
+      <li><strong>h.’e.ñ</strong> — has ’e-wuadam ñeo’okĭ</li>
+      <li><strong>h.’e.v</strong> — has ’e-wuadam ve:mkam</li>
+      <li><strong>m</strong> — mu’i</li>
+      <li><strong>n</strong> — na:tois</li>
+      <li><strong>p.n.</strong> — pi na:tois</li>
+    </ul>
+
+  </section>
+
+</section>
+
+    <section class="search-panel" aria-label="Dictionary search">
+      <div class="search-row">
+        <label for="dictionary-search" style="position:absolute;left:-9999px">Search dictionary</label>
+        <input id="dictionary-search" type="search" placeholder="’An g ha’icu ga:g…" autocomplete="off">
+        <button id="clear-search" type="button">Clear</button>
+      </div>
+      <div id="search-meta" class="search-meta" aria-live="polite"></div>
+    </section>
+
+    <nav aria-label="Dictionary alphabet">
+      <ul id="alphabet" class="alphabet"></ul>
+    </nav>
+
+    <section id="dictionary" class="dictionary" aria-label="Dictionary entries">
+      
+<div class="letHead"><span class="letter" lang="ood">B b</span></div>
+<div class="entry" id="g8f69a992-394d-4025-b0d1-bf3477af5023"><span class="mainheadword"><span lang="ood"><a href="#g8f69a992-394d-4025-b0d1-bf3477af5023">bahi</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g8f69a992-394d-4025-b0d1-bf3477af5023"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">Hegi mo ’ab ’i ’uliñ ’amjeḍ g ha’icu doakam ’at. </span></span><span class="lexsensereferences"><span class="lexsensereference"><span class="ownertype_name"><span lang="ood">Muʼi</span></span><span class="configtargets"><span class="configtarget"><span class="headword"><span lang="ood"><a href="#g33339762-22b5-4912-9255-e19af15d7b40">ba:bhai</a></span></span></span></span></span></span></span></span></span></div><div class="entry" id="gad89033e-ff4e-434a-8237-58b51eb0f225"><span class="mainheadword"><span lang="ood"><a href="#gad89033e-ff4e-434a-8237-58b51eb0f225">bahidag</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="gad89033e-ff4e-434a-8237-58b51eb0f225"><span class="definitionorgloss"><span lang="ood">Hegi ha’icu mo ’ab ’i hiot ’amjeḍ g ha’icu vu:ṣañim, c hebaicuc ge s-’io’ovĭ c ’e-koa’a.</span></span></span></span></span></div><div class="entry" id="gf220c0af-ff1d-427e-8cd0-ec64c5845013"><span class="mainheadword"><span lang="ood"><a href="#gf220c0af-ff1d-427e-8cd0-ec64c5845013">bahidaj</a></span></span><span class="senses"><span class="sensecontent"><span class="sense" entryguid="gf220c0af-ff1d-427e-8cd0-ec64c5845013"><span class="definitionorgloss"><span lang="ood">hegi bahidag mo ’ab ’i vu:ṣke ha:ṣañ ’amjeḍ</span></span></span></span></span></div><div class="entry" id="g35fadeb4-1f03-43a3-9233-f979cca9401d"><span class="mainheadword"><span lang="ood"><a href="#g35fadeb4-1f03-43a3-9233-f979cca9401d">ban</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g35fadeb4-1f03-43a3-9233-f979cca9401d"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">Misciñ haʼicu doakam mo ge giʼik ta:taḍ c ’an ’oimeḍ tohono c-’eḍ c ge vopo, c wuḍ ha’i ha-ve:mkal c ’ep wuḍ hema hegam ha’icu dodakam mo g hemajkam ’ab ’amjeḍ ñeñok mat ’am o va ha-’a:gĭ g ho’ok ’a:gida. </span></span><span class="lexsensereferences"><span class="lexsensereference"><span class="ownertype_name"><span lang="ood">Muʼi</span></span><span class="configtargets"><span class="configtarget"><span class="headword"><span lang="ood"><a href="#g27f9743c-f8f4-47a5-8e0d-a3d8812265ef">ba:ban</a></span></span></span></span></span></span></span></span></span></div><div class="entry" id="g60e313a1-32a7-4972-a059-5da6d53c2b7b"><span class="mainheadword"><span lang="ood"><a href="#g60e313a1-32a7-4972-a059-5da6d53c2b7b">bapad</a></span></span><span class="senses"><span class="sensecontent"><span class="sense" entryguid="g60e313a1-32a7-4972-a059-5da6d53c2b7b"><span class="definitionorgloss"><span lang="ood">laʼas  haʼicu doakam mo ṣu:dagĭ c-ʼeḍ ʼoimeḍ ʼo jeveḍo ʼoimeḍ c ʼep ge s-da:pk ʼeldag.</span></span></span></span></span></div><div class="entry" id="g203dea02-35b1-4ef5-988f-415e9bbdfba7"><span class="mainheadword"><span lang="ood"><a href="#g203dea02-35b1-4ef5-988f-415e9bbdfba7">bavĭ</a></span></span><span class="senses"><span class="sensecontent"><span class="sense" entryguid="g203dea02-35b1-4ef5-988f-415e9bbdfba7"><span class="agreement"><span class="abbreviation"><span lang="ood">ʼe-k</span></span></span><span class="definitionorgloss"><span lang="ood">Lahaʼas mu:ñ mo ʼe-ʼeʼeṣa c e-koaʼa, haʼi ge s-to:ta c haʼi ʼep ge s-soaʼam. </span></span></span></span></span></div><div class="entry" id="gb69e3336-6266-419e-8776-bc4274e468cf"><span class="mainheadword"><span lang="ood"><a href="#gb69e3336-6266-419e-8776-bc4274e468cf">bayuka</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="gb69e3336-6266-419e-8776-bc4274e468cf"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">Hegi mo g hemajkam ʼab ʼa:dc. </span></span></span></span></span></div><div class="entry" id="g34126d4c-beef-4fd8-b754-d5a4e359062f"><span class="mainheadword"><span lang="ood"><a href="#g34126d4c-beef-4fd8-b754-d5a4e359062f">baʼa</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.ñ</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g34126d4c-beef-4fd8-b754-d5a4e359062f"><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n.</span></span></span><span class="definitionorgloss"><span lang="ood">Matt ʼam o haʼicu hu: ʼo haʼicu ʼi: k ʼan o ʼi himc t-baʼitk ʼeḍ ʼin hugkam g t-vo:k ʼeḍ. </span></span></span></span></span></div><div class="entry" id="g48e0edef-1a99-4a84-852d-fe7c1f6d3366"><span class="mainheadword"><span lang="ood"><a href="#g48e0edef-1a99-4a84-852d-fe7c1f6d3366">baʼag</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g48e0edef-1a99-4a84-852d-fe7c1f6d3366"><span class="definitionorgloss"><span lang="ood">ʼUʼuhig mo ge s-cuck ʼaʼan, s-toha moʼo c s-ʼoam ciñ. </span></span></span></span></span></div><div class="entry" id="g205ec4f9-e30e-47a2-ac52-bb46ba533337"><span class="mainheadword"><span lang="ood"><a href="#g205ec4f9-e30e-47a2-ac52-bb46ba533337">baʼamaḍ</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g205ec4f9-e30e-47a2-ac52-bb46ba533337"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">Maḍaj g ʼuvĭ ʼalidaj g ceoj. </span></span></span></span></span></div><div class="entry" id="g3614f91b-cbb7-409e-9f92-a07c50e59eef"><span class="mainheadword"><span lang="ood"><a href="#g3614f91b-cbb7-409e-9f92-a07c50e59eef">baʼic</a></span></span><span class="senses"><span class="sensecontent"><span class="sense" entryguid="g3614f91b-cbb7-409e-9f92-a07c50e59eef"><span class="definitionorgloss"><span lang="ood">ʼAmi ʼam haʼicu ta:gio.</span></span></span></span></span></div><div class="entry" id="gba3a13a4-aadb-4a1b-8197-5e96a13e8e5d"><span class="mainheadword"><span lang="ood"><a href="#gba3a13a4-aadb-4a1b-8197-5e96a13e8e5d">baʼic ʼi</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.v</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="gba3a13a4-aadb-4a1b-8197-5e96a13e8e5d"><span class="definitionorgloss"><span lang="ood">Mo ʼe-hekaj ʼi:da haʼicu ceʼidag matt ʼam o ha-ʼa:gĭ matp  ʼam haʼas ʼi geʼeda mo has cuʼig haʼicu ʼo hema c haʼicu ʼep ʼo hema ʼep pi ʼam hu ṣaʼi vepo masma hab cuʼig ʼam ʼi ha-ñeidc.</span></span><span class="examplescontents"><span class="examplescontent"><span class="example"><span lang="ood">ʼI:da kamiṣ ʼo baʼic ʼi s-vegĭ mo hegi. </span></span></span></span></span></span></span></div><div class="entry" id="g7b3c78ac-5c25-4c36-9947-25f8f4d00635"><span class="mainheadword"><span lang="ood"><a href="#g7b3c78ac-5c25-4c36-9947-25f8f4d00635">baʼitk</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g7b3c78ac-5c25-4c36-9947-25f8f4d00635"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">Mo ʼan hab cuʼig t-kusvo ʼeḍ c hekaj haʼicu baʼa c ʼi:bheñ.</span></span></span></span></span></div><div class="entry" id="g27f9743c-f8f4-47a5-8e0d-a3d8812265ef"><span class="mainheadword"><span lang="ood"><a href="#g27f9743c-f8f4-47a5-8e0d-a3d8812265ef">ba:ban</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g27f9743c-f8f4-47a5-8e0d-a3d8812265ef"><span class="agreement"><span class="abbreviation"><span lang="ood">m</span></span></span><span class="lexsensereferences"><span class="lexsensereference"><span class="ownertype_name"><span lang="ood">Hemako</span></span><span class="configtargets"><span class="configtarget"><span class="headword"><span lang="ood"><a href="#g35fadeb4-1f03-43a3-9233-f979cca9401d">ban</a></span></span></span></span></span></span></span></span></span></div><div class="entry" id="g8b12a31e-803f-4c01-a6fd-2509631586dc"><span class="mainheadword"><span lang="ood"><a href="#g8b12a31e-803f-4c01-a6fd-2509631586dc">ba:bas</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g8b12a31e-803f-4c01-a6fd-2509631586dc"><span class="agreement"><span class="abbreviation"><span lang="ood">ʼe-k</span></span></span><span class="definitionorgloss"><span lang="ood">Hegi mo ʼe-ʼeʼeṣa jeveḍ c-ʼeḍ c ʼe-koaʼa.</span></span></span></span></span></div><div class="entry" id="gadfde080-fc17-4841-8a71-6cb8568080be"><span class="mainheadword"><span lang="ood"><a href="#gadfde080-fc17-4841-8a71-6cb8568080be">ba:baʼa</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="gadfde080-fc17-4841-8a71-6cb8568080be"><span class="definitionorgloss"><span lang="ood">T-jeʼe ʼo:g.</span></span></span></span></span></div><div class="entry" id="g33339762-22b5-4912-9255-e19af15d7b40"><span class="mainheadword"><span lang="ood"><a href="#g33339762-22b5-4912-9255-e19af15d7b40">ba:bhai</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g33339762-22b5-4912-9255-e19af15d7b40"><span class="agreement"><span class="abbreviation"><span lang="ood">m</span></span></span><span class="lexsensereferences"><span class="lexsensereference"><span class="ownertype_name"><span lang="ood">Hemako</span></span><span class="configtargets"><span class="configtarget"><span class="headword"><span lang="ood"><a href="#g8f69a992-394d-4025-b0d1-bf3477af5023">bahi</a></span></span></span></span></span></span></span></span></span></div><div class="entry" id="ge524acdb-9637-4504-9e17-fe40ec113b84"><span class="mainheadword"><span lang="ood"><a href="#ge524acdb-9637-4504-9e17-fe40ec113b84">ba:ñimeḍ</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.ñ</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="ge524acdb-9637-4504-9e17-fe40ec113b84"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n.</span></span></span><span class="definitionorgloss"><span lang="ood">Mat hema ʼam o himad g ʼe-kakkio c nonovĭkaj</span></span></span></span></span></div><div class="entry" id="g18153ebc-1e77-4831-acc6-ebb707fe8a60"><span class="mainheadword"><span lang="ood"><a href="#g18153ebc-1e77-4831-acc6-ebb707fe8a60">ba:ṣo</a></span></span><span class="senses"><span class="sensecontent"></span><span class="sense" entryguid="g18153ebc-1e77-4831-acc6-ebb707fe8a60"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">Mo ʼan hab cuʼig t-cu:kug ʼab, ʼan ha-ṣa:gid g t-kusvo c vo:k.</span></span></span></span></span></div><div class="entry" id="g25c125c7-b108-497a-b364-f4b37b4f3a30"><span class="mainheadword"><span lang="ood"><a href="#g25c125c7-b108-497a-b364-f4b37b4f3a30">ba:ṣoḍag</a></span></span><span class="senses"><span class="sensecontent"><span class="sense" entryguid="g25c125c7-b108-497a-b364-f4b37b4f3a30"><span class="definitionorgloss"><span lang="ood">Hegi mo g hemajkam ʼab va:kc mat hab o pi bi:tagij g ʼe-ʼeñiga.</span></span></span></span></span></div><div class="entry" id="g3b64e7b1-d19c-4abb-8dc7-f39f4d50fe58"><span class="mainheadword"><span lang="ood"><a href="#g3b64e7b1-d19c-4abb-8dc7-f39f4d50fe58">behe</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.ñ</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g3b64e7b1-d19c-4abb-8dc7-f39f4d50fe58"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n.</span></span></span><span class="definitionorgloss"><span lang="ood">Mat hema vo haʼicu be:kai.</span></span></span></span></span></div><div class="entry" id="gc7fb29e9-aa72-49bb-b9b5-022579a140dd"><span class="mainheadword"><span lang="ood"><a href="#gc7fb29e9-aa72-49bb-b9b5-022579a140dd">beikuḍ</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="gc7fb29e9-aa72-49bb-b9b5-022579a140dd"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">Hegi mac hekaj haʼicu giaʼa.</span></span></span></span></span></div><div class="entry" id="gd3029066-2933-49d5-8922-587943ae2340"><span class="mainheadword"><span lang="ood"><a href="#gd3029066-2933-49d5-8922-587943ae2340">be:kai</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.ñ</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="gd3029066-2933-49d5-8922-587943ae2340"><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n./n.</span></span></span><span class="definitionorgloss"><span lang="ood">Mat hema vo haʼicu bei.</span></span></span></span></span></div><div class="entry" id="g257b20c4-58c3-436b-a7f8-ef9b485f397f"><span class="mainheadword"><span lang="ood"><a href="#g257b20c4-58c3-436b-a7f8-ef9b485f397f">bia</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.ñ</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g257b20c4-58c3-436b-a7f8-ef9b485f397f"><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n.</span></span></span><span class="definitionorgloss"><span lang="ood">Mat hema vo bei g haʼicu hugĭ ʼab haʼa ʼo hidoḍakuḍ t-ʼamjeḍ mat o ʼe-gegos.</span></span></span></span></span></div><div class="entry" id="ga80c37c7-7a58-4d25-9b97-961dbeb829de"><span class="mainheadword"><span lang="ood"><a href="#ga80c37c7-7a58-4d25-9b97-961dbeb829de">bicito</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="ga80c37c7-7a58-4d25-9b97-961dbeb829de"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">Laʼas haʼicu doakam mo ge s-cuk komĭ c hebicuc ʼu:g ʼi ʼul g ʼe-ʼat mat ʼam o ʼe-ʼuiv.</span></span></span></span></span></div><div class="entry" id="g6edf9558-5612-4df6-9ed4-abeddd2ae946"><span class="mainheadword"><span lang="ood"><a href="#g6edf9558-5612-4df6-9ed4-abeddd2ae946">bid</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g6edf9558-5612-4df6-9ed4-abeddd2ae946"><span class="definitionorgloss"><span lang="ood">S-kavk jeweḍ matp g hemajkam hebicuc vapga k o hekaj ha-na:to g hahaʼa.</span></span></span></span></span></div><div class="entry" id="g4f36a6ce-52ee-4140-ade7-e805ae19e758"><span class="mainheadword"><span lang="ood"><a href="#g4f36a6ce-52ee-4140-ade7-e805ae19e758">bihugim</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.ñ</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g4f36a6ce-52ee-4140-ade7-e805ae19e758"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="aspect"><span class="abbreviation-2"><span lang="ood">n.</span></span></span><span class="definitionorgloss"><span lang="ood">Mat hema vo pi ʼe-gegosid k hab o va ta:hadag mo haʼicu s-hugim.</span></span></span></span></span></div><div class="entry" id="gf07cbd55-572f-4c15-bc4d-3aa810e64878"><span class="mainheadword"><span lang="ood"><a href="#gf07cbd55-572f-4c15-bc4d-3aa810e64878">bijim</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.ñ</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="gf07cbd55-572f-4c15-bc4d-3aa810e64878"><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n.</span></span></span><span class="definitionorgloss"><span lang="ood">Mat hema vo him k o ṣa miabĭ hema ʼep k o pi kekiwua, ʼam ʼabṣ o si himad.</span></span></span></span></span></div><div class="entry" id="gce2b3e0d-3752-4a1d-9886-59e592b8a183"><span class="mainheadword"><span lang="ood"><a href="#gce2b3e0d-3752-4a1d-9886-59e592b8a183">bisck</a></span></span><span class="senses"><span class="sensecontent"><span class="sense" entryguid="gce2b3e0d-3752-4a1d-9886-59e592b8a183"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n.</span></span></span><span class="definitionorgloss"><span lang="ood">Matp hekid o s-mohogĭ g t-na:k ʼeḍ k o si s-gevkam ʼi:bhe t-na:k ʼamjeḍ.</span></span></span></span></span></div><div class="entry" id="g9fb7f97b-5e9b-44e6-8242-751e41d88c17"><span class="mainheadword"><span lang="ood"><a href="#g9fb7f97b-5e9b-44e6-8242-751e41d88c17">bi:t</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g9fb7f97b-5e9b-44e6-8242-751e41d88c17"><span class="definitionorgloss"><span lang="ood">Hegi mo g haʼicu dodakm koaʼa k ʼam hu hebi vo ʼi vu:ṣ ʼe-ʼat ʼamjeḍ </span></span></span></span></span></div><div class="entry" id="g6f522465-72f0-4f39-af0d-106b057fe7b1"><span class="mainheadword"><span lang="ood"><a href="#g6f522465-72f0-4f39-af0d-106b057fe7b1">bi:twua</a></span></span><span class="senses"><span class="sensecontent"><span class="sense" entryguid="g6f522465-72f0-4f39-af0d-106b057fe7b1"><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n./n.</span></span></span><span class="definitionorgloss"><span lang="ood">Mat hema vo hekaj g dahiwuakuḍ mat gm hu b o ʼi ju: g ʼe-bi:t.</span></span></span></span></span></div><div class="entry" id="gd0c6db80-e987-4744-8d2b-b22603395a8c"><span class="mainheadword"><span lang="ood"><a href="#gd0c6db80-e987-4744-8d2b-b22603395a8c">bo:l</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="gd0c6db80-e987-4744-8d2b-b22603395a8c"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">Hegi mo wuḍ ge ʼolas cicvikuḍ.</span></span></span></span></span></div><div class="letHead"><span class="letter" lang="ood">C c</span></div>
+<div class="entry" id="ge84a0271-0206-4f22-914b-18d1a25e4b49"><span class="mainheadword"><span lang="ood"><a href="#ge84a0271-0206-4f22-914b-18d1a25e4b49">cali:hi</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="ge84a0271-0206-4f22-914b-18d1a25e4b49"><span class="agreement"><span class="abbreviation"><span lang="ood">h</span></span></span><span class="definitionorgloss"><span lang="ood">ʼOʼodham mo ʼam ha-ñu:kud g hemajkam c ʼam ha-ʼuʼu hegam mo pi ʼap has ʼe-wua. </span></span></span></span></span></div><div class="entry" id="g573672d5-a551-407e-841e-94f7389ad18f"><span class="mainheadword"><span lang="ood"><a href="#g573672d5-a551-407e-841e-94f7389ad18f">ceggia</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.ñ</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g573672d5-a551-407e-841e-94f7389ad18f"><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n./n.</span></span></span><span class="definitionorgloss"><span lang="ood">Matp hekid go:k ʼo muʼi ʼoʼodham ʼo pi ʼe-ho:hi k o ʼaʼai ʼe-ṣoñhi. </span></span></span></span></span></div><div class="entry" id="gb8cf21de-1d49-410c-b538-a2607f8ef907"><span class="mainheadword"><span lang="ood"><a href="#gb8cf21de-1d49-410c-b538-a2607f8ef907">cegĭto</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="en">h.'e.ñ</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="gb8cf21de-1d49-410c-b538-a2607f8ef907"><span class="aspect"><span class="abbreviation-2"><span lang="ood">p.n./n.</span></span></span><span class="definitionorgloss"><span lang="ood">Matp hekid hema vo va ʼep cegĭto ʼab ʼamjeḍ haʼicu mo va hekĭ hu s-ma:c. </span></span></span></span></span></div><div class="entry" id="g1a4d230f-b612-4f0b-a50a-c5a12a572a38"><span class="mainheadword"><span lang="ood"><a href="#g1a4d230f-b612-4f0b-a50a-c5a12a572a38">cegĭtoidag</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g1a4d230f-b612-4f0b-a50a-c5a12a572a38"><span class="definitionorgloss"><span lang="ood">Mapt hascu ḍ ʼi hegi mac cegĭto.</span></span></span></span></span></div><div class="entry" id="g01f077ad-8921-45f1-9eaf-083c4f2f2f2d"><span class="mainheadword"><span lang="ood"><a href="#g01f077ad-8921-45f1-9eaf-083c4f2f2f2d">cehia</a></span></span><span class="senses"><span class="sharedgrammaticalinfo"><span class="morphosyntaxanalysis"><span class="partofspeech"><span lang="ood">c</span></span></span></span><span class="sensecontent"><span class="sense" entryguid="g01f077ad-8921-45f1-9eaf-083c4f2f2f2d"><span class="definitionorgloss"><span lang="ood">Vecij ʼuvĭ mat pi koi cu:wua.</span></span></span></span></span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Jeremy Johns</p>
+  </footer>
+</body>
+</html>
